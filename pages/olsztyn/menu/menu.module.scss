@@ -1,0 +1,23 @@
+@import '../../../styles/colors.module.scss';
+
+div.category_wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 3em 0;
+}
+
+div.category_wrapper button {
+	background: transparent;
+	border: none;
+	font-size: 18px;
+	font-family: 'Merriweather';
+	color: $gray;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+div.category_wrapper button:hover {
+	color: $black;
+}

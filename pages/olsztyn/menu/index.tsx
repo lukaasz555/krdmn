@@ -4,11 +4,13 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { request } from '../../api/menu_olsztyn';
 import Layout from '../layout';
+import styles from './menu.module.scss';
 
 export interface ICourse {
 	id: string;
 	name: string;
 	price: Number;
+	category: string;
 	desc?: string;
 }
 
@@ -22,6 +24,7 @@ const apiQuery = `query Home {
       name
       price
       desc
+	  category
     }
   }`;
 
@@ -38,6 +41,54 @@ export const getStaticProps = async () => {
 
 export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 	const { allCourses } = data;
+	const [filtered, setFiltered] = useState<ICourse[] | []>(allCourses);
+
+	const categories = () => {
+		const cats = new Set(allCourses.map((item) => item.category));
+		return Array.from(cats);
+	};
+
+	const handleFilter = (data: string) => {
+		if (allCourses) {
+			console.log('data to', data);
+			const res: ICourse[] = allCourses
+				.filter((item: ICourse) => item.category === data)
+				.sort((a: ICourse, b: ICourse) => Number(a.price) - Number(b.price));
+			setFiltered(res);
+		}
+	};
+
+	useEffect(() => {
+		handleFilter('1');
+	}, []);
+
+	const handleCatName = (item: string) => {
+		switch (item) {
+			case '1':
+				return 'Przystawki';
+			case '2':
+				return 'Zupy';
+			case '3':
+				return 'Sałaty';
+			case '4':
+				return 'Dania główne';
+			case '5':
+				return 'Dla dzieci';
+			case '6':
+				return 'Desery';
+			default:
+				return null;
+		}
+	};
+
+	const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+		const target = e.target as Element;
+		if (e.target !== null) {
+			handleFilter(target.id);
+			console.log(target.id);
+		}
+	};
+
 	return (
 		<>
 			<Head>
@@ -49,18 +100,21 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 			<Layout>
 				<main>
 					<header>
-						<h1>page - Olsztyn</h1>
-						{allCourses.length > 0
-							? allCourses.map(
-									({
-										id,
-										name,
-										price,
-									}: {
-										id: string;
-										name: string;
-										price: Number;
-									}) => (
+						<div className={styles.category_wrapper}>
+							{categories().map((item: string) => (
+								<button
+									key={item}
+									id={item}
+									onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
+										handleClick(e)
+									}>
+									{handleCatName(item)}
+								</button>
+							))}
+						</div>
+						{filtered.length > 0
+							? filtered.map(
+									({ id, name, price }: Omit<ICourse, 'desc' | 'category'>) => (
 										<div
 											key={id}
 											style={{
