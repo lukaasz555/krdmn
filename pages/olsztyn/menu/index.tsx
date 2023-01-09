@@ -45,8 +45,8 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 	const [activeCategory, setActiveCategory] = useState('');
 
 	const categories = () => {
-		const cats = new Set(allCourses.map((item) => item.category));
-		return Array.from(cats);
+		const cats = Array.from(new Set(allCourses.map((item) => item.category)));
+		return cats.sort((a: any, b: any) => a - b);
 	};
 
 	const handleFilter = (data: string) => {
