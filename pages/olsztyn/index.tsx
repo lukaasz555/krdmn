@@ -6,40 +6,7 @@ import { request } from '../api/menu_olsztyn';
 import Menu from './components/Menu';
 import Layout from './layout';
 
-export interface ICourse {
-	id: string;
-	name: string;
-	price: Number;
-	desc?: string;
-}
-
-const apiQuery = `query Home {
-    allCourses(first: 99) {
-      id
-      name
-      price
-      desc
-    }
-  }`;
-
-export const getStaticProps = async () => {
-	const data = await request({
-		query: apiQuery,
-		variables: { limit: 59 },
-	});
-
-	return {
-		props: { data },
-	};
-};
-
-export default function Home({ data }: any) {
-	const [menu, setMenu] = useState<[] | ICourse[]>([]);
-
-	useEffect(() => {
-		console.log(data);
-		setMenu(data);
-	}, []);
+export default function Home() {
 	return (
 		<>
 			<Head>

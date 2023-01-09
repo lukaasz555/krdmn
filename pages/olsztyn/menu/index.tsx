@@ -3,6 +3,7 @@ import Link from 'next/link';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { request } from '../../api/menu_olsztyn';
+import Layout from '../layout';
 
 export interface ICourse {
 	id: string;
@@ -45,35 +46,37 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<main>
-				<header>
-					<h1>page - Olsztyn</h1>
-					{allCourses.length > 0
-						? allCourses.map(
-								({
-									id,
-									name,
-									price,
-								}: {
-									id: string;
-									name: string;
-									price: Number;
-								}) => (
-									<div
-										key={id}
-										style={{
-											display: 'flex',
-											justifyContent: 'space-between',
-											width: '300px',
-										}}>
-										<p>{name}</p>
-										<p>{String(price)}</p>
-									</div>
-								)
-						  )
-						: null}
-				</header>
-			</main>
+			<Layout>
+				<main>
+					<header>
+						<h1>page - Olsztyn</h1>
+						{allCourses.length > 0
+							? allCourses.map(
+									({
+										id,
+										name,
+										price,
+									}: {
+										id: string;
+										name: string;
+										price: Number;
+									}) => (
+										<div
+											key={id}
+											style={{
+												display: 'flex',
+												justifyContent: 'space-between',
+												width: '300px',
+											}}>
+											<p>{name}</p>
+											<p>{String(price)}</p>
+										</div>
+									)
+							  )
+							: null}
+					</header>
+				</main>
+			</Layout>
 		</>
 	);
 }
