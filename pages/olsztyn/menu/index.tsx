@@ -42,6 +42,7 @@ export const getStaticProps = async () => {
 export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 	const { allCourses } = data;
 	const [filtered, setFiltered] = useState<ICourse[] | []>(allCourses);
+	const [activeCategory, setActiveCategory] = useState('');
 
 	const categories = () => {
 		const cats = new Set(allCourses.map((item) => item.category));
@@ -50,11 +51,11 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 
 	const handleFilter = (data: string) => {
 		if (allCourses) {
-			console.log('data to', data);
 			const res: ICourse[] = allCourses
 				.filter((item: ICourse) => item.category === data)
 				.sort((a: ICourse, b: ICourse) => Number(a.price) - Number(b.price));
 			setFiltered(res);
+			setActiveCategory(data);
 		}
 	};
 
@@ -85,7 +86,6 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 		const target = e.target as Element;
 		if (e.target !== null) {
 			handleFilter(target.id);
-			console.log(target.id);
 		}
 	};
 
@@ -98,38 +98,39 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Layout>
-				<main>
-					<header>
-						<div className={styles.category_wrapper}>
-							{categories().map((item: string) => (
-								<button
-									key={item}
-									id={item}
-									onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
-										handleClick(e)
-									}>
-									{handleCatName(item)}
-								</button>
-							))}
-						</div>
+				<div className={styles.category_wrapper}>
+					{categories().map((item: string) => (
+						<button
+							key={item}
+							id={item}
+							onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
+								handleClick(e)
+							}>
+							{handleCatName(item)}
+						</button>
+					))}
+				</div>
+				<section className={styles.menu_wrapper}>
+					<h2>{handleCatName(activeCategory)}</h2>
+					<div>
 						{filtered.length > 0
 							? filtered.map(
-									({ id, name, price }: Omit<ICourse, 'desc' | 'category'>) => (
-										<div
-											key={id}
-											style={{
-												display: 'flex',
-												justifyContent: 'space-between',
-												width: '300px',
-											}}>
-											<p>{name}</p>
-											<p>{String(price)}</p>
+									({ id, name, price, desc }: Omit<ICourse, 'category'>) => (
+										<div key={id} className={styles.menu_course}>
+											<div className={styles.menu_course_left}>
+												<p className={styles.menu_course_left_title}>{name}</p>
+												<p className={styles.menu_course_left_desc}>{desc}</p>
+											</div>
+
+											<div className={styles.menu_course_right}>
+												<p>{Number(price)}zł</p>
+											</div>
 										</div>
 									)
 							  )
 							: null}
-					</header>
-				</main>
+					</div>
+				</section>
 			</Layout>
 		</>
 	);
