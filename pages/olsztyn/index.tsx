@@ -53,30 +53,6 @@ export default function Home({ data }: any) {
 					<Layout>
 						<h1>page - Olsztyn</h1>
 					</Layout>
-					{/* {data.allCourses.length > 0
-						? data.allCourses.map(
-								({
-									id,
-									name,
-									price,
-								}: {
-									id: string;
-									name: string;
-									price: Number;
-								}) => (
-									<div
-										key={id}
-										style={{
-											display: 'flex',
-											justifyContent: 'space-between',
-											width: '300px',
-										}}>
-										<p>{name}</p>
-										<p>{String(price)}</p>
-									</div>
-								)
-						  )
-						: null} */}
 				</header>
 			</main>
 		</>

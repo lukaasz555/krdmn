@@ -18,8 +18,10 @@ export default function Home() {
 				<header>
 					<h1>hello</h1>
 					<div style={{ display: 'flex', flexDirection: 'column' }}>
-						<Link href={`/ketrzyn`}>page 1</Link>
-						<Link href={`/olsztyn`}>page 2</Link>
+						<Link href={`/olsztyn`}>Olsztyn, Żołnierska 4</Link>
+						<Link href={`/ketrzyn`}>
+							Kętrzyn, Plac marszałka Józefa Piłsudskiego 1
+						</Link>
 					</div>
 				</header>
 			</main>

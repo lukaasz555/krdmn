@@ -1,15 +1,11 @@
 import Menu from './components/Menu';
+import style from './layout.module.scss';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<section
-			style={{
-				display: 'flex',
-				flexDirection: 'column',
-				backgroundColor: '#fab',
-			}}>
+		<section className={style.layout_wrapper}>
 			<Menu />
-			{children}
+			<main>{children}</main>
 		</section>
 	);
 };
