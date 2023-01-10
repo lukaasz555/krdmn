@@ -5,6 +5,12 @@
 	@include section-container;
 }
 
+.section_about_wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .section_about_left {
 	display: flex;
 	flex-direction: column;
@@ -41,6 +47,11 @@
 }
 
 @media (min-width: 768px) {
+	.section_about_wrapper {
+		flex-direction: row;
+		justify-content: center;
+	}
+
 	.section_about_left {
 		text-align: left;
 		flex-basis: 40%;

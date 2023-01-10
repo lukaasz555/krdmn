@@ -1,0 +1,30 @@
+@import '../../../../styles/mixins.module.scss';
+@import '../../../../styles/colors.module.scss';
+
+.section_news {
+	@include section-container;
+	display: flex;
+	flex-direction: column;
+}
+
+.news_head h3 {
+	@include section-header($black);
+	text-align: center;
+}
+
+.news_container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.news_item {
+	width: 250px;
+	height: 250px;
+	margin: 2em 1em;
+}
+
+.news_item img {
+	@include img-shadow;
+}
