@@ -1,0 +1,57 @@
+@import '../../../../styles/mixins.module.scss';
+@import '../../../../styles/colors.module.scss';
+
+.section_about {
+	@include section-container;
+}
+
+.section_about_left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	order: 2;
+}
+
+.section_about_right {
+	position: relative;
+	min-height: 300px;
+	order: 1;
+	margin-left: 2em;
+	width: 80%;
+}
+
+.section_about_right img {
+	object-fit: cover;
+	border-radius: 4px;
+	box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.section_about_header {
+	@include section-header(black);
+}
+
+.section_about_desc {
+	@include section-content($black);
+	margin-bottom: 2em;
+}
+
+.section_about_link {
+	@include section-link($white, $black);
+}
+
+@media (min-width: 768px) {
+	.section_about_left {
+		text-align: left;
+		flex-basis: 40%;
+		order: 1;
+		height: 100%;
+		align-items: start;
+	}
+
+	.section_about_right {
+		flex-basis: 40%;
+		order: 2;
+		min-height: 400px;
+	}
+}

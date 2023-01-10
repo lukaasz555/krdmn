@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { request } from '../api/menu_olsztyn';
 import Layout from './layout';
+import About from './components/About/About';
 
 export default function Home() {
 	return (
@@ -17,7 +18,9 @@ export default function Home() {
 			<main>
 				<header>
 					<Layout>
-						<h1>page - Olsztyn</h1>
+						<div style={{ display: 'flex', justifyContent: 'center' }}>
+							<About />
+						</div>
 					</Layout>
 				</header>
 			</main>
