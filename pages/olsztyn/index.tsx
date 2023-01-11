@@ -24,6 +24,9 @@ export default function Home({ feed }: any) {
 								display: 'flex',
 								flexDirection: 'column',
 								alignItems: 'center',
+								width: '100%',
+								height: '100%',
+								position: 'relative',
 							}}>
 							<About />
 							<News feed={feed} />
