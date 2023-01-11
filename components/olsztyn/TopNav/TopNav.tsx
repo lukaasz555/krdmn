@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Fade as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
 import Socials from '../Socials/Socials';
+import Logo from '../../../public/olsztyn/logo_white.png';
 
 const TopNav = () => {
 	const [isNavOpen, setNavOpen] = useState(false);
@@ -18,12 +19,7 @@ const TopNav = () => {
 		<div className={styles.topnav}>
 			<div className={styles.topnav_wrapper}>
 				<Link href={`/olsztyn`}>
-					<Image
-						src='/logo_white.png'
-						alt='Kardamon Olsztyn'
-						width={120}
-						height={120}
-					/>
+					<Image src={Logo} alt='Kardamon Olsztyn' width={120} height={120} />
 				</Link>
 				<div>
 					<button

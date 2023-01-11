@@ -3,6 +3,7 @@ import styles from './Footer.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import Socials from '../Socials/Socials';
+import Logo from '../../../public/olsztyn/logo_white.png';
 
 const Footer = () => {
 	return (
@@ -86,12 +87,7 @@ const Footer = () => {
 				</div>
 				<div style={{ marginTop: '1em' }}>
 					<Link href={`/olsztyn`}>
-						<Image
-							src='/logo_white.png'
-							alt='Kardamon Olsztyn'
-							width={80}
-							height={80}
-						/>
+						<Image src={Logo} alt='Kardamon Olsztyn' width={80} height={80} />
 					</Link>
 				</div>
 			</div>
