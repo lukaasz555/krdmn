@@ -24,10 +24,11 @@ const News = ({ feed }: any) => {
 					displayPosts.map((item: IFeed) => (
 						<div key={item.id} className={styles.news_item}>
 							<Link href={item.permalink}>
-								<img
+								{/* <img
 									src={item.media_url}
 									style={{ height: '100%', width: '100%', objectFit: 'cover' }}
-								/>
+								/> */}
+								<Image src={item.media_url} fill={true} alt={item.permalink} />
 							</Link>
 						</div>
 					))
