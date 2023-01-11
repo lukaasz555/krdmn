@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styles from './News.module.scss';
 import { InstagramEmbed } from 'react-social-media-embed';
 import Image from 'next/image';
@@ -13,6 +13,8 @@ import {
 	faSquareFacebook,
 	faSquareInstagram,
 } from '@fortawesome/free-brands-svg-icons';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 interface IFeed {
 	id: string;
@@ -32,8 +34,27 @@ const News = ({ feed }: any) => {
 		}
 	}, [width]);
 
+	gsap.registerPlugin(ScrollTrigger);
+
+	useEffect(() => {
+		gsap.fromTo(
+			'#news',
+			{ transform: 'translateY(50%)', zIndex: -10 },
+			{
+				transform: 'translateY(0)',
+				duration: 1,
+				zIndex: 0,
+				scrollTrigger: {
+					trigger: '#events',
+					start: 'top',
+					end: 'bottom',
+				},
+			}
+		);
+	}, []);
+
 	return (
-		<section className={styles.section_news}>
+		<section className={styles.section_news} id='news'>
 			<header className={styles.news_head}>
 				<h3>Aktualności</h3>
 			</header>

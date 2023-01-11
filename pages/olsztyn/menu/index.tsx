@@ -5,18 +5,10 @@ import { useEffect, useState } from 'react';
 import { request } from '../../api/menu_olsztyn';
 import Layout from '../layout';
 import styles from './menu.module.scss';
-
-export interface ICourse {
-	id: string;
-	name: string;
-	price: Number;
-	category: string;
-	desc?: string;
-}
-
-export interface CourseDataProps {
-	allCourses: [];
-}
+import { handleCatName } from '../helpers/handleCatName';
+import { ICourse, CourseDataProps } from '../models/Courses';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const apiQuery = `query Home {
     allCourses(first: 99) {
@@ -61,26 +53,19 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 
 	useEffect(() => {
 		handleFilter('1');
+		gsap.fromTo(
+			'#menu',
+			{
+				opacity: 0,
+				transform: 'translateY(10%)',
+			},
+			{
+				opacity: 1,
+				transform: 'translateY(0)',
+				duration: 1,
+			}
+		);
 	}, []);
-
-	const handleCatName = (item: string) => {
-		switch (item) {
-			case '1':
-				return 'Przystawki';
-			case '2':
-				return 'Zupy';
-			case '3':
-				return 'Sałaty';
-			case '4':
-				return 'Dania główne';
-			case '5':
-				return 'Dla dzieci';
-			case '6':
-				return 'Desery';
-			default:
-				return null;
-		}
-	};
 
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		const target = e.target as Element;
@@ -98,39 +83,43 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Layout>
-				<div className={styles.category_wrapper}>
-					{categories().map((item: string) => (
-						<button
-							key={item}
-							id={item}
-							onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
-								handleClick(e)
-							}>
-							{handleCatName(item)}
-						</button>
-					))}
-				</div>
-				<section className={styles.menu_wrapper}>
-					<h2>{handleCatName(activeCategory)}</h2>
-					<div>
-						{filtered.length > 0
-							? filtered.map(
-									({ id, name, price, desc }: Omit<ICourse, 'category'>) => (
-										<div key={id} className={styles.menu_course}>
-											<div className={styles.menu_course_left}>
-												<p className={styles.menu_course_left_title}>{name}</p>
-												<p className={styles.menu_course_left_desc}>{desc}</p>
-											</div>
-
-											<div className={styles.menu_course_right}>
-												<p>{Number(price)}zł</p>
-											</div>
-										</div>
-									)
-							  )
-							: null}
+				<div id='menu'>
+					<div className={styles.category_wrapper}>
+						{categories().map((item: string) => (
+							<button
+								key={item}
+								id={item}
+								onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
+									handleClick(e)
+								}>
+								{handleCatName(item)}
+							</button>
+						))}
 					</div>
-				</section>
+					<section className={styles.menu_wrapper}>
+						<h2>{handleCatName(activeCategory)}</h2>
+						<div>
+							{filtered.length > 0
+								? filtered.map(
+										({ id, name, price, desc }: Omit<ICourse, 'category'>) => (
+											<div key={id} className={styles.menu_course}>
+												<div className={styles.menu_course_left}>
+													<p className={styles.menu_course_left_title}>
+														{name}
+													</p>
+													<p className={styles.menu_course_left_desc}>{desc}</p>
+												</div>
+
+												<div className={styles.menu_course_right}>
+													<p>{Number(price)}zł</p>
+												</div>
+											</div>
+										)
+								  )
+								: null}
+						</div>
+					</section>
+				</div>
 			</Layout>
 		</>
 	);

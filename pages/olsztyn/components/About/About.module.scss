@@ -3,6 +3,7 @@
 
 .section_about {
 	@include section-container;
+	overflow: hidden;
 }
 
 .section_about_wrapper {
