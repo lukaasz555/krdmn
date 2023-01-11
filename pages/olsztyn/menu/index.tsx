@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { request } from '../../api/menu_olsztyn';
 import Layout from '../layout';
