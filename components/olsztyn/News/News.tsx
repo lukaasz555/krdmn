@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { useWindowSize } from '../../hooks/useWindowSize';
+import { useWindowSize } from '../../../hooks/useWindowSize';
 import Socials from '../Socials/Socials';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {

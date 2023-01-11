@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react';
 import { request } from '../../api/menu_olsztyn';
 import Layout from '../layout';
 import styles from './menu.module.scss';
-import { handleCatName } from '../helpers/handleCatName';
-import { ICourse, CourseDataProps } from '../models/Courses';
+import { handleCatName } from '../../../helpers/handleCatName';
+import { ICourse, CourseDataProps } from '../../../models/Courses';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 

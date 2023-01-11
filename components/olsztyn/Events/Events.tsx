@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './Events.module.scss';
 import Image from 'next/image';
-import EventPic from '../../../../public/olsztyn/2.jpeg';
+import EventPic from '../../../public/olsztyn/2.jpeg';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
