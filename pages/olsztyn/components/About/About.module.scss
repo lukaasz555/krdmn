@@ -23,7 +23,6 @@
 	position: relative;
 	min-height: 300px;
 	order: 1;
-	margin-left: 2em;
 	width: 80%;
 }
 
@@ -40,6 +39,7 @@
 .section_about_desc {
 	@include section-content($black);
 	margin-bottom: 2em;
+	padding: 0 3em;
 }
 
 .section_about_link {
@@ -50,6 +50,7 @@
 	.section_about_wrapper {
 		flex-direction: row;
 		justify-content: center;
+		align-items: center;
 	}
 
 	.section_about_left {
@@ -58,11 +59,17 @@
 		order: 1;
 		height: 100%;
 		align-items: start;
+		justify-content: center;
 	}
 
 	.section_about_right {
 		flex-basis: 40%;
 		order: 2;
 		min-height: 400px;
+		margin-left: 2em;
+	}
+
+	.section_about_desc {
+		padding: 0;
 	}
 }

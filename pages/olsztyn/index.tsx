@@ -6,6 +6,7 @@ import { request } from '../api/menu_olsztyn';
 import Layout from './layout';
 import About from './components/About/About';
 import News from './components/News/News';
+import Events from './components/Events/Events';
 
 export default function Home({ feed }: any) {
 	return (
@@ -29,6 +30,7 @@ export default function Home({ feed }: any) {
 								position: 'relative',
 							}}>
 							<About />
+							<Events />
 							<News feed={feed} />
 						</div>
 					</Layout>
