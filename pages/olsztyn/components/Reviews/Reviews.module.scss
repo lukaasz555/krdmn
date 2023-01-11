@@ -1,0 +1,14 @@
+@import '../../../../styles/colors.module.scss';
+@import '../../../../styles/mixins.module.scss';
+
+.reviews {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 5em;
+}
+
+.reviews header h3 {
+	@include section-header($black);
+	//
+}

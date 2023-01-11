@@ -7,6 +7,7 @@ import Layout from './layout';
 import About from './components/About/About';
 import News from './components/News/News';
 import Events from './components/Events/Events';
+import Reviews from './components/Reviews/Reviews';
 
 export default function Home({ feed }: any) {
 	return (
@@ -32,6 +33,7 @@ export default function Home({ feed }: any) {
 							<About />
 							<Events />
 							<News feed={feed} />
+							<Reviews />
 						</div>
 					</Layout>
 				</header>
