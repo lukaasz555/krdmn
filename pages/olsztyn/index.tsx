@@ -19,25 +19,23 @@ export default function Home({ feed }: any) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<main>
-				<header>
-					<Layout>
-						<div
-							style={{
-								display: 'flex',
-								flexDirection: 'column',
-								alignItems: 'center',
-								width: '100%',
-								height: '100%',
-								position: 'relative',
-							}}>
-							<About />
-							<Events />
-							<News feed={feed} />
-							<Reviews />
-						</div>
-					</Layout>
-					<ScrollToTop />
-				</header>
+				<Layout>
+					<div
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							alignItems: 'center',
+							width: '100%',
+							height: '100%',
+							position: 'relative',
+						}}>
+						<About />
+						<Events />
+						<News feed={feed} />
+						<Reviews />
+					</div>
+				</Layout>
+				<ScrollToTop />
 			</main>
 		</>
 	);
@@ -45,7 +43,6 @@ export default function Home({ feed }: any) {
 
 export const getStaticProps = async () => {
 	const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.REACT_APP_IG_TOKEN}`;
-
 	const data = await fetch(url);
 	const feed = await data.json();
 
