@@ -1,13 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styles from './News.module.scss';
-import { InstagramEmbed } from 'react-social-media-embed';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
 import { useWindowSize } from '../../../hooks/useWindowSize';
-import Socials from '../Socials/Socials';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faSquareFacebook,
@@ -15,6 +10,9 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 interface IFeed {
 	id: string;
