@@ -7,6 +7,7 @@ import About from '../../components/olsztyn/About/About';
 import News from '../../components/olsztyn/News/News';
 import Events from '../../components/olsztyn/Events/Events';
 import Reviews from '../../components/olsztyn/Reviews/Reviews';
+import ScrollToTop from '../../components/olsztyn/ScrollToTop/ScrollToTop';
 
 export default function Home({ feed }: any) {
 	return (
@@ -35,6 +36,7 @@ export default function Home({ feed }: any) {
 							<Reviews />
 						</div>
 					</Layout>
+					<ScrollToTop />
 				</header>
 			</main>
 		</>

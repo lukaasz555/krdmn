@@ -15,7 +15,7 @@ const Reviews = () => {
 				zIndex: 0,
 				scrollTrigger: {
 					trigger: '#news',
-					start: 'top center',
+					start: 'center center',
 					end: 'bottom',
 				},
 			}
