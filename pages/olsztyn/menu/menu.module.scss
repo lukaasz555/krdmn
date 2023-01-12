@@ -25,7 +25,7 @@
 .category_wrapper button {
 	background: transparent;
 	border: none;
-	font-size: 18px;
+	font-size: 1em;
 	font-family: 'Merriweather';
 	color: $gray;
 	cursor: pointer;
@@ -35,46 +35,4 @@
 
 .category_wrapper button:hover {
 	color: $black;
-}
-
-.menu_course {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	font-family: 'Merriweather';
-	font-size: 18px;
-	margin-bottom: 2em;
-	min-width: 320px;
-	max-width: 600px;
-	padding: 0 1em;
-}
-
-.menu_course_left {
-	display: flex;
-	flex-direction: column;
-	flex-basis: 80%;
-}
-
-.menu_course_left_title {
-	font-size: 18px;
-	color: $black;
-	margin: 0;
-}
-
-.menu_course_left_desc {
-	color: $gray;
-	font-size: 15px;
-	margin: 0;
-}
-
-.menu_course_right {
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-start;
-}
-
-.menu_course_right p {
-	display: block;
-	justify-self: flex-start;
-	margin: 0;
 }
