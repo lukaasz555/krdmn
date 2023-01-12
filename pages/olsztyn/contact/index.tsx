@@ -3,24 +3,11 @@ import Head from 'next/head';
 import Layout from '../layout';
 import styles from './contact.module.scss';
 import Link from 'next/link';
-import { gsap } from 'gsap';
+import { slideFromBottom } from '../../../helpers/animations';
 
 export default function Home() {
-	const hello = 'hello';
-
 	useEffect(() => {
-		gsap.fromTo(
-			'#contact',
-			{
-				opacity: 0,
-				transform: 'translateY(10%)',
-			},
-			{
-				opacity: 1,
-				transform: 'translateY(0)',
-				duration: 1,
-			}
-		);
+		slideFromBottom('#contact');
 	}, []);
 
 	return (

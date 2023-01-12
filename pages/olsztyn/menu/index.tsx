@@ -6,7 +6,8 @@ import Layout from '../layout';
 import styles from './menu.module.scss';
 import { handleCatName } from '../../../helpers/handleCatName';
 import { ICourse, CourseDataProps } from '../../../models/Courses';
-import { gsap } from 'gsap';
+import Course from '../../../components/olsztyn/Course/Course';
+import { slideFromBottom } from '../../../helpers/animations';
 
 const apiQuery = `query Home {
     allCourses(first: 99) {
@@ -51,18 +52,7 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 
 	useEffect(() => {
 		handleFilter('1');
-		gsap.fromTo(
-			'#menu',
-			{
-				opacity: 0,
-				transform: 'translateY(10%)',
-			},
-			{
-				opacity: 1,
-				transform: 'translateY(0)',
-				duration: 1,
-			}
-		);
+		slideFromBottom('#menu');
 	}, []);
 
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -100,18 +90,7 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 							{filtered.length > 0
 								? filtered.map(
 										({ id, name, price, desc }: Omit<ICourse, 'category'>) => (
-											<div key={id} className={styles.menu_course}>
-												<div className={styles.menu_course_left}>
-													<p className={styles.menu_course_left_title}>
-														{name}
-													</p>
-													<p className={styles.menu_course_left_desc}>{desc}</p>
-												</div>
-
-												<div className={styles.menu_course_right}>
-													<p>{Number(price)}zł</p>
-												</div>
-											</div>
+											<Course key={id} name={name} price={price} desc={desc} />
 										)
 								  )
 								: null}
