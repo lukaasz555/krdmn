@@ -7,7 +7,6 @@ import styles from './menu.module.scss';
 import { handleCatName } from '../../../helpers/handleCatName';
 import { ICourse, CourseDataProps } from '../../../models/Courses';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const apiQuery = `query Home {
     allCourses(first: 99) {
