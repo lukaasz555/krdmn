@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { request } from '../api/menu_olsztyn';
 import Layout from './layout';
 import About from '../../components/olsztyn/About/About';
 import News from '../../components/olsztyn/News/News';
@@ -42,9 +40,10 @@ export default function Home({ feed }: any) {
 }
 
 export const getStaticProps = async () => {
-	const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.REACT_APP_IG_TOKEN}`;
-	const data = await fetch(url);
-	const feed = await data.json();
+	const getFeed = await fetch(
+		`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.REACT_APP_IG_TOKEN}`
+	);
+	const feed = await getFeed.json();
 
 	return {
 		props: {

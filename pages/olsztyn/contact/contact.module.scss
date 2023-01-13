@@ -7,17 +7,11 @@
 	margin-bottom: 10em;
 }
 
-.contact_top p,
-.contact_top a {
-	margin: 0;
-	margin-bottom: 0.25em;
-	padding: 0;
-}
-
 .contact_top {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	//background-color: #fab;
 }
 
 .contact_top div:nth-child(2) {
@@ -28,10 +22,15 @@
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-
 	padding: 1em;
 	min-width: 220px;
-	//background-color: #fab;
+}
+
+.contact_top p,
+.contact_top a {
+	margin: 0;
+	margin-bottom: 0.25em;
+	padding: 0;
 }
 
 .contact_top a {
@@ -60,14 +59,25 @@
 	border-radius: 4px;
 }
 
+.openingHours p {
+	text-align: center;
+	line-height: 110%;
+}
+
 @media (min-width: 768px) {
 	.contact_top {
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: flex-start;
 	}
 
 	.contact_top div:nth-child(2) {
 		margin: 0 1em;
+	}
+
+	.openingHours p {
+		text-align: right;
+		padding-right: 1.5em;
 	}
 }
 

@@ -21,6 +21,10 @@
 	align-items: center;
 }
 
+.footer_content_details_desc {
+	padding: 0 3em;
+}
+
 .footer_block_wrapper {
 	display: flex;
 	flex-direction: column;
@@ -90,6 +94,10 @@
 	.footer_content_address p,
 	h3.footer_header_address {
 		text-align: left;
+	}
+
+	.footer_content_details_desc {
+		padding: 0 1em;
 	}
 
 	.footer_content_hours p,

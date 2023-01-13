@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Footer.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -35,7 +35,7 @@ const Footer = () => {
 					<div className={styles.footer_block}>
 						<h3>Krótki opis?</h3>
 						<section className={styles.footer_content_details}>
-							<p>
+							<p className={styles.footer_content_details_desc}>
 								Miejsce na max dwa zdania. Często są tutaj informacje, np.
 								kiedy/w jaki sposób dokonywać rezerwacji albo np. info o
 								parkingu czy coś w tym stylu.

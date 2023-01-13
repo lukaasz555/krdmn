@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Head from 'next/head';
 import Layout from '../layout';
 import styles from './contact.module.scss';
@@ -35,16 +35,10 @@ export default function Home() {
 							</Link>
 						</div>
 
-						<div>
+						<div className={styles.openingHours}>
 							<h3>Godziny otwarcia</h3>
-
-							<p>
-								pon - sob:
-								<span style={{ fontWeight: '500' }}> 13 - 22</span>
-							</p>
-							<p>
-								niedziela: <span style={{ fontWeight: '500' }}>13 - 20</span>
-							</p>
+							<p>pon-sob: 13 - 22</p>
+							<p>niedziela: 13 - 20</p>
 						</div>
 					</div>
 					<div className={styles.contact_bottom}>

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { request } from '../../api/menu_olsztyn';
+import { request } from '../../api/dato_olsztyn';
 import Layout from '../layout';
 import styles from './menu.module.scss';
 import { handleCatName } from '../../../helpers/handleCatName';
@@ -9,20 +9,17 @@ import { ICourse, CourseDataProps } from '../../../models/Courses';
 import Course from '../../../components/olsztyn/Course/Course';
 import { slideFromBottom } from '../../../helpers/animations';
 
-const apiQuery = `query Home {
-    allCourses(first: 99) {
-      id
-      name
-      price
-      desc
-	  category
-    }
-  }`;
-
 export const getStaticProps = async () => {
 	const data: ICourse[] = await request({
-		query: apiQuery,
-		variables: { limit: 59 },
+		query: `query Home {
+			allCourses(first: 99) {
+			  id
+			  name
+			  price
+			  desc
+			  category
+			}
+		  }`,
 	});
 
 	return {
