@@ -70,6 +70,7 @@ const News = ({ feed }: any) => {
 										height={260}
 										width={260}
 										alt={item.permalink}
+										quality={80}
 									/>
 								</Link>
 							</SwiperSlide>

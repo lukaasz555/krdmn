@@ -87,7 +87,13 @@ const Footer = () => {
 				</div>
 				<div style={{ marginTop: '1em' }}>
 					<Link href={`/olsztyn`}>
-						<Image src={Logo} alt='Kardamon Olsztyn' width={80} height={80} />
+						<Image
+							src={Logo}
+							alt='Kardamon Olsztyn'
+							width={80}
+							height={80}
+							quality={100}
+						/>
 					</Link>
 				</div>
 			</div>

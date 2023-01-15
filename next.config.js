@@ -2,6 +2,8 @@
 const nextConfig = {
 	reactStrictMode: true,
 	images: {
+		// to remove:
+		unoptimized: true,
 		remotePatterns: [{ protocol: 'https', hostname: '**' }],
 	},
 	distDir: 'build',

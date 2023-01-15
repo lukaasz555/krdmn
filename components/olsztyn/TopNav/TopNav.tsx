@@ -19,7 +19,13 @@ const TopNav = () => {
 		<div className={styles.topnav}>
 			<div className={styles.topnav_wrapper}>
 				<Link href={`/olsztyn`}>
-					<Image src={Logo} alt='Kardamon Olsztyn' width={120} height={120} />
+					<Image
+						src={Logo}
+						alt='Kardamon Olsztyn'
+						width={120}
+						height={120}
+						quality={100}
+					/>
 				</Link>
 				<div>
 					<button

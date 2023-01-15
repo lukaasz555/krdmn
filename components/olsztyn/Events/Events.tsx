@@ -51,6 +51,7 @@ const Events = () => {
 						src={EventPic}
 						alt='Restauracja Kardamon - Olsztyn, Żołnierska 4'
 						fill={true}
+						quality={100}
 					/>
 				</div>
 				<div className={styles.events_right} id='e_right'>

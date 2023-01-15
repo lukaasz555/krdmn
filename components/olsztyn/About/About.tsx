@@ -46,6 +46,7 @@ const About = () => {
 						src={MainPic}
 						alt='Restauracja Kardamon - Olsztyn, Żołnierska 4'
 						fill={true}
+						quality={100}
 					/>
 				</div>
 			</div>
