@@ -45,6 +45,7 @@
 
 .events_right_header {
 	@include section-header($white);
+	margin-top: 1em;
 }
 
 .events_right_desc {
@@ -73,6 +74,10 @@
 
 	.events_right_desc {
 		padding: 0;
+	}
+
+	.events_right_header {
+		margin-top: 0;
 	}
 
 	.events_left {

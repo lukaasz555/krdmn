@@ -35,6 +35,7 @@
 
 .section_about_header {
 	@include section-header(black);
+	margin-top: 1em;
 }
 
 .section_about_desc {
@@ -68,6 +69,10 @@
 		order: 2;
 		min-height: 400px;
 		margin-left: 2em;
+	}
+
+	.section_about_header {
+		margin-top: 0;
 	}
 
 	.section_about_desc {
