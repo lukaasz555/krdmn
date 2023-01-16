@@ -6,10 +6,12 @@ export const slideFromBottom = (id: string) => {
 		{
 			opacity: 0,
 			transform: 'translateY(10%)',
+			zIndex: -99,
 		},
 		{
 			opacity: 1,
 			transform: 'translateY(0)',
+			zIndex: 0,
 			duration: 1,
 		}
 	);

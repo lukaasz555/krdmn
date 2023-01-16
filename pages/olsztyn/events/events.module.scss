@@ -1,6 +1,55 @@
 @import '../../../styles/olsztyn/colors.module.scss';
 @import '../../../styles/olsztyn/mixins.module.scss';
 
-.events h1 {
-	color: $borderBlack;
+.events_wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 0 2em 5em;
+}
+
+.events_top,
+.events_bottom {
+	flex-basis: 45%;
+}
+
+.events_top {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.events_top h3 {
+	@include section-header($black);
+}
+
+.events_top_desc {
+	margin: 1em 0;
+}
+
+.events_bottom {
+	position: relative;
+	min-width: 320px;
+	min-height: 450px;
+}
+
+.events_bottom img {
+	@include img-shadow;
+	object-fit: cover;
+	border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+	.events_wrapper {
+		@include section-container;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.events_top {
+		text-align: left;
+		margin-bottom: 0;
+	}
+
+	.events_bottom {
+		margin-left: 1em;
+	}
 }
