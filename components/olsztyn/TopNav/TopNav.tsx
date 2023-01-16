@@ -31,7 +31,7 @@ const TopNav = () => {
 					<button
 						className={styles.topnav_button}
 						onClick={() => setNavOpen(!isNavOpen)}>
-						<Hamburger color='#f9f4f5' size={42} />
+						<Hamburger color='#f9f4f5' size={34} toggled={isNavOpen} />
 					</button>
 
 					<div style={mobileStyles.nav}>
