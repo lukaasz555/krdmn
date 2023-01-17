@@ -1,10 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 export default function Home() {
-	const router = useRouter();
-
 	return (
 		<>
 			<Head>
@@ -19,10 +16,7 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<main>
-				<header>
-					<h1>page - Kętrzyn</h1>
-					<button onClick={() => router.back()}>powrót</button>
-				</header>
+				<header></header>
 			</main>
 		</>
 	);

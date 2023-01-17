@@ -9,6 +9,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 2em 0;
+	margin: 0;
 }
 
 .section_about_left {
@@ -31,6 +33,7 @@
 	border-radius: 4px;
 	height: 100%;
 	width: 100%;
+	box-shadow: 4px 8px 22px rgba(0, 0, 0, 0.2);
 }
 
 .section_about_header {
