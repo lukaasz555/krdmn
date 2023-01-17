@@ -17,7 +17,7 @@ const Events = () => {
 				<title>Przyjęcia | Kardamon Olsztyn</title>
 				<meta
 					name='description'
-					content='Restauracja Kardamon znajduje się w Hotelu Villa Pallas, w centrum Olsztyna. Mamy ponad 10 lat doświadczenia w organizacji imprez.'
+					content='Pyszna elegancja smaków. Położona w centrum restauracja Kardamon jest blisko Ciebie. Olsztyn, Żołnierska 4'
 				/>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
