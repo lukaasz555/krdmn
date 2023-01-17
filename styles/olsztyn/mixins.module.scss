@@ -27,6 +27,7 @@
 @mixin section-content($col) {
 	font-size: 1.2em;
 	color: $col;
+	font-family: 'Montserrat', sans-serif;
 }
 
 @mixin img-shadow {
