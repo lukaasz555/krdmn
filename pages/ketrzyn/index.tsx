@@ -1,9 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
 import Layout from './layout';
 import Header from '../../components/ketrzyn/Header/Header';
+import About from '../../components/ketrzyn/About/About';
 
 export default function Home() {
+	const headerRef = useRef<HTMLElement>(null);
+
 	return (
 		<>
 			<Head>
@@ -18,7 +22,8 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Layout>
-				<Header />
+				<Header headerRef={headerRef} />
+				<About />
 			</Layout>
 		</>
 	);
