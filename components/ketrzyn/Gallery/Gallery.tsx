@@ -67,6 +67,14 @@ const Gallery = () => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [isOpen, setOpen] = useState(false);
 
+	const handleClick = (e: React.MouseEvent<HTMLImageElement>) => {
+		const target = e.target as Element;
+		if (target.id) {
+			setActiveIndex(Number(target.id));
+			setOpen(true);
+		}
+	};
+
 	const nextImg = () =>
 		activeIndex + 1 < data.length && setActiveIndex(activeIndex + 1);
 	const prevImg = () => activeIndex > 0 && setActiveIndex(activeIndex - 1);
@@ -81,8 +89,14 @@ const Gallery = () => {
 				currentIndex={activeIndex}
 				images={data}
 				style={{ background: 'rgba(0, 0, 0, 0.85)' }}
-				renderPrevButton={() => <ArrowLeft onClick={prevImg} />}
-				renderNextButton={() => <ArrowRight onClick={nextImg} />}
+				renderPrevButton={() =>
+					activeIndex !== 0 ? <ArrowLeft onClick={prevImg} /> : null
+				}
+				renderNextButton={() =>
+					activeIndex + 1 !== data.length ? (
+						<ArrowRight onClick={nextImg} />
+					) : null
+				}
 				onClose={handleClose}
 			/>
 			<div>
@@ -96,10 +110,7 @@ const Gallery = () => {
 								width={320}
 								style={{ borderRadius: '4px' }}
 								id={String(i)}
-								onClick={(e: React.MouseEvent) => {
-									setActiveIndex(Number(e.target.id));
-									setOpen(true);
-								}}
+								onClick={handleClick}
 							/>
 						</div>
 					))}
