@@ -4,10 +4,12 @@ import { useEffect, useRef } from 'react';
 import Layout from './layout';
 import Header from '../../components/ketrzyn/Header/Header';
 import About from '../../components/ketrzyn/About/About';
+import Offer from '../../components/ketrzyn/Offer/Offer';
 
 export default function Home() {
 	const headerRef = useRef<HTMLElement>(null);
 	const aboutRef = useRef<HTMLElement>(null);
+	const offerRef = useRef<HTMLElement>(null);
 
 	return (
 		<>
@@ -25,6 +27,7 @@ export default function Home() {
 			<Layout>
 				<Header headerRef={headerRef} />
 				<About aboutRef={aboutRef} />
+				<Offer offerRef={offerRef} />
 			</Layout>
 		</>
 	);

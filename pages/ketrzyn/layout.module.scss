@@ -1,3 +1,5 @@
+@import '../../styles/ketrzyn/colors.module.scss';
+
 .layout_wrapper {
 	display: flex;
 	flex-direction: column;
@@ -5,4 +7,6 @@
 	width: 100%;
 	min-width: 340px;
 	margin: 0 auto;
+	overflow-x: hidden;
+	background-color: $white;
 }

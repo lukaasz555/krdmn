@@ -3,10 +3,11 @@ import styles from './About.module.scss';
 import Image from 'next/image';
 import AboutPic from '../../../public/ketrzyn/about.jpeg';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const About = React.forwardRef(
 	({ aboutRef }: { aboutRef: React.LegacyRef<HTMLElement> }) => {
+		gsap.registerPlugin(ScrollTrigger);
 		useEffect(() => {
 			gsap.fromTo(
 				'#imgGoldBorder',
