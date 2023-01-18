@@ -7,6 +7,7 @@ import About from '../../components/ketrzyn/About/About';
 
 export default function Home() {
 	const headerRef = useRef<HTMLElement>(null);
+	const aboutRef = useRef<HTMLElement>(null);
 
 	return (
 		<>
@@ -23,7 +24,7 @@ export default function Home() {
 			</Head>
 			<Layout>
 				<Header headerRef={headerRef} />
-				<About />
+				<About aboutRef={aboutRef} />
 			</Layout>
 		</>
 	);
