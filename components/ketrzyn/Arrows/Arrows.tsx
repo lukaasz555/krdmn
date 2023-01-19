@@ -9,7 +9,7 @@ export const ArrowLeft = ({ onClick }: ArrowProps) => (
 	<button
 		style={{
 			position: 'absolute',
-			left: '0.25em',
+			left: '0.05em',
 			top: '50%',
 			zIndex: '20',
 			fontSize: '44px',
