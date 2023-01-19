@@ -6,44 +6,7 @@ import Pic1 from '../../../public/ketrzyn/gal1.jpeg';
 import Pic2 from '../../../public/ketrzyn/gal2.jpeg';
 import Pic3 from '../../../public/ketrzyn/gal3.jpeg';
 import Lightbox, { ImagesListType } from 'react-spring-lightbox';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-
-const ArrowLeft = ({ onClick }: any) => (
-	<button
-		style={{
-			position: 'absolute',
-			left: '0.25em',
-			top: '50%',
-			zIndex: '20',
-			fontSize: '44px',
-			color: 'rgba(255, 255,255, 0.6)',
-			border: 'none',
-			background: 'transparent',
-			cursor: 'pointer',
-		}}
-		onClick={onClick}>
-		<FontAwesomeIcon icon={faArrowLeft} />
-	</button>
-);
-
-const ArrowRight = ({ onClick }: any) => (
-	<button
-		style={{
-			position: 'absolute',
-			right: '0.25em',
-			top: '50%',
-			zIndex: '20',
-			fontSize: '44px',
-			color: 'rgba(255, 255,255, 0.6)',
-			border: 'none',
-			background: 'transparent',
-			cursor: 'pointer',
-		}}
-		onClick={onClick}>
-		<FontAwesomeIcon icon={faArrowRight} />
-	</button>
-);
+import { ArrowLeft, ArrowRight } from '../Arrows/Arrows';
 
 const Gallery = () => {
 	const data: ImagesListType = [
@@ -67,7 +30,7 @@ const Gallery = () => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [isOpen, setOpen] = useState(false);
 
-	const handleClick = (e: React.MouseEvent<HTMLImageElement>) => {
+	const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		const target = e.target as Element;
 		if (target.id) {
 			setActiveIndex(Number(target.id));
@@ -102,7 +65,11 @@ const Gallery = () => {
 			<div>
 				<div className={styles.gallery}>
 					{data.map(({ src }, i) => (
-						<div key={src} className={styles.gallery_item} id={String(i)}>
+						<button
+							className={styles.gallery_item}
+							key={src}
+							tabIndex={-1}
+							onClick={handleClick}>
 							<Image
 								src={src}
 								alt=''
@@ -110,9 +77,8 @@ const Gallery = () => {
 								width={320}
 								style={{ borderRadius: '4px' }}
 								id={String(i)}
-								onClick={handleClick}
 							/>
-						</div>
+						</button>
 					))}
 				</div>
 			</div>
