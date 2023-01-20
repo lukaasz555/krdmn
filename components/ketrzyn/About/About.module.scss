@@ -39,12 +39,14 @@
 	position: relative;
 	min-height: 360px;
 	min-width: 340px;
+	z-index: 0;
 }
 
 .body_img img {
 	object-fit: cover;
 	height: 100%;
 	width: 100%;
+	z-index: 0;
 }
 
 .body_img_border {
