@@ -5,11 +5,13 @@ import Layout from './layout';
 import Header from '../../components/ketrzyn/Header/Header';
 import About from '../../components/ketrzyn/About/About';
 import Offer from '../../components/ketrzyn/Offer/Offer';
+import Menu from '../../components/ketrzyn/Menu/Menu';
 
 export default function Home() {
 	const headerRef = useRef<HTMLElement>(null);
 	const aboutRef = useRef<HTMLElement>(null);
 	const offerRef = useRef<HTMLElement>(null);
+	const menuRef = useRef<HTMLElement>(null);
 
 	return (
 		<>
@@ -28,6 +30,7 @@ export default function Home() {
 				<Header headerRef={headerRef} />
 				<About aboutRef={aboutRef} />
 				<Offer offerRef={offerRef} />
+				<Menu menuRef={menuRef} />
 			</Layout>
 		</>
 	);
