@@ -31,7 +31,7 @@ const MenuItem = ({ title, courses }: { title: string; courses: any }) => {
 								<li>
 									<div>
 										<p>{name}</p>
-										<p>{String(price)}zł</p>
+										{price ? <p>{String(price)} zł</p> : null}
 									</div>
 									<div>{desc}</div>
 								</li>
