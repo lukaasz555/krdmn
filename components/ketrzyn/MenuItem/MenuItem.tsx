@@ -26,9 +26,9 @@ const MenuItem = ({ title, courses }: { title: string; courses: any }) => {
 				<ul>
 					{courses
 						.sort((a: ICourse, b: ICourse) => Number(a.price) - Number(b.price))
-						.map(({ name, price, desc }: Omit<ICourse, 'id' | 'category'>) => (
+						.map(({ name, price, desc, id }: Omit<ICourse, 'category'>) => (
 							<>
-								<li>
+								<li key={id}>
 									<div>
 										<p>{name}</p>
 										{price ? <p>{String(price)} zł</p> : null}

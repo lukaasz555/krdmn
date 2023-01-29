@@ -14,8 +14,12 @@ export const handleCatName = (item: string) => {
 			return 'Desery';
 		case '7':
 			return 'Pizza';
+		case '8':
+			return 'Herbaty';
+		case '9':
+			return 'Kawy';
 		case '10':
-			return 'Napoje gorące';
+			return 'Czekolady';
 		case '11':
 			return 'Napoje zimne';
 		case '12':
