@@ -6,12 +6,35 @@ import Header from '../../components/ketrzyn/Header/Header';
 import About from '../../components/ketrzyn/About/About';
 import Offer from '../../components/ketrzyn/Offer/Offer';
 import Menu from '../../components/ketrzyn/Menu/Menu';
+import { request } from '../api/dato_ketrzyn';
+import { ICourse } from '../../models/Courses';
 
-export default function Home() {
+export const getStaticProps = async () => {
+	const data: any = await request({
+		query: `
+		{
+			allCourses(first:99) {
+			  id
+			  name
+			  desc
+			  price
+			  category
+			}
+		  }
+		`,
+	});
+
+	return {
+		props: { data },
+	};
+};
+
+export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 	const headerRef = useRef<HTMLElement>(null);
 	const aboutRef = useRef<HTMLElement>(null);
 	const offerRef = useRef<HTMLElement>(null);
 	const menuRef = useRef<HTMLElement>(null);
+	const { allCourses } = data;
 
 	return (
 		<>
@@ -30,7 +53,7 @@ export default function Home() {
 				<Header headerRef={headerRef} />
 				<About aboutRef={aboutRef} />
 				<Offer offerRef={offerRef} />
-				<Menu menuRef={menuRef} />
+				<Menu menuRef={menuRef} courses={allCourses} />
 			</Layout>
 		</>
 	);
