@@ -9,7 +9,7 @@ import { ICourse, CourseDataProps } from '../../../models/Courses';
 import Course from '../../../components/olsztyn/Course/Course';
 import { slideFromBottom } from '../../../helpers/animations';
 
-export const getStaticProps = async () => {
+/* export const getStaticProps = async () => {
 	const data: ICourse[] = await request({
 		query: `query Home {
 			allCourses(first: 99) {
@@ -25,7 +25,25 @@ export const getStaticProps = async () => {
 	return {
 		props: { data },
 	};
-};
+}; */
+
+export async function getServerSideProps() {
+	const data: ICourse[] = await request({
+		query: `query Home {
+			allCourses(first: 99) {
+			  id
+			  name
+			  price
+			  desc
+			  category
+			}
+		  }`,
+	});
+
+	return {
+		props: { data },
+	};
+}
 
 export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 	const { allCourses } = data;

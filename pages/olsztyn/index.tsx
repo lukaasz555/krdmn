@@ -7,6 +7,19 @@ import Events from '../../components/olsztyn/Events/Events';
 import Reviews from '../../components/olsztyn/Reviews/Reviews';
 import ScrollToTop from '../../components/olsztyn/ScrollToTop/ScrollToTop';
 
+export async function getServerSideProps() {
+	const getFeed = await fetch(
+		`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.NEXT_ENV_IG_TOKEN}`
+	);
+	const feed = await getFeed.json();
+
+	return {
+		props: {
+			feed,
+		},
+	};
+}
+
 export default function Home({ feed }: any) {
 	return (
 		<>
@@ -42,7 +55,7 @@ export default function Home({ feed }: any) {
 	);
 }
 
-export const getStaticProps = async () => {
+/* export const getStaticProps = async () => {
 	const getFeed = await fetch(
 		`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.NEXT_ENV_IG_TOKEN}`
 	);
@@ -54,3 +67,4 @@ export const getStaticProps = async () => {
 		},
 	};
 };
+ */

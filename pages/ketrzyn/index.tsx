@@ -9,7 +9,7 @@ import Menu from '../../components/ketrzyn/Menu/Menu';
 import { request } from '../api/dato_ketrzyn';
 import { ICourse } from '../../models/Courses';
 
-export const getStaticProps = async () => {
+export async function getServerSideProps() {
 	const data: any = await request({
 		query: `
 		{
@@ -27,7 +27,7 @@ export const getStaticProps = async () => {
 	return {
 		props: { data },
 	};
-};
+}
 
 export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 	const headerRef = useRef<HTMLElement>(null);
