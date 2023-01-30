@@ -1,12 +1,13 @@
 @import '../../../styles/ketrzyn/colors.module.scss';
 
+/*add rwd*/
 .menuItem_wrapper {
 	width: 320px;
 }
 
 .category_name_btn_active {
 	transform: rotate(45deg);
-	animation: rotateButton 0.15s 1 alternate;
+	animation: rotateButton 0.2s 1 alternate;
 }
 
 ul.list {
@@ -36,9 +37,9 @@ ul.list {
 	color: $navy;
 	font-size: 1.8em;
 	font-size: 1.7em;
-	font-weight: 500;
 	margin-bottom: 1em;
-	font-weight: 600;
+	font-weight: 500;
+	font-size: 24px;
 }
 
 .item {

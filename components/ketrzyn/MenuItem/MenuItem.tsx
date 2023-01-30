@@ -30,7 +30,7 @@ const MenuItem = ({ title, items }: MenuItemProps) => {
 								<li key={id} className={styles.item}>
 									<div className={styles.item_title}>
 										<p className={styles.item_title_name}>{name}</p>
-										{price ? <p>{String(price)} zł</p> : null}
+										{price !== 999 ? <p>{String(price)} zł</p> : null}
 									</div>
 									<div>
 										<p className={styles.item_desc}>{desc}</p>
