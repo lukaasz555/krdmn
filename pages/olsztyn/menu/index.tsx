@@ -72,30 +72,46 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 			</Head>
 			<Layout>
 				<div id='menu'>
-					<div className={styles.category_wrapper}>
-						{categories().map((item: string) => (
-							<button
-								key={item}
-								id={item}
-								onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
-									handleClick(e)
-								}>
-								{handleCatName(item)}
-							</button>
-						))}
-					</div>
-					<section className={styles.menu_wrapper}>
-						<h2>{handleCatName(activeCategory)}</h2>
-						<div>
-							{filtered.length > 0
-								? filtered.map(
-										({ id, name, price, desc }: Omit<ICourse, 'category'>) => (
-											<Course key={id} name={name} price={price} desc={desc} />
-										)
-								  )
-								: null}
-						</div>
-					</section>
+					{allCourses ? (
+						<>
+							<div className={styles.category_wrapper}>
+								{categories().map((item: string) => (
+									<button
+										key={item}
+										id={item}
+										onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
+											handleClick(e)
+										}>
+										{handleCatName(item)}
+									</button>
+								))}
+							</div>
+							<section className={styles.menu_wrapper}>
+								<h2>{handleCatName(activeCategory)}</h2>
+								<div>
+									{filtered.length > 0
+										? filtered.map(
+												({
+													id,
+													name,
+													price,
+													desc,
+												}: Omit<ICourse, 'category'>) => (
+													<Course
+														key={id}
+														name={name}
+														price={price}
+														desc={desc}
+													/>
+												)
+										  )
+										: null}
+								</div>
+							</section>
+						</>
+					) : (
+						<p>Nie udało się wczytać zawartości</p>
+					)}
 				</div>
 			</Layout>
 		</>
