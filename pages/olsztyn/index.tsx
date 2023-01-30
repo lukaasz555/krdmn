@@ -33,7 +33,7 @@ export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
 						}}>
 						<About />
 						<Events />
-						<News feed={feed} />
+						<News feed={feed.data} />
 						<Reviews />
 					</div>
 				</Layout>
