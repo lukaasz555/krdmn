@@ -9,6 +9,7 @@ import ScrollToTop from '../../components/olsztyn/ScrollToTop/ScrollToTop';
 import { FeedProps } from '../../helpers/interfaces';
 
 export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
+	const { data } = feed;
 	return (
 		<>
 			<Head>
@@ -33,7 +34,7 @@ export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
 						}}>
 						<About />
 						<Events />
-						<News feed={feed.data} />
+						<News feed={data} />
 						<Reviews />
 					</div>
 				</Layout>
@@ -50,7 +51,7 @@ export const getStaticProps = async () => {
 
 	return {
 		props: {
-			feed: feed.data,
+			feed,
 		},
 	};
 };
