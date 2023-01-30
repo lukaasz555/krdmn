@@ -12,7 +12,7 @@ interface MenuProps {
 	menuRef: React.LegacyRef<HTMLElement>;
 }
 
-const Menu = ({ courses, drinks, menuRef }: MenuProps) => {
+const Menu = React.forwardRef(({ courses, drinks, menuRef }: MenuProps) => {
 	const coursesCategories = Array.from(
 		new Set(courses.map((c) => c.category))
 	).sort((a, b) => Number(a) - Number(b));
@@ -26,7 +26,7 @@ const Menu = ({ courses, drinks, menuRef }: MenuProps) => {
 	};
 
 	return (
-		<section ref={menuRef}>
+		<section ref={menuRef} id='menu'>
 			<h2 className={styles.menu_header}>menu</h2>
 
 			{coursesCategories.map((item) => (
@@ -38,6 +38,5 @@ const Menu = ({ courses, drinks, menuRef }: MenuProps) => {
 			))}
 		</section>
 	);
-};
-
+});
 export default Menu;
