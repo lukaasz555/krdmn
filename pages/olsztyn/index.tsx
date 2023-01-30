@@ -44,7 +44,7 @@ export default function Home({ feed }: any) {
 
 export const getStaticProps = async () => {
 	const getFeed = await fetch(
-		`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.REACT_APP_IG_TOKEN}`
+		`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.NEXT_ENV_IG_TOKEN}`
 	);
 	const feed = await getFeed.json();
 
