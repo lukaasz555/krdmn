@@ -9,7 +9,6 @@ import ScrollToTop from '../../components/olsztyn/ScrollToTop/ScrollToTop';
 import { FeedProps } from '../../helpers/interfaces';
 
 export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
-	const { data } = feed;
 	return (
 		<>
 			<Head>
@@ -34,7 +33,7 @@ export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
 						}}>
 						<About />
 						<Events />
-						<News feed={data} />
+						<News feed={feed.data} />
 						<Reviews />
 					</div>
 				</Layout>
@@ -43,7 +42,8 @@ export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
 		</>
 	);
 }
-export const getStaticProps = async () => {
+
+export async function getServerSideProps() {
 	const getFeed = await fetch(
 		`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.NEXT_ENV_IG_TOKEN}`
 	);
@@ -54,20 +54,7 @@ export const getStaticProps = async () => {
 			feed,
 		},
 	};
-};
-
-/* export async function getServerSideProps() {
-	const getFeed = await fetch(
-		`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.NEXT_ENV_IG_TOKEN}`
-	);
-	const feed = await getFeed.json();
-
-	return {
-		props: {
-			feed,
-		},
-	};
-} */
+}
 
 /* export const getStaticProps = async () => {
 	const getFeed = await fetch(

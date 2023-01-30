@@ -60,10 +60,6 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 		slideFromBottom('#menu');
 	}, []);
 
-	if (!allCourses) {
-		return <h1>nie ma</h1>;
-	}
-
 	return (
 		<>
 			<Head>
@@ -139,10 +135,4 @@ export async function getServerSideProps() {
 	return {
 		props: { data },
 	};
-
-	if (!data) {
-		return {
-			notFound: true,
-		};
-	}
 }
