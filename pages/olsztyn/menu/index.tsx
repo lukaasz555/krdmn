@@ -119,7 +119,7 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 }
 
 export async function getServerSideProps() {
-	const data = await request({
+	const res = await request({
 		query: `query Home {
 			allCourses(first: 99) {
 			  id
@@ -131,7 +131,15 @@ export async function getServerSideProps() {
 		  }`,
 	});
 
+	const data = res.json();
+
 	return {
 		props: { data },
 	};
+
+	if (!data) {
+		return {
+			notFound: true,
+		};
+	}
 }
