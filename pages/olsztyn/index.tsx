@@ -55,17 +55,3 @@ export async function getServerSideProps() {
 		},
 	};
 }
-
-/* export const getStaticProps = async () => {
-	const getFeed = await fetch(
-		`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.NEXT_ENV_IG_TOKEN}`
-	);
-	const feed = await getFeed.json();
-
-	return {
-		props: {
-			feed,
-		},
-	};
-};
- */

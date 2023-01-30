@@ -10,7 +10,7 @@ import { request } from '../api/dato_ketrzyn';
 import { ICourse } from '../../models/Courses';
 
 export async function getServerSideProps() {
-	const data: any = await request({
+	const courses = await request({
 		query: `
 		{
 			allCourses(first:99) {
@@ -24,17 +24,39 @@ export async function getServerSideProps() {
 		`,
 	});
 
+	const drinks = await request({
+		query: `
+		{
+			allDrinks(first:99) {
+			  id
+			  name
+			  desc
+			  price
+			  category
+			}
+		  }
+		`,
+	});
+
 	return {
-		props: { data },
+		props: { courses, drinks },
 	};
 }
 
-export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
+export default function Home({
+	courses,
+	drinks,
+}: {
+	courses: { allCourses: ICourse[] };
+	drinks: { allDrinks: ICourse[] };
+}) {
 	const headerRef = useRef<HTMLElement>(null);
 	const aboutRef = useRef<HTMLElement>(null);
 	const offerRef = useRef<HTMLElement>(null);
 	const menuRef = useRef<HTMLElement>(null);
-	const { allCourses } = data;
+
+	const { allCourses } = courses;
+	const { allDrinks } = drinks;
 
 	return (
 		<>
@@ -53,7 +75,7 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 				<Header headerRef={headerRef} />
 				<About aboutRef={aboutRef} />
 				<Offer offerRef={offerRef} />
-				<Menu menuRef={menuRef} courses={allCourses} />
+				<Menu menuRef={menuRef} courses={allCourses} drinks={allDrinks} />
 			</Layout>
 		</>
 	);

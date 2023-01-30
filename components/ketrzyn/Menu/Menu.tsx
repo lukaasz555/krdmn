@@ -6,28 +6,35 @@ import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { ICourse } from '../../../models/Courses';
 import MenuItem from '../MenuItem/MenuItem';
 
-const Menu = ({
-	courses,
-	menuRef,
-}: {
+interface MenuProps {
 	courses: ICourse[];
+	drinks: ICourse[];
 	menuRef: React.LegacyRef<HTMLElement>;
-}) => {
-	const cats = Array.from(new Set(courses.map((c) => c.category))).sort(
-		(a, b) => Number(a) - Number(b)
-	);
+}
+
+const Menu = ({ courses, drinks, menuRef }: MenuProps) => {
+	const coursesCategories = Array.from(
+		new Set(courses.map((c) => c.category))
+	).sort((a, b) => Number(a) - Number(b));
+
+	const drinksCategories = Array.from(
+		new Set(drinks.map((d) => d.category))
+	).sort((a, b) => Number(a) - Number(b));
 
 	const filtered = (arr: ICourse[], item: string) => {
 		return arr.filter(({ category }) => category === item);
 	};
 
-	console.log(courses.length);
 	return (
 		<section ref={menuRef}>
 			<h2 className={styles.menu_header}>menu</h2>
 
-			{cats.map((item) => (
-				<MenuItem title={item} courses={filtered(courses, item)} />
+			{coursesCategories.map((item) => (
+				<MenuItem title={item} items={filtered(courses, item)} />
+			))}
+
+			{drinksCategories.map((item) => (
+				<MenuItem title={item} items={filtered(drinks, item)} />
 			))}
 		</section>
 	);

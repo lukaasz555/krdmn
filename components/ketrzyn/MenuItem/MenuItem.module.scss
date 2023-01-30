@@ -1,0 +1,111 @@
+@import '../../../styles/ketrzyn/colors.module.scss';
+
+.menuItem_wrapper {
+	width: 320px;
+}
+
+.category_name_btn_active {
+	transform: rotate(45deg);
+	animation: rotateButton 0.15s 1 alternate;
+}
+
+ul.list {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	animation: showItems 0.75s 1 alternate;
+	width: 90%;
+}
+
+.category {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: none;
+	border: none;
+	width: 100%;
+	cursor: pointer;
+	padding: 0;
+	min-width: 340px;
+	max-width: 800px;
+	width: 100%;
+}
+
+.category_name {
+	color: $navy;
+	font-size: 1.8em;
+	font-size: 1.7em;
+	font-weight: 500;
+	margin-bottom: 1em;
+	font-weight: 600;
+}
+
+.item {
+	list-style: none;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	//background-color: #fab;
+	margin-bottom: 1em;
+}
+
+.item_title {
+	font-size: 16px;
+	color: $navy;
+	font-family: 'Montserrat';
+	font-weight: 600;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 0.2em;
+}
+
+.item_title p {
+	margin: 0;
+}
+
+.item_title_name {
+	flex-basis: 75%;
+}
+
+.item_desc {
+	font-size: 16px;
+	color: $navy;
+	opacity: 0.7;
+	font-weight: 500;
+	margin: 0;
+}
+@keyframes rotateButton {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes showItems {
+	from {
+		transform: scaleY(0) translateY(-100%);
+		transform-origin: top;
+		opacity: 0;
+		z-index: -10;
+	}
+
+	to {
+		transform: scaleY(1) translateY(0);
+		z-index: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes animateOpacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

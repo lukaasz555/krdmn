@@ -6,29 +6,6 @@
 	text-align: center;
 }
 
-.category {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background: none;
-	border: none;
-	width: 100%;
-	cursor: pointer;
-	padding: 0;
-	min-width: 340px;
-	max-width: 800px;
-	width: 100%;
-}
-
-.category_name {
-	color: $navy;
-	font-size: 1.8em;
-	font-size: 1.7em;
-	font-weight: 500;
-	margin-bottom: 1em;
-	font-weight: 600;
-}
-
 .course {
 	display: flex;
 	flex-direction: column;
