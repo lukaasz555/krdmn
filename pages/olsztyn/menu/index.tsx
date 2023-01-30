@@ -8,6 +8,7 @@ import { handleCatName } from '../../../helpers/handleCatName';
 import { ICourse, CourseDataProps } from '../../../models/Courses';
 import Course from '../../../components/olsztyn/Course/Course';
 import { slideFromBottom } from '../../../helpers/animations';
+import { GetServerSideProps } from 'next';
 
 /* export const getStaticProps = async () => {
 	const data: ICourse[] = await request({
@@ -123,7 +124,7 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 }
 
 export async function getServerSideProps() {
-	const res = await request({
+	const data = await request({
 		query: `query Home {
 			allCourses(first: 99) {
 			  id
@@ -134,8 +135,6 @@ export async function getServerSideProps() {
 			}
 		  }`,
 	});
-
-	const data = res.json();
 
 	return {
 		props: { data },

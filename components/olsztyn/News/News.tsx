@@ -15,7 +15,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { FeedProps } from '../../../helpers/interfaces';
 
-const News = ({ posts }: { posts: FeedProps[] }) => {
+const News = ({ feed }: { feed: FeedProps[] }) => {
 	const { width } = useWindowSize();
 	const [centerSlides, setCenterSlides] = useState(true);
 
@@ -52,12 +52,12 @@ const News = ({ posts }: { posts: FeedProps[] }) => {
 				<h3>Aktualności</h3>
 			</header>
 			<div className={styles.news_container}>
-				{posts ? (
+				{feed ? (
 					<Swiper
 						className='mySwiper'
 						centeredSlides={centerSlides}
 						slidesPerView={4.2}>
-						{posts.map((item: any) => (
+						{feed.map((item: any) => (
 							<SwiperSlide key={item.id} className={styles.news_item}>
 								<Link href={item.permalink} className={styles.news_item_link}>
 									<Image
