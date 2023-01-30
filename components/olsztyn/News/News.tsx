@@ -13,14 +13,9 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { FeedProps } from '../../../helpers/interfaces';
 
-interface IFeed {
-	id: string;
-	media_url: string;
-	permalink: string;
-}
-
-const News = ({ feed }: any) => {
+const News = ({ posts }: { posts: FeedProps[] }) => {
 	const { width } = useWindowSize();
 	const [centerSlides, setCenterSlides] = useState(true);
 
@@ -57,12 +52,12 @@ const News = ({ feed }: any) => {
 				<h3>Aktualności</h3>
 			</header>
 			<div className={styles.news_container}>
-				{feed.data ? (
+				{posts ? (
 					<Swiper
 						className='mySwiper'
 						centeredSlides={centerSlides}
 						slidesPerView={4.2}>
-						{feed.data.map((item: IFeed) => (
+						{posts.map((item: any) => (
 							<SwiperSlide key={item.id} className={styles.news_item}>
 								<Link href={item.permalink} className={styles.news_item_link}>
 									<Image

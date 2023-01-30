@@ -27,24 +27,6 @@ import { slideFromBottom } from '../../../helpers/animations';
 	};
 }; */
 
-export async function getServerSideProps() {
-	const data: ICourse[] = await request({
-		query: `query Home {
-			allCourses(first: 99) {
-			  id
-			  name
-			  price
-			  desc
-			  category
-			}
-		  }`,
-	});
-
-	return {
-		props: { data },
-	};
-}
-
 export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 	const { allCourses } = data;
 	const [filtered, setFiltered] = useState<ICourse[] | []>(allCourses);
@@ -65,17 +47,17 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 		}
 	};
 
-	useEffect(() => {
-		handleFilter('1');
-		slideFromBottom('#menu');
-	}, []);
-
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		const target = e.target as Element;
 		if (e.target !== null) {
 			handleFilter(target.id);
 		}
 	};
+
+	useEffect(() => {
+		handleFilter('1');
+		slideFromBottom('#menu');
+	}, []);
 
 	return (
 		<>
@@ -118,4 +100,22 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 			</Layout>
 		</>
 	);
+}
+
+export async function getServerSideProps() {
+	const data = await request({
+		query: `query Home {
+			allCourses(first: 99) {
+			  id
+			  name
+			  price
+			  desc
+			  category
+			}
+		  }`,
+	});
+
+	return {
+		props: { data },
+	};
 }
