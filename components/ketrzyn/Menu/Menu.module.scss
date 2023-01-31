@@ -1,33 +1,15 @@
 @import '../../../styles/ketrzyn/colors.module.scss';
 @import '../../../styles/ketrzyn/mixins.module.scss';
 
+.menu_wrapper {
+	@include section-styles;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
 .menu_header {
 	@include section-header($gray);
 	text-align: center;
-}
-
-.course {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 1.5em;
-	font-size: 1.1em;
-}
-
-.course_top {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 0.1em;
-	color: $navy;
-}
-
-.course_top_info {
-	font-weight: 500;
-	margin: 0;
-}
-
-.course_bottom_desc {
-	color: $gray;
-	font-weight: 500;
-	margin: 0;
-	width: 90%;
 }

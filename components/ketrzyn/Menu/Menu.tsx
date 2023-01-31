@@ -26,7 +26,7 @@ const Menu = React.forwardRef(({ courses, drinks, menuRef }: MenuProps) => {
 	};
 
 	return (
-		<section ref={menuRef} id='menu'>
+		<section ref={menuRef} id='menu' className={styles.menu_wrapper}>
 			<h2 className={styles.menu_header}>menu</h2>
 
 			{coursesCategories.map((item) => (

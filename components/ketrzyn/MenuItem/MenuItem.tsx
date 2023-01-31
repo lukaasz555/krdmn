@@ -29,25 +29,23 @@ const MenuItem = ({ title, items }: MenuItemProps) => {
 					<FontAwesomeIcon icon={faPlus} color='#d5a021' size={'2xl'} />
 				</button>
 			</div>
-			{isOpen ? (
-				<ul className={styles.list}>
-					{items
-						.sort((a: ICourse, b: ICourse) => Number(a.price) - Number(b.price))
-						.map(({ name, price, desc, id }: Omit<ICourse, 'category'>) => (
-							<>
-								<li key={id} className={styles.item}>
-									<div className={styles.item_title}>
-										<p className={styles.item_title_name}>{name}</p>
-										{price !== 999 ? <p>{String(price)} zł</p> : null}
-									</div>
-									<div>
-										<p className={styles.item_desc}>{desc}</p>
-									</div>
-								</li>
-							</>
-						))}
-				</ul>
-			) : null}
+			<div className={isOpen ? styles.list_active : styles.list}>
+				{items
+					.sort((a: ICourse, b: ICourse) => Number(a.price) - Number(b.price))
+					.map(({ name, price, desc, id }: Omit<ICourse, 'category'>) => (
+						<>
+							<div key={id} className={styles.item}>
+								<div className={styles.item_title}>
+									<p className={styles.item_title_name}>{name}</p>
+									{price !== 999 ? <p>{String(price)} zł</p> : null}
+								</div>
+								<div>
+									<p className={styles.item_desc}>{desc}</p>
+								</div>
+							</div>
+						</>
+					))}
+			</div>
 		</div>
 	);
 };

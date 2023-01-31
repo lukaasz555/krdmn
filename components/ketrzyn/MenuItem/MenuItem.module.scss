@@ -1,6 +1,5 @@
 @import '../../../styles/ketrzyn/colors.module.scss';
 
-/*add rwd*/
 .menuItem_wrapper {
 	display: flex;
 	flex-direction: column;
@@ -9,18 +8,26 @@
 }
 
 .category_name_btn {
-	animation: rotateBack 0.2s 1 alternate;
+	transform: rotate(0);
+	transition: transform 0.2s;
 }
 
 .category_name_btn_active {
 	transform: rotate(45deg);
-	animation: rotateButton 0.2s 1 alternate;
+	transition: transform 0.2s;
 }
-
-ul.list {
-	//animation: showItems 0.75s 1 alternate;
+.list,
+.list_active {
 	width: 100%;
 	margin: 0 0 1em;
+}
+
+.list {
+	display: none;
+}
+
+.list_active {
+	display: block;
 }
 
 .category {
@@ -31,7 +38,6 @@ ul.list {
 	border: none;
 	width: 100%;
 	padding: 0;
-	width: 100%;
 }
 
 .category button {
@@ -49,9 +55,9 @@ ul.list {
 }
 
 .item {
-	margin: 0 auto 1em;
+	margin: 0 auto 2em;
 	list-style: none;
-	width: 100%;
+	width: 95%;
 	display: flex;
 	flex-direction: column;
 }
@@ -82,6 +88,7 @@ ul.list {
 	opacity: 0.7;
 	margin: 0;
 	font-weight: 600;
+	width: 80%;
 }
 
 @media (min-width: 568px) {
@@ -99,40 +106,5 @@ ul.list {
 @media (min-width: 996) {
 	.menuItem_wrapper {
 		width: 750px;
-	}
-}
-
-@keyframes rotateButton {
-	from {
-		transform: rotate(0);
-	}
-
-	to {
-		transform: rotate(45deg);
-	}
-}
-
-@keyframes rotateBack {
-	from {
-		transform: rotate(45deg);
-	}
-
-	to {
-		transform: rotate(0);
-	}
-}
-
-@keyframes showItems {
-	from {
-		transform: scaleY(0) translateY(-100%);
-		transform-origin: top;
-		opacity: 0;
-		z-index: -10;
-	}
-
-	to {
-		transform: scaleY(1) translateY(0);
-		z-index: 0;
-		opacity: 1;
 	}
 }
