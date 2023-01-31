@@ -6,6 +6,7 @@ import Header from '../../components/ketrzyn/Header/Header';
 import About from '../../components/ketrzyn/About/About';
 import Offer from '../../components/ketrzyn/Offer/Offer';
 import Menu from '../../components/ketrzyn/Menu/Menu';
+import Footer from '../../components/ketrzyn/Footer/Footer';
 import { request } from '../api/dato_ketrzyn';
 import { ICourse } from '../../models/Courses';
 
@@ -54,6 +55,7 @@ export default function Home({
 	const aboutRef = useRef<HTMLElement>(null);
 	const offerRef = useRef<HTMLElement>(null);
 	const menuRef = useRef<HTMLElement>(null);
+	const footerRef = useRef<HTMLElement>(null);
 
 	const { allCourses } = courses;
 	const { allDrinks } = drinks;
@@ -76,6 +78,7 @@ export default function Home({
 				<About aboutRef={aboutRef} />
 				<Offer offerRef={offerRef} />
 				<Menu menuRef={menuRef} courses={allCourses} drinks={allDrinks} />
+				<Footer footerRef={footerRef} />
 			</Layout>
 		</>
 	);
