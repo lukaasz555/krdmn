@@ -74,7 +74,7 @@ const Header = React.forwardRef(
 							<Link
 								href={`/ketrzyn/#contact`}
 								onClick={() => setNavOpen(false)}>
-								kontakt2
+								kontakt
 							</Link>
 						</nav>
 						<nav className={styles.nav_desktop}>
