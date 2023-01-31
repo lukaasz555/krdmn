@@ -15,12 +15,20 @@ const MenuItem = ({ title, items }: MenuItemProps) => {
 
 	return (
 		<div className={styles.menuItem_wrapper}>
-			<button className={styles.category} onClick={() => setOpen(!isOpen)}>
-				<p className={styles.category_name}>{handleCatName(title)}</p>
-				<span className={isOpen ? styles.category_name_btn_active : `null`}>
+			<div className={styles.category}>
+				<button
+					className={styles.category_name}
+					onClick={() => setOpen(!isOpen)}>
+					{handleCatName(title)}
+				</button>
+				<button
+					className={
+						isOpen ? styles.category_name_btn_active : styles.category_name_btn
+					}
+					onClick={() => setOpen(!isOpen)}>
 					<FontAwesomeIcon icon={faPlus} color='#d5a021' size={'2xl'} />
-				</span>
-			</button>
+				</button>
+			</div>
 			{isOpen ? (
 				<ul className={styles.list}>
 					{items
