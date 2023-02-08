@@ -13,9 +13,9 @@ const Footer = React.forwardRef(
 								<p>Plac marszałka Józefa Piłsudskiego 1</p>
 								<p>11-400 Kętrzyn</p>
 							</div>
-
 							<div className={styles.contact_details_content}>
 								<p>+48 89 751 10 22</p>
+								<p style={{ marginBottom: '0.5em' }}>+48 510 518 518</p>
 								<a href='mailto:kardamonketrzyn@gmail.com'>
 									kardamonketrzyn@gmail.com
 								</a>

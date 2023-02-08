@@ -71,7 +71,7 @@ export default function Home({
 					content='Restauracja Kardamon w centrum Kętrzyna. Dania na wynos, imprezy okolicznościowe, catering.'
 				/>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<link rel='icon' href='/favicon.ico' />
+				<link rel='icon' href='/ketrzyn/fav.png' />
 			</Head>
 			<Layout>
 				<Header headerRef={headerRef} />
