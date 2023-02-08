@@ -1,5 +1,5 @@
 @import '../../../styles/ketrzyn/colors.module.scss';
-
+@import '../../../styles/colors.module.scss';
 .header_wrapper {
 	height: 100%;
 	width: 100%;
@@ -81,7 +81,6 @@
 	}
 
 	.header_logo {
-		//transform: scale(1);
 		opacity: 1;
 	}
 }
@@ -98,10 +97,7 @@
 	position: relative;
 	height: 65px;
 	width: 65px;
-
 	padding: 0.5em;
-	//transform: scale(0);
-	//transition: transform 0.25s;
 	opacity: 0;
 	transition: opacity 0.2s;
 }

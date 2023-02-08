@@ -1,7 +1,7 @@
 import styles from './Card.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from '../../../public/olsztyn/ko_black.png';
+import Logo from '../../../public/olsztyn/fav.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faA, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 

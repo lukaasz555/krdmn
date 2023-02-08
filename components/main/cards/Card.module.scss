@@ -1,8 +1,9 @@
 @import '../../../styles/olsztyn/colors.module.scss';
 @import '../../../styles/ketrzyn/colors.module.scss';
+@import '../../../styles/colors.module.scss';
 
 .card__wrapper {
-	background-color: #fff;
+	background-color: rgba(255, 245, 235, 0.4);
 	border-radius: 8px;
 	padding: 2em;
 	transition: transform 0.2s;
@@ -38,6 +39,8 @@
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+	//style={{ color: '#6C5A55' }}
+	color: #6c5a55;
 }
 
 .card__top {
@@ -53,16 +56,18 @@
 .card__header {
 	font-family: 'Alatsi', sans-serif;
 	text-transform: uppercase;
-	color: $black;
 
 	letter-spacing: 0.1em;
 	font-size: 1.75em;
 	text-align: center;
+	text-align: left;
 	z-index: 10;
 	width: 100%;
 
 	border-top: 1px solid $borderBlack;
 	padding-top: 0.5em;
+
+	color: $brown;
 }
 
 .card__data {
@@ -84,7 +89,7 @@
 
 .card__link {
 	text-decoration: none;
-	color: $black;
+	color: $brown;
 	margin: 0;
 	padding: 0;
 	&:hover {
@@ -101,10 +106,10 @@
 }
 
 .card__bottom a {
-	color: $black;
+	color: $brown;
 	text-transform: uppercase;
 	font-size: 1.5em;
-	font-weight: 200;
+	font-weight: 300;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -119,5 +124,5 @@
 	margin-left: 0.2em;
 	transition: transform 0.2s;
 	transform: rotate(180deg);
-	fill: $black;
+	fill: $brown;
 }
