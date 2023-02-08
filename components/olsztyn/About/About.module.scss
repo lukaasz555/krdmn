@@ -55,10 +55,12 @@
 	@include section-content($black);
 	margin-bottom: 2em;
 	padding: 0 3em;
+	margin: 0.5em 0;
 }
 
 .section_about_link {
 	@include section-link($white, $black);
+	margin-top: 2em;
 }
 
 @media (min-width: 768px) {
@@ -83,14 +85,6 @@
 		min-height: 400px;
 		margin-left: 2em;
 	}
-
-	/* 	.section_about_header {
-		margin-top: 0;
-	} */
-	/* 
-	.section_about_kardamon_header {
-		margin: 0;
-	} */
 
 	.section_about_desc {
 		padding: 0;
