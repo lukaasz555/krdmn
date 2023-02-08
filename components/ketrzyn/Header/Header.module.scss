@@ -74,7 +74,7 @@
 	right: 0;
 	background-color: #fff;
 	transition: background-color 0.2s;
-	padding: 0 1em;
+	padding: 0.25em 1em;
 	box-shadow: 4px 2px 22px rgba(0, 0, 0, 0.2);
 	.nav_desktop a {
 		color: $navy;
@@ -96,8 +96,9 @@
 
 .header_logo {
 	position: relative;
-	height: 70px;
-	width: 70px;
+	height: 65px;
+	width: 65px;
+
 	padding: 0.5em;
 	//transform: scale(0);
 	//transition: transform 0.25s;
