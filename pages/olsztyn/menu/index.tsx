@@ -10,24 +10,6 @@ import Course from '../../../components/olsztyn/Course/Course';
 import { slideFromBottom } from '../../../helpers/animations';
 import { GetServerSideProps } from 'next';
 
-/* export const getStaticProps = async () => {
-	const data: ICourse[] = await request({
-		query: `query Home {
-			allCourses(first: 99) {
-			  id
-			  name
-			  price
-			  desc
-			  category
-			}
-		  }`,
-	});
-
-	return {
-		props: { data },
-	};
-}; */
-
 export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 	const { allCourses } = data;
 	const [filtered, setFiltered] = useState<ICourse[] | []>(allCourses);
@@ -63,13 +45,13 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 	return (
 		<>
 			<Head>
-				<title>Menu | Kardamon Olsztyn</title>
+				<title>Menu | Kardamon - Olsztyn, Żołnierska 4</title>
 				<meta
 					name='description'
 					content='Pyszna elegancja smaków. Położona w centrum restauracja Kardamon jest blisko Ciebie. Olsztyn, Żołnierska 4'
 				/>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<link rel='icon' href='/favicon.ico' />
+				<link rel='icon' href='/olsztyn/fav.png' />
 			</Head>
 			<Layout>
 				<div id='menu'>
