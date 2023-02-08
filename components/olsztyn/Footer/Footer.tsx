@@ -35,12 +35,12 @@ const Footer = () => {
 					</div>
 
 					<div className={styles.footer_block}>
-						<h3>Krótki opis?</h3>
+						<h3>Spotkajmy się w Kardamonie!</h3>
 						<section className={styles.footer_content_details}>
 							<p className={styles.footer_content_details_desc}>
-								Miejsce na max dwa zdania. Często są tutaj informacje, np.
-								kiedy/w jaki sposób dokonywać rezerwacji albo np. info o
-								parkingu czy coś w tym stylu.
+								Zapraszamy do rezerwacji stolików oraz imprez okolicznościowych
+								pod wskazanym numerem telefonu. Czeka na Was bezpłatny parking,
+								piękny ogród i fantastyczne menu!
 							</p>
 						</section>
 					</div>
@@ -50,38 +50,38 @@ const Footer = () => {
 						<section>
 							<div className={styles.footer_content_hours}>
 								<p>
-									poniedziałek: <span>12:00-22:00</span>
+									poniedziałek: <span>13:00-21:00</span>
 								</p>
 							</div>
 							<div className={styles.footer_content_hours}>
 								<p>
-									wtorek: <span>12:00-22:00</span>
+									wtorek: <span>13:00-21:00</span>
 								</p>
 							</div>
 							<div className={styles.footer_content_hours}>
 								<p>
-									środa: <span>12:00-22:00</span>
+									środa: <span>13:00-21:00</span>
 								</p>
 							</div>
 							<div className={styles.footer_content_hours}>
 								<p>
-									czwartek: <span>12:00-22:00</span>
+									czwartek: <span>13:00-21:00</span>
 								</p>
 							</div>
 							<div className={styles.footer_content_hours}>
 								<p>
-									piątek: <span>12:00-22:00</span>
+									piątek: <span>13:00-21:00</span>
 								</p>
 							</div>
 							<div className={styles.footer_content_hours}>
 								<p>
-									sobota: <span>12:00-22:00</span>
+									sobota: <span>13:00-21:00</span>
 								</p>
 							</div>
 
 							<div className={styles.footer_content_hours}>
 								<p>
-									niedziela: <span>12:00-20:00</span>
+									niedziela: <span>13:00-20:00</span>
 								</p>
 							</div>
 						</section>
