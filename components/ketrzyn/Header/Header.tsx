@@ -9,7 +9,7 @@ import { useWindowSize } from '../../../hooks/useWindowSize';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useScrollPosition } from '../../../hooks/useScrollPosition';
-import Logo from '../../../public/ketrzyn/logo.jpeg';
+import Logo from '../../../public/ketrzyn/kklogo.png';
 import Image from 'next/image';
 
 const Header = React.forwardRef(
@@ -36,7 +36,7 @@ const Header = React.forwardRef(
 				</div>
 				<div
 					className={
-						scrollPos < 300 ? styles.header_nav : styles.header_nav_active
+						scrollPos < 400 ? styles.header_nav : styles.header_nav_active
 					}>
 					<div className={styles.header_content}>
 						<div style={{ color: 'yellow' }} className={styles.header_logo}>
