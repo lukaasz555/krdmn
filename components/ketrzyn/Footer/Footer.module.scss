@@ -61,6 +61,16 @@ footer.wrapper section:last-child {
 	}
 }
 
+.contact_hours {
+	display: flex;
+	flex-direction: column;
+}
+
+p.contact_hours__item {
+	display: block;
+	margin-bottom: 5em;
+}
+
 @media (min-width: 768px) {
 	.wrapper_content {
 		flex-direction: row;

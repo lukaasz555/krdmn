@@ -23,8 +23,33 @@ const Footer = React.forwardRef(
 						</div>
 						<div className={styles.contact_hours}>
 							<h3>Godziny otwarcia</h3>
-							<p>niedziela - czwartek: 11:00 - 21:00</p>
-							<p>piątek - sobota: 11:00 - 22:00</p>
+							<div
+								style={{
+									display: 'flex',
+									justifyContent: 'space-between',
+									marginBottom: '0.3em',
+								}}>
+								<p>poniedziałek - czwartek</p>
+								<span style={{ flexBasis: '30%' }}>11:00 - 21:00</span>
+							</div>
+							<div
+								style={{
+									display: 'flex',
+									justifyContent: 'space-between',
+									marginBottom: '0.3em',
+								}}>
+								<p>piątek - sobota</p>
+								<span style={{ flexBasis: '30%' }}>11:00 - 22:00</span>
+							</div>
+							<div
+								style={{
+									display: 'flex',
+									justifyContent: 'space-between',
+									marginBottom: '0.3em',
+								}}>
+								<p>niedziela</p>
+								<span style={{ flexBasis: '30%' }}>11:00 - 21:00</span>
+							</div>
 						</div>
 					</section>
 					<section>
