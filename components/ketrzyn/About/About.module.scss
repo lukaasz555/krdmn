@@ -32,7 +32,8 @@
 .body_desc p {
 	@include section-content($navy);
 	margin: 0;
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
+	text-align: left;
 }
 
 .body_img {
@@ -60,7 +61,7 @@
 	z-index: -1;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 968px) {
 	.body_img {
 		min-height: 420px;
 		min-width: 400px;
@@ -85,7 +86,7 @@
 		margin-right: 1.5em;
 	}
 
-	.body_desc p {
+	/* 	.body_desc p {
 		text-align: left;
-	}
+	} */
 }

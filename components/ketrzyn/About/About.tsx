@@ -33,20 +33,6 @@ const About = React.forwardRef(
 					<h2 className={styles.about_header}>o nas</h2>
 					<div className={styles.about_body}>
 						<div className={styles.body_desc}>
-							{/* 							<p>
-								Kardamon to miejsce, które już od ponad dziesięciu lat stanowi
-								gastronomiczną wizytówkę Kętrzyna.
-							</p>
-							<p>
-								Znajdująca się w zabytkowym, neogotyckim budynku ratuszu
-								miejskiego restauracja to połączenie nowoczesności z tradycją.
-							</p>
-							<p>
-								Wysoki standard obsługi, różnorodne menu oraz dogodna
-								lokalizacja sprawiają, że Kardamon to świetny wybór na spotkanie
-								biznesowe, wspólny posiłek z bliskimi czy nastrojowe spotkanie
-								we dwoje.
-							</p> */}
 							<p>
 								Restauracja Kardamon to wspaniałe miejsce do spotkań i
 								uroczystości. Prestiżowa lokalizacja w zabytkowym budynku
