@@ -33,7 +33,7 @@ const About = React.forwardRef(
 					<h2 className={styles.about_header}>o nas</h2>
 					<div className={styles.about_body}>
 						<div className={styles.body_desc}>
-							<p>
+							{/* 							<p>
 								Kardamon to miejsce, które już od ponad dziesięciu lat stanowi
 								gastronomiczną wizytówkę Kętrzyna.
 							</p>
@@ -46,6 +46,25 @@ const About = React.forwardRef(
 								lokalizacja sprawiają, że Kardamon to świetny wybór na spotkanie
 								biznesowe, wspólny posiłek z bliskimi czy nastrojowe spotkanie
 								we dwoje.
+							</p> */}
+							<p>
+								Restauracja Kardamon to wspaniałe miejsce do spotkań i
+								uroczystości. Prestiżowa lokalizacja w zabytkowym budynku
+								ratusza miejskiego, niezwykły wystrój wnętrza, wysoki standard
+								obsługi, a przede wszystkim pyszne menu sprawiają, że nasi
+								goście chętnie przychodzą na codzienny obiad, biznesowy lunch,
+								uroczystą kolację, organizują u nas spotkania w większym gronie
+								przyjaciół oraz rodziny.
+							</p>
+							<p>
+								Lokal stanowi doskonałą wizytówkę miasta - jest nowoczesny, a
+								jednocześnie przywiązany do pięknych tradycji. Restauracja
+								istnieje od 2012 roku i jest kontynuacją Pizzerii TROPS
+								działającej na kętrzyńskim rynku gastronomicznym od 2009 roku.
+								Dania, które odnajdziecie Państwo w naszej karcie to
+								różnorodność smaków tradycyjnej kuchni polskiej, ale także
+								potrawy z różnych stron świata. Dokładamy wszelkich starań, aby
+								Państwa zaskakiwać!
 							</p>
 						</div>
 						<div className={styles.body_img}>
