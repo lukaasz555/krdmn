@@ -41,6 +41,16 @@
 	margin-top: 1em;
 }
 
+.section_about_kardamon_header {
+	@include section-header(black);
+	font-family: 'Alatsi', sans-serif;
+	font-size: 3em;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	margin-top: 1em;
+	margin-bottom: 0.35em;
+}
+
 .section_about_desc {
 	@include section-content($black);
 	margin-bottom: 2em;
@@ -74,9 +84,13 @@
 		margin-left: 2em;
 	}
 
-	.section_about_header {
+	/* 	.section_about_header {
 		margin-top: 0;
-	}
+	} */
+	/* 
+	.section_about_kardamon_header {
+		margin: 0;
+	} */
 
 	.section_about_desc {
 		padding: 0;

@@ -6,6 +6,8 @@ import Socials from '../Socials/Socials';
 import Logo from '../../../public/olsztyn/logo_white.png';
 
 const Footer = () => {
+	const currentYear = new Date().getFullYear();
+
 	return (
 		<footer className={styles.footer_wrapper}>
 			<div className={styles.footer_content}>
@@ -85,7 +87,7 @@ const Footer = () => {
 						</section>
 					</div>
 				</div>
-				<div style={{ marginTop: '1em' }}>
+				<div className={styles.footer_bottom}>
 					<Link href={`/olsztyn`}>
 						<Image
 							src={Logo}
@@ -95,6 +97,7 @@ const Footer = () => {
 							quality={100}
 						/>
 					</Link>
+					<p>Restauracja Kardamon {currentYear}</p>
 				</div>
 			</div>
 		</footer>

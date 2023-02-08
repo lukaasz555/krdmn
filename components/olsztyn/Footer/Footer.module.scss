@@ -79,6 +79,20 @@
 	margin-bottom: 0.25em;
 }
 
+.footer_bottom {
+	margin-top: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer_bottom p {
+	margin: 0;
+	color: $white;
+	opacity: 0.7;
+	font-size: 0.9em;
+}
+
 @media (min-width: 768px) {
 	.footer_block {
 		margin-bottom: 0;

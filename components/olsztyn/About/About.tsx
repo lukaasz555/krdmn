@@ -30,7 +30,7 @@ const About = () => {
 		<section className={styles.section_about} id='about'>
 			<div className={styles.section_about_wrapper}>
 				<div className={styles.section_about_left}>
-					<h3 className={styles.section_about_header}>Restauracja Kardamon</h3>
+					<h3 className={styles.section_about_kardamon_header}>Kardamon</h3>
 					<p className={styles.section_about_desc}>
 						Pyszna elegancja smaków. Położona w centrum restauracja Kardamon
 						jest blisko Ciebie. Znajdujemy się w Hotelu Villa Pallas. Zapraszamy
