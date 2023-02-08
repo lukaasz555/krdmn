@@ -1,0 +1,123 @@
+@import '../../../styles/olsztyn/colors.module.scss';
+@import '../../../styles/ketrzyn/colors.module.scss';
+
+.card__wrapper {
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 2em;
+	transition: transform 0.2s;
+	margin: 2em;
+	position: relative;
+	width: 320px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	&:hover {
+		transform: scale(1.05);
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		top: 0;
+		height: 100%;
+		border-radius: 8px;
+		box-shadow: 4px 8px 22px rgba(0, 0, 0, 0.1);
+		transition: box-shadow 0.2s;
+	}
+
+	&:hover::after {
+		box-shadow: 4px 8px 22px rgba(0, 0, 0, 0.2);
+	}
+}
+
+.card__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.card__top {
+	height: 160px;
+	width: 160px;
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	z-index: 10;
+}
+
+.card__header {
+	font-family: 'Alatsi', sans-serif;
+	text-transform: uppercase;
+	color: $black;
+
+	letter-spacing: 0.1em;
+	font-size: 1.75em;
+	text-align: center;
+	z-index: 10;
+	width: 100%;
+
+	border-top: 1px solid $borderBlack;
+	padding-top: 0.5em;
+}
+
+.card__data {
+	width: 100%;
+	z-index: 10;
+	margin-bottom: 1em;
+}
+
+.card__data p {
+	margin: 0;
+}
+
+.card__contact {
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.card__link {
+	text-decoration: none;
+	color: $black;
+	margin: 0;
+	padding: 0;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.card__bottom {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 2em;
+	z-index: 10;
+}
+
+.card__bottom a {
+	color: $black;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	font-weight: 200;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+
+	&:hover svg {
+		transform: translateX(0.2em) rotate(180deg);
+	}
+}
+
+.card__bottom a svg {
+	margin-left: 0.2em;
+	transition: transform 0.2s;
+	transform: rotate(180deg);
+	fill: $black;
+}
