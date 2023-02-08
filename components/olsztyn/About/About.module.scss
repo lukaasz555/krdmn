@@ -56,7 +56,6 @@
 }
 
 .section_about_link {
-	//@include section-link($white, $navy);
 	@include section-cta($black, #fff);
 	margin-top: 2em;
 }
