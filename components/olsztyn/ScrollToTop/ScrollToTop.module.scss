@@ -1,11 +1,11 @@
 @import '../../../styles/olsztyn/colors.module.scss';
-
+@import '../../../styles/colors.module.scss';
 .button_top {
 	position: fixed;
 	right: 0;
 	bottom: 0;
 	color: $white;
-	background-color: $black;
+	background-color: $navy;
 	padding: 0.5em;
 	border: none;
 	cursor: pointer;

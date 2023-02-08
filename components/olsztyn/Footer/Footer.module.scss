@@ -1,10 +1,10 @@
 @import '../../../styles/olsztyn/colors.module.scss';
-
+@import '../../../styles/colors.module.scss';
 .footer_wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: $black;
+	background-color: $navy;
 	width: 100%;
 	min-height: 100px;
 	padding: 2em 0 1em;

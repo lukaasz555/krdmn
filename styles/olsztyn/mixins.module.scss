@@ -17,6 +17,7 @@
 	color: $col;
 	margin-top: 2em;
 	margin-bottom: 0;
+	font-weight: 500;
 
 	@media (min-width: 768px) {
 		margin-top: 0;
@@ -49,10 +50,52 @@
 	font-family: 'Montserrat';
 	text-align: center;
 	position: relative;
+	//
+	/* 	border: 2px solid $gold;
+	background: transparent;
+	color: $gold;
+	font-weight: 500; */
 
 	&:hover {
 		color: $bg;
 		background-color: transparent;
 		border: 1px solid $bg;
+		//background-color: $navy;
+	}
+}
+
+@mixin section-cta($col, $bg) {
+	color: $col;
+	font-weight: 300;
+	border: 1px solid;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	padding: 0.6em 1.2em;
+	position: relative;
+	background-color: $bg;
+	border: 2px solid $gold;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		border: 2px solid $gold;
+		transform: translate(0, 0);
+		transition: transform 0.2s;
+		box-sizing: border-box;
+		z-index: -10;
+		transform: translate(0, 0);
+	}
+
+	&:hover {
+		background-color: $gold;
+		color: $white;
+	}
+
+	&:hover::before {
+		transform: translate(8px, 8px);
 	}
 }

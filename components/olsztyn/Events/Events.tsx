@@ -63,7 +63,10 @@ const Events = () => {
 						stanie spełnić wszystkie wymagania i dostosować się do potrzeb
 						Naszych Gości. Zadzwoń i zapytaj o szczegóły.
 					</p>
-					<Link className={styles.events_right_link} href={`/olsztyn/contact`}>
+					{/* <Link className={styles.events_right_link} href={`/olsztyn/contact`}>
+						kontakt
+					</Link> */}
+					<Link className={styles.events_right_link2} href={`/olsztyn/contact`}>
 						kontakt
 					</Link>
 				</div>

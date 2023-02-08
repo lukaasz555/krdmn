@@ -1,5 +1,7 @@
 @import '../../../styles/olsztyn/mixins.module.scss';
 @import '../../../styles/olsztyn/colors.module.scss';
+@import '../../../styles/colors.module.scss';
+
 .section_about {
 	@include section-container;
 	overflow: hidden;
@@ -36,13 +38,8 @@
 	box-shadow: 4px 8px 22px rgba(0, 0, 0, 0.2);
 }
 
-.section_about_header {
-	@include section-header(black);
-	margin-top: 1em;
-}
-
 .section_about_kardamon_header {
-	@include section-header(black);
+	@include section-header($navy);
 	font-family: 'Alatsi', sans-serif;
 	font-size: 3em;
 	text-transform: uppercase;
@@ -52,14 +49,15 @@
 }
 
 .section_about_desc {
-	@include section-content($black);
+	@include section-content($navy);
 	margin-bottom: 2em;
 	padding: 0 3em;
 	margin: 0.5em 0;
 }
 
 .section_about_link {
-	@include section-link($white, $black);
+	//@include section-link($white, $navy);
+	@include section-cta($black, #fff);
 	margin-top: 2em;
 }
 

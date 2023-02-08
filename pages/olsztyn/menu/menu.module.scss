@@ -1,5 +1,5 @@
 @import '../../../styles/olsztyn/colors.module.scss';
-
+@import '../../../styles/colors.module.scss';
 .category_wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -18,6 +18,7 @@
 .menu_wrapper h2 {
 	margin-bottom: 2em;
 	font-family: 'Merriweather';
+	color: $navy;
 }
 
 .menu_wrapper > div {
@@ -36,5 +37,5 @@
 }
 
 .category_wrapper button:hover {
-	color: $black;
+	color: $navy;
 }

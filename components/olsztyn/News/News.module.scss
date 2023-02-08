@@ -1,5 +1,6 @@
 @import '../../../styles/olsztyn/colors.module.scss';
 @import '../../../styles/olsztyn/mixins.module.scss';
+@import '../../../styles/colors.module.scss';
 
 .section_news {
 	@include section-container;
@@ -8,7 +9,7 @@
 }
 
 .news_head h3 {
-	@include section-header($black);
+	@include section-header($navy);
 	text-align: center;
 }
 
@@ -49,6 +50,6 @@
 }
 
 .news_message {
-	@include section-content($black);
+	@include section-content($navy);
 	margin: 2em 0 3em;
 }

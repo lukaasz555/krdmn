@@ -1,6 +1,5 @@
 @import '../../../styles/olsztyn/colors.module.scss';
-
-// menu_course
+@import '../../../styles/colors.module.scss';
 
 .course {
 	display: flex;
@@ -22,7 +21,7 @@
 
 .course_left_title {
 	font-size: 1em;
-	color: $black;
+	color: $navy;
 	margin: 0;
 }
 
