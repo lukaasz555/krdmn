@@ -99,8 +99,9 @@ const Header = React.forwardRef(
 					</div>
 				</div>
 				<div className={styles.header_hero}>
-					<h1>Kardamon Kętrzyn</h1>
+					<h1 className={styles.header_hero__kardamon}>Kardamon</h1>
 					<h2>Plac marszałka Józefa Piłsudskiego 1</h2>
+					<h2>11-400 Kętrzyn</h2>
 				</div>
 				<div className={styles.header_shadow}></div>
 			</header>

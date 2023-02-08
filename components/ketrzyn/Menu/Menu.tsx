@@ -36,6 +36,10 @@ const Menu = React.forwardRef(({ courses, drinks, menuRef }: MenuProps) => {
 			{drinksCategories.map((item) => (
 				<MenuItem title={item} items={filtered(drinks, item)} />
 			))}
+			<div className={styles.greetings}>
+				<h3>Spotkajmy się w Kardamonie</h3>
+				<h4>Dorota i Jacek Moczarscy</h4>
+			</div>
 		</section>
 	);
 });

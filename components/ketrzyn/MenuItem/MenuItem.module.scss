@@ -48,11 +48,12 @@
 
 .category_name {
 	color: $navy;
-	font-size: 1.8em;
-	font-size: 1.5em;
 	margin-bottom: 1em;
 	font-weight: 400;
 	text-align: left;
+	font-family: 'Alatsi', sans-serif;
+	text-transform: lowercase;
+	font-size: 1.75em;
 }
 
 .item {

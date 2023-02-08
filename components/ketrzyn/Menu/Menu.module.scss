@@ -13,3 +13,34 @@
 	@include section-header($gray);
 	text-align: center;
 }
+
+.greetings h3,
+.greetings h4 {
+	font-family: 'Dancing Script', cursive;
+}
+
+.greetings h3 {
+	font-size: 4.5em;
+	color: $navy;
+	//
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+
+.greetings h4 {
+	font-size: 2.2em;
+	margin: 0;
+	color: $navy;
+	//
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.greetings h3 {
+		margin-bottom: 0;
+	}
+
+	.greetings h4 {
+		text-align: right;
+	}
+}
