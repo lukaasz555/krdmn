@@ -4,7 +4,7 @@ import Title from '../components/main/title/Title';
 import CardKetrzyn from '../components/main/cards/CardKetrzyn';
 import CardOlsztyn from '../components/main/cards/CardOlsztyn';
 
-import style from './main.module.scss';
+import styles from './main.module.scss';
 
 export default function Home() {
 	return (
@@ -18,9 +18,9 @@ export default function Home() {
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/ketrzyn/fav.png' />
 			</Head>
-			<main>
+			<main className={styles.wrapper}>
 				<Title />
-				<section className={style.cards__wrapper}>
+				<section className={styles.cards__wrapper}>
 					<CardOlsztyn />
 					<CardKetrzyn />
 				</section>

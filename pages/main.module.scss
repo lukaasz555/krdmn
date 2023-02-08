@@ -1,5 +1,15 @@
+.wrapper {
+	width: 100%;
+}
+
 .cards__wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+
+@media (min-width: 768px) {
+	.wrapper {
+		margin-top: 7em;
+	}
 }
