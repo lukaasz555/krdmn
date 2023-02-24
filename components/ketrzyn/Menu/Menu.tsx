@@ -30,11 +30,11 @@ const Menu = React.forwardRef(
 				<h2 className={styles.menu_header}>menu</h2>
 
 				{coursesCategories.map((item) => (
-					<MenuItem title={item} items={filtered(courses, item)} />
+					<MenuItem title={item} items={filtered(courses, item)} key={item} />
 				))}
 
 				{drinksCategories.map((item) => (
-					<MenuItem title={item} items={filtered(drinks, item)} />
+					<MenuItem title={item} items={filtered(drinks, item)} key={item} />
 				))}
 				<div className={styles.greetings}>
 					<h3>Spotkajmy się w Kardamonie</h3>

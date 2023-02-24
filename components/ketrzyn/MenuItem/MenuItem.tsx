@@ -36,17 +36,15 @@ const MenuItem = ({ title, items }: MenuItemProps) => {
 					{items
 						.sort((a: ICourse, b: ICourse) => Number(a.price) - Number(b.price))
 						.map(({ name, price, desc, id }: Omit<ICourse, 'category'>) => (
-							<>
-								<div key={id} className={styles.item}>
-									<div className={styles.item_title}>
-										<p className={styles.item_title_name}>{name}</p>
-										{price !== 999 ? <p>{String(price)} zł</p> : null}
-									</div>
-									<div>
-										<p className={styles.item_desc}>{desc}</p>
-									</div>
+							<div key={name + id} className={styles.item}>
+								<div className={styles.item_title}>
+									<p className={styles.item_title_name}>{name}</p>
+									{price !== 999 ? <p>{String(price)} zł</p> : null}
 								</div>
-							</>
+								<div>
+									<p className={styles.item_desc}>{desc}</p>
+								</div>
+							</div>
 						))}
 				</div>
 			</div>
