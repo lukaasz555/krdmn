@@ -6,7 +6,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const About = React.forwardRef(
-	({ aboutRef }: { aboutRef: React.LegacyRef<HTMLElement> }) => {
+	(_: unknown, ref: React.LegacyRef<HTMLElement>) => {
 		gsap.registerPlugin(ScrollTrigger);
 		useEffect(() => {
 			gsap.fromTo(
@@ -28,7 +28,7 @@ const About = React.forwardRef(
 		}, []);
 
 		return (
-			<section ref={aboutRef} className={styles.about} id='about'>
+			<section ref={ref} className={styles.about} id='about'>
 				<div className={styles.about_content}>
 					<h2 className={styles.about_header}>o nas</h2>
 					<div className={styles.about_body}>

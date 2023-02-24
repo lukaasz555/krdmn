@@ -3,9 +3,9 @@ import styles from './Offer.module.scss';
 import Gallery from '../Gallery/Gallery';
 
 const Offer = React.forwardRef(
-	({ offerRef }: { offerRef: React.LegacyRef<HTMLElement> }) => {
+	(_: unknown, ref: React.LegacyRef<HTMLElement>) => {
 		return (
-			<section className={styles.offer} ref={offerRef} id='offer'>
+			<section className={styles.offer} ref={ref} id='offer'>
 				<div className={styles.offer_content}>
 					<h2 className={styles.offer_header}>oferta</h2>
 					<div className={styles.offer_desc}>

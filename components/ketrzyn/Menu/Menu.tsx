@@ -9,38 +9,39 @@ import MenuItem from '../MenuItem/MenuItem';
 interface MenuProps {
 	courses: ICourse[];
 	drinks: ICourse[];
-	menuRef: React.LegacyRef<HTMLElement>;
 }
 
-const Menu = React.forwardRef(({ courses, drinks, menuRef }: MenuProps) => {
-	const coursesCategories = Array.from(
-		new Set(courses.map((c) => c.category))
-	).sort((a, b) => Number(a) - Number(b));
+const Menu = React.forwardRef(
+	({ courses, drinks }: MenuProps, ref: React.LegacyRef<HTMLElement>) => {
+		const coursesCategories = Array.from(
+			new Set(courses.map((c) => c.category))
+		).sort((a, b) => Number(a) - Number(b));
 
-	const drinksCategories = Array.from(
-		new Set(drinks.map((d) => d.category))
-	).sort((a, b) => Number(a) - Number(b));
+		const drinksCategories = Array.from(
+			new Set(drinks.map((d) => d.category))
+		).sort((a, b) => Number(a) - Number(b));
 
-	const filtered = (arr: ICourse[], item: string) => {
-		return arr.filter(({ category }) => category === item);
-	};
+		const filtered = (arr: ICourse[], item: string) => {
+			return arr.filter(({ category }) => category === item);
+		};
 
-	return (
-		<section ref={menuRef} id='menu' className={styles.menu_wrapper}>
-			<h2 className={styles.menu_header}>menu</h2>
+		return (
+			<section ref={ref} id='menu' className={styles.menu_wrapper}>
+				<h2 className={styles.menu_header}>menu</h2>
 
-			{coursesCategories.map((item) => (
-				<MenuItem title={item} items={filtered(courses, item)} />
-			))}
+				{coursesCategories.map((item) => (
+					<MenuItem title={item} items={filtered(courses, item)} />
+				))}
 
-			{drinksCategories.map((item) => (
-				<MenuItem title={item} items={filtered(drinks, item)} />
-			))}
-			<div className={styles.greetings}>
-				<h3>Spotkajmy się w Kardamonie</h3>
-				<h4>Dorota i Jacek Moczarscy</h4>
-			</div>
-		</section>
-	);
-});
+				{drinksCategories.map((item) => (
+					<MenuItem title={item} items={filtered(drinks, item)} />
+				))}
+				<div className={styles.greetings}>
+					<h3>Spotkajmy się w Kardamonie</h3>
+					<h4>Dorota i Jacek Moczarscy</h4>
+				</div>
+			</section>
+		);
+	}
+);
 export default Menu;

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Footer.module.scss';
 
 const Footer = React.forwardRef(
-	({ footerRef }: { footerRef: React.LegacyRef<HTMLElement> }) => {
+	(_: unknown, ref: React.LegacyRef<HTMLElement>) => {
 		return (
 			<footer className={styles.wrapper} id='contact'>
 				<div className={styles.wrapper_content}>

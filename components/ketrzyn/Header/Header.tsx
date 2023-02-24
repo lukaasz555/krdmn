@@ -13,13 +13,13 @@ import Logo from '../../../public/ketrzyn/kklogo.png';
 import Image from 'next/image';
 
 const Header = React.forwardRef(
-	({ headerRef }: { headerRef: React.LegacyRef<HTMLElement> }) => {
+	(_: unknown, ref: React.LegacyRef<HTMLElement>) => {
 		const [isNavOpen, setNavOpen] = useState(false);
 		const [isScrolled, setScrolled] = useState(false);
 		const scrollPos = useScrollPosition();
 
 		return (
-			<header className={styles.header_wrapper} ref={headerRef}>
+			<header className={styles.header_wrapper} ref={ref}>
 				<div className={styles.header_contact}>
 					<div className={styles.header_contact_content}>
 						<div className={styles.contact_data}>
