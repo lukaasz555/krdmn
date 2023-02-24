@@ -33,6 +33,15 @@
 	min-height: 450px;
 }
 
+.events_top_desc_link {
+	color: ($gold);
+	margin-top: 1.5em;
+	display: inline-block;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 .events_bottom img {
 	@include img-shadow;
 	object-fit: cover;
