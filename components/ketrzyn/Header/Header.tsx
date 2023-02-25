@@ -75,21 +75,11 @@ const Header = () => {
 						</Link>
 					</nav>
 					<nav className={styles.nav_desktop}>
-						<Link href={`/ketrzyn/`} onClick={() => setNavOpen(false)}>
-							start
-						</Link>
-						<Link href={`/ketrzyn/#about`} onClick={() => setNavOpen(false)}>
-							o nas
-						</Link>
-						<Link href={`/ketrzyn/#offer`} onClick={() => setNavOpen(false)}>
-							oferta
-						</Link>
-						<Link href={`/ketrzyn/#menu`} onClick={() => setNavOpen(false)}>
-							menu
-						</Link>
-						<Link href={`/ketrzyn/#contact`} onClick={() => setNavOpen(false)}>
-							kontakt
-						</Link>
+						<Link href={`/ketrzyn/`}>start</Link>
+						<Link href={`/ketrzyn/#about`}>o nas</Link>
+						<Link href={`/ketrzyn/#offer`}>oferta</Link>
+						<Link href={`/ketrzyn/#menu`}>menu</Link>
+						<Link href={`/ketrzyn/#contact`}>kontakt</Link>
 					</nav>
 				</div>
 			</div>
