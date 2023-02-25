@@ -9,6 +9,11 @@ import Menu from '../../components/ketrzyn/Menu/Menu';
 import Footer from '../../components/ketrzyn/Footer/Footer';
 import { request } from '../api/dato_ketrzyn';
 import { ICourse } from '../../models/Courses';
+import headerStyles from '../../components/ketrzyn/Header/Header.module.scss';
+import aboutStyles from '../../components/ketrzyn/About/About.module.scss';
+import offerStyles from '../../components/ketrzyn/Offer/Offer.module.scss';
+import menuStyles from '../../components/ketrzyn/Menu/Menu.module.scss';
+import footerStyles from '../../components/ketrzyn/Footer/Footer.module.scss';
 
 export async function getServerSideProps() {
 	const courses = await request({
@@ -74,11 +79,21 @@ export default function Home({
 				<link rel='icon' href='/ketrzyn/fav.png' />
 			</Head>
 			<Layout>
-				<Header /* ref={headerRef} */ />
-				<About /* ref={aboutRef} */ />
-				<Offer /* ref={offerRef} */ />
-				<Menu /* ref={menuRef} */ courses={allCourses} drinks={allDrinks} />
-				<Footer /* ref={footerRef} */ />
+				<header className={headerStyles.header_wrapper} ref={headerRef}>
+					<Header />
+				</header>
+				<section ref={aboutRef} className={aboutStyles.about} id='about'>
+					<About />
+				</section>
+				<section className={offerStyles.offer} id='offer'>
+					<Offer />
+				</section>
+				<section id='menu' className={menuStyles.menu_wrapper}>
+					<Menu courses={allCourses} drinks={allDrinks} />
+				</section>
+				<footer className={footerStyles.wrapper} id='contact'>
+					<Footer />
+				</footer>
 			</Layout>
 		</>
 	);

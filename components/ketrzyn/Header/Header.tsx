@@ -17,7 +17,7 @@ const Header = () => {
 	const [isScrolled, setScrolled] = useState(false);
 	const scrollPos = useScrollPosition();
 	return (
-		<header className={styles.header_wrapper}>
+		<>
 			<div className={styles.header_contact}>
 				<div className={styles.header_contact_content}>
 					<div className={styles.contact_data}>
@@ -88,7 +88,7 @@ const Header = () => {
 				<h2>11-400 Kętrzyn</h2>
 			</div>
 			<div className={styles.header_shadow}></div>
-		</header>
+		</>
 	);
 };
 
@@ -99,7 +99,7 @@ const Header = () => {
 		const scrollPos = useScrollPosition();
 
 		return (
-			<header className={styles.header_wrapper} ref={ref}>
+			<>
 				<div className={styles.header_contact}>
 					<div className={styles.header_contact_content}>
 						<div className={styles.contact_data}>
@@ -170,7 +170,7 @@ const Header = () => {
 					<h2>11-400 Kętrzyn</h2>
 				</div>
 				<div className={styles.header_shadow}></div>
-			</header>
+			</>
 		);
 	}
 ); */

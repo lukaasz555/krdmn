@@ -25,7 +25,7 @@ const Menu = ({ courses, drinks }: MenuProps) => {
 	};
 
 	return (
-		<section id='menu' className={styles.menu_wrapper}>
+		<>
 			<h2 className={styles.menu_header}>menu</h2>
 
 			{coursesCategories.map((item) => (
@@ -39,7 +39,7 @@ const Menu = ({ courses, drinks }: MenuProps) => {
 				<h3>Spotkajmy się w Kardamonie</h3>
 				<h4>Dorota i Jacek Moczarscy</h4>
 			</div>
-		</section>
+		</>
 	);
 };
 
