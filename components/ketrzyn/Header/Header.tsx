@@ -58,19 +58,34 @@ const Header = () => {
 							opacity: isNavOpen ? '1' : '0',
 						}}
 						className={styles.nav_mobile}>
-						<Link href={`/ketrzyn/`} onClick={() => setNavOpen(false)}>
+						<Link
+							href={`/ketrzyn/`}
+							onClick={() => setNavOpen(false)}
+							scroll={false}>
 							start
 						</Link>
-						<Link href={`/ketrzyn/#about`} onClick={() => setNavOpen(false)}>
+						<Link
+							href={`/ketrzyn/#about`}
+							onClick={() => setNavOpen(false)}
+							scroll={false}>
 							o nas
 						</Link>
-						<Link href={`/ketrzyn/#offer`} onClick={() => setNavOpen(false)}>
+						<Link
+							href={`/ketrzyn/#offer`}
+							onClick={() => setNavOpen(false)}
+							scroll={false}>
 							oferta
 						</Link>
-						<Link href={`/ketrzyn/#menu`} onClick={() => setNavOpen(false)}>
+						<Link
+							href={`/ketrzyn/#menu`}
+							onClick={() => setNavOpen(false)}
+							scroll={false}>
 							menu
 						</Link>
-						<Link href={`/ketrzyn/#contact`} onClick={() => setNavOpen(false)}>
+						<Link
+							href={`/ketrzyn/#contact`}
+							onClick={() => setNavOpen(false)}
+							scroll={false}>
 							kontakt
 						</Link>
 					</nav>
