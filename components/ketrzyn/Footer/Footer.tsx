@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 
-const Footer = () => {
+/* const Footer = () => {
 	return (
 		<footer className={styles.wrapper} id='contact'>
 			<div className={styles.wrapper_content}>
@@ -63,9 +63,9 @@ const Footer = () => {
 			</div>
 		</footer>
 	);
-};
+}; */
 
-/* const Footer = React.forwardRef(
+const Footer = React.forwardRef(
 	(_: unknown, ref: React.LegacyRef<HTMLElement>) => {
 		return (
 			<footer className={styles.wrapper} id='contact'>
@@ -129,6 +129,6 @@ const Footer = () => {
 			</footer>
 		);
 	}
-); */
+);
 
 export default Footer;

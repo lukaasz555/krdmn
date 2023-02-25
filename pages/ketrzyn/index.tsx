@@ -51,11 +51,11 @@ export default function Home({
 	courses: { allCourses: ICourse[] };
 	drinks: { allDrinks: ICourse[] };
 }) {
-	// const headerRef = useRef<HTMLElement>(null);
-	// const aboutRef = useRef<HTMLElement>(null);
-	// const offerRef = useRef<HTMLElement>(null);
-	// const menuRef = useRef<HTMLElement>(null);
-	// const footerRef = useRef<HTMLElement>(null);
+	const headerRef = useRef<HTMLElement>(null);
+	const aboutRef = useRef<HTMLElement>(null);
+	const offerRef = useRef<HTMLElement>(null);
+	const menuRef = useRef<HTMLElement>(null);
+	const footerRef = useRef<HTMLElement>(null);
 
 	const { allCourses } = courses;
 	const { allDrinks } = drinks;
@@ -74,11 +74,11 @@ export default function Home({
 				<link rel='icon' href='/ketrzyn/fav.png' />
 			</Head>
 			<Layout>
-				<Header /* ref={headerRef} */ />
-				<About /* ref={aboutRef} */ />
-				<Offer /* ref={offerRef} */ />
-				<Menu /* ref={menuRef} */ courses={allCourses} drinks={allDrinks} />
-				<Footer /* ref={footerRef} */ />
+				<Header ref={headerRef} />
+				<About ref={aboutRef} />
+				<Offer ref={offerRef} />
+				<Menu ref={menuRef} courses={allCourses} drinks={allDrinks} />
+				<Footer ref={footerRef} />
 			</Layout>
 		</>
 	);

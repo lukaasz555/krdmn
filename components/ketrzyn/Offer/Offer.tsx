@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Offer.module.scss';
 import Gallery from '../Gallery/Gallery';
 
-/* const Offer = React.forwardRef(
+const Offer = React.forwardRef(
 	(_: unknown, ref: React.LegacyRef<HTMLElement>) => {
 		return (
 			<section className={styles.offer} ref={ref} id='offer'>
@@ -30,9 +30,9 @@ import Gallery from '../Gallery/Gallery';
 			</section>
 		);
 	}
-); */
+);
 
-const Offer = () => {
+/* const Offer = () => {
 	return (
 		<section className={styles.offer} id='offer'>
 			<div className={styles.offer_content}>
@@ -58,6 +58,6 @@ const Offer = () => {
 			</div>
 		</section>
 	);
-};
+}; */
 
 export default Offer;
