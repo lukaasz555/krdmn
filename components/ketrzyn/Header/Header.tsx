@@ -57,28 +57,28 @@ const Header = () => {
 							opacity: isNavOpen ? '1' : '0',
 						}}
 						className={styles.nav_mobile}>
-						<Link href='#' onClick={() => setNavOpen(false)}>
+						<Link href='/ketrzyn#' onClick={() => setNavOpen(false)}>
 							start
 						</Link>
-						<Link href='#about' onClick={() => setNavOpen(false)}>
+						<Link href='/ketrzyn#about' onClick={() => setNavOpen(false)}>
 							o nas
 						</Link>
-						<Link href='#offer' onClick={() => setNavOpen(false)}>
+						<Link href='/ketrzyn#offer' onClick={() => setNavOpen(false)}>
 							oferta
 						</Link>
-						<Link href='#menu' onClick={() => setNavOpen(false)}>
+						<Link href='/ketrzyn#menu' onClick={() => setNavOpen(false)}>
 							menu
 						</Link>
-						<Link href='#contact' onClick={() => setNavOpen(false)}>
+						<Link href='/ketrzyn#contact' onClick={() => setNavOpen(false)}>
 							kontakt
 						</Link>
 					</nav>
 					<nav className={styles.nav_desktop}>
-						<Link href='#'>start</Link>
-						<Link href='#about'>o nas</Link>
-						<Link href='#offer'>oferta</Link>
-						<Link href='#menu'>menu</Link>
-						<Link href='#contact'>kontakt</Link>
+						<Link href='/ketrzyn#'>start</Link>
+						<Link href='/ketrzyn#about'>o nas</Link>
+						<Link href='/ketrzyn#offer'>oferta</Link>
+						<Link href='/ketrzyn#menu'>menu</Link>
+						<Link href='/ketrzyn#contact'>kontakt</Link>
 					</nav>
 				</div>
 			</div>
