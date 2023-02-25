@@ -5,7 +5,7 @@ import AboutPic from '../../../public/ketrzyn/about.jpeg';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-/* const About = () => {
+const About = () => {
 	gsap.registerPlugin(ScrollTrigger);
 	useEffect(() => {
 		gsap.fromTo(
@@ -63,9 +63,9 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 			</div>
 		</section>
 	);
-}; */
+};
 
-const About = React.forwardRef(
+/* const About = React.forwardRef(
 	(_: unknown, ref: React.LegacyRef<HTMLElement>) => {
 		gsap.registerPlugin(ScrollTrigger);
 		useEffect(() => {
@@ -126,6 +126,6 @@ const About = React.forwardRef(
 			</section>
 		);
 	}
-);
+); */
 
 export default About;

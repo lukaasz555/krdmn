@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Offer.module.scss';
 import Gallery from '../Gallery/Gallery';
 
-const Offer = React.forwardRef(
+/* const Offer = React.forwardRef(
 	(_: unknown, ref: React.LegacyRef<HTMLElement>) => {
+		useEffect(() => {
+			console.log(ref);
+		}, []);
 		return (
 			<section className={styles.offer} ref={ref} id='offer'>
 				<div className={styles.offer_content}>
@@ -30,9 +33,9 @@ const Offer = React.forwardRef(
 			</section>
 		);
 	}
-);
+); */
 
-/* const Offer = () => {
+const Offer = () => {
 	return (
 		<section className={styles.offer} id='offer'>
 			<div className={styles.offer_content}>
@@ -58,6 +61,6 @@ const Offer = React.forwardRef(
 			</div>
 		</section>
 	);
-}; */
+};
 
 export default Offer;

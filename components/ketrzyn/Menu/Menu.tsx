@@ -11,7 +11,7 @@ interface MenuProps {
 	drinks: ICourse[];
 }
 
-/* const Menu = ({ courses, drinks }: MenuProps) => {
+const Menu = ({ courses, drinks }: MenuProps) => {
 	const coursesCategories = Array.from(
 		new Set(courses.map((c) => c.category))
 	).sort((a, b) => Number(a) - Number(b));
@@ -41,9 +41,9 @@ interface MenuProps {
 			</div>
 		</section>
 	);
-}; */
+};
 
-const Menu = React.forwardRef(
+/* const Menu = React.forwardRef(
 	({ courses, drinks }: MenuProps, ref: React.LegacyRef<HTMLElement>) => {
 		const coursesCategories = Array.from(
 			new Set(courses.map((c) => c.category))
@@ -75,5 +75,6 @@ const Menu = React.forwardRef(
 			</section>
 		);
 	}
-);
+); */
+
 export default Menu;

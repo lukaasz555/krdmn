@@ -74,11 +74,11 @@ export default function Home({
 				<link rel='icon' href='/ketrzyn/fav.png' />
 			</Head>
 			<Layout>
-				<Header ref={headerRef} />
-				<About ref={aboutRef} />
-				<Offer ref={offerRef} />
-				<Menu ref={menuRef} courses={allCourses} drinks={allDrinks} />
-				<Footer ref={footerRef} />
+				<Header /* ref={headerRef} */ />
+				<About /* ref={aboutRef} */ />
+				<Offer /* ref={offerRef} */ />
+				<Menu /* ref={menuRef} */ courses={allCourses} drinks={allDrinks} />
+				<Footer /* ref={footerRef} */ />
 			</Layout>
 		</>
 	);
