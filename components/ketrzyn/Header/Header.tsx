@@ -11,8 +11,9 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useScrollPosition } from '../../../hooks/useScrollPosition';
 import Logo from '../../../public/ketrzyn/kklogo.png';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-const Header = () => {
+/* const Header = () => {
 	const [isNavOpen, setNavOpen] = useState(false);
 	const [isScrolled, setScrolled] = useState(false);
 	const scrollPos = useScrollPosition();
@@ -91,12 +92,13 @@ const Header = () => {
 		</>
 	);
 };
-
-/* const Header = React.forwardRef(
+ */
+const Header = React.forwardRef(
 	(_: unknown, ref: React.LegacyRef<HTMLElement>) => {
 		const [isNavOpen, setNavOpen] = useState(false);
 		const [isScrolled, setScrolled] = useState(false);
 		const scrollPos = useScrollPosition();
+		const router = useRouter();
 
 		return (
 			<>
@@ -138,29 +140,60 @@ const Header = () => {
 								transform: isNavOpen ? 'scaleY(1)' : 'scaleY(0)',
 								opacity: isNavOpen ? '1' : '0',
 							}}
+							//  router.push('/about')
 							className={styles.nav_mobile}>
-							<Link href='#' onClick={() => setNavOpen(false)}>
+							<button
+								onClick={() => {
+									setNavOpen(false);
+									router.push('/ketrzyn#');
+								}}>
 								start
-							</Link>
-							<Link href='#about' onClick={() => setNavOpen(false)}>
+							</button>
+
+							<button
+								onClick={() => {
+									setNavOpen(false);
+									router.push('/ketrzyn#about');
+								}}>
 								o nas
-							</Link>
-							<Link href='#offer' onClick={() => setNavOpen(false)}>
+							</button>
+
+							<button
+								onClick={() => {
+									setNavOpen(false);
+									router.push('/ketrzyn#offer');
+								}}>
 								oferta
-							</Link>
-							<Link href='#menu' onClick={() => setNavOpen(false)}>
+							</button>
+
+							<button
+								onClick={() => {
+									setNavOpen(false);
+									router.push('/ketrzyn#menu');
+								}}>
 								menu
-							</Link>
-							<Link href='#contact' onClick={() => setNavOpen(false)}>
+							</button>
+
+							<button
+								onClick={() => {
+									setNavOpen(false);
+									router.push('/ketrzyn#contact');
+								}}>
 								kontakt
-							</Link>
+							</button>
 						</nav>
 						<nav className={styles.nav_desktop}>
-							<Link href='#'>start</Link>
-							<Link href='#about'>o nas</Link>
-							<Link href='#offer'>oferta</Link>
-							<Link href='#menu'>menu</Link>
-							<Link href='#contact'>kontakt</Link>
+							<button onClick={() => router.push('/ketrzyn#')}>start</button>
+							<button onClick={() => router.push('/ketrzyn#about')}>
+								o nas
+							</button>
+							<button onClick={() => router.push('/ketrzyn#offer')}>
+								oferta
+							</button>
+							<button onClick={() => router.push('/ketrzyn#menu')}>menu</button>
+							<button onClick={() => router.push('/ketrzyn#contact')}>
+								kontakt
+							</button>
 						</nav>
 					</div>
 				</div>
@@ -173,6 +206,6 @@ const Header = () => {
 			</>
 		);
 	}
-); */
+);
 
 export default Header;
