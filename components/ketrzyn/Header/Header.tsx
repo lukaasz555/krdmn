@@ -140,12 +140,11 @@ const Header = React.forwardRef(
 								transform: isNavOpen ? 'scaleY(1)' : 'scaleY(0)',
 								opacity: isNavOpen ? '1' : '0',
 							}}
-							//  router.push('/about')
 							className={styles.nav_mobile}>
 							<button
 								onClick={() => {
 									setNavOpen(false);
-									router.push('/ketrzyn#');
+									/* router.push('/ketrzyn#'); */
 								}}>
 								start
 							</button>
@@ -153,7 +152,7 @@ const Header = React.forwardRef(
 							<button
 								onClick={() => {
 									setNavOpen(false);
-									router.push('/ketrzyn#about');
+									/* router.push('/ketrzyn#about'); */
 								}}>
 								o nas
 							</button>
@@ -161,7 +160,7 @@ const Header = React.forwardRef(
 							<button
 								onClick={() => {
 									setNavOpen(false);
-									router.push('/ketrzyn#offer');
+									/* router.push('/ketrzyn#offer'); */
 								}}>
 								oferta
 							</button>
@@ -169,7 +168,7 @@ const Header = React.forwardRef(
 							<button
 								onClick={() => {
 									setNavOpen(false);
-									router.push('/ketrzyn#menu');
+									/* router.push('/ketrzyn#menu'); */
 								}}>
 								menu
 							</button>
@@ -177,21 +176,25 @@ const Header = React.forwardRef(
 							<button
 								onClick={() => {
 									setNavOpen(false);
-									router.push('/ketrzyn#contact');
+									/* router.push('/ketrzyn#contact'); */
 								}}>
 								kontakt
 							</button>
 						</nav>
 						<nav className={styles.nav_desktop}>
-							<button onClick={() => router.push('/ketrzyn#')}>start</button>
-							<button onClick={() => router.push('/ketrzyn#about')}>
+							<button /* onClick={() => router.push('/ketrzyn#')} */>
+								start
+							</button>
+							<button /* onClick={() => router.push('/ketrzyn#about')} */>
 								o nas
 							</button>
-							<button onClick={() => router.push('/ketrzyn#offer')}>
+							<button /* onClick={() => router.push('/ketrzyn#offer')} */>
 								oferta
 							</button>
-							<button onClick={() => router.push('/ketrzyn#menu')}>menu</button>
-							<button onClick={() => router.push('/ketrzyn#contact')}>
+							<button /* onClick={() => router.push('/ketrzyn#menu')} */>
+								menu
+							</button>
+							<button /* onClick={() => router.push('/ketrzyn#contact')} */>
 								kontakt
 							</button>
 						</nav>
