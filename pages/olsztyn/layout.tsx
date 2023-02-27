@@ -1,6 +1,6 @@
 import style from './layout.module.scss';
-import TopNav from '../../components/olsztyn/TopNav/TopNav';
-import Footer from '../../components/olsztyn/Footer/Footer';
+import TopNav from '../../components/TopNav/TopNav';
+import Footer from '../../components/Footer/Footer';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
 	return (

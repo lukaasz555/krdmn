@@ -1,8 +1,15 @@
-import React from 'react';
-import styles from './layout.module.scss';
+import style from './layout.module.scss';
+import TopNav from '../../components/TopNav/TopNav';
+import Footer from '../../components/Footer/Footer';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-	return <main className={styles.layout_wrapper}>{children}</main>;
+	return (
+		<section className={style.layout_wrapper}>
+			<TopNav />
+			<main className={style.layout_content}>{children}</main>
+			<Footer />
+		</section>
+	);
 };
 
 export default Layout;

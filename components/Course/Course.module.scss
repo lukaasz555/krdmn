@@ -1,0 +1,44 @@
+@import '../../styles/olsztyn/colors.module.scss';
+@import '../../styles/colors.module.scss';
+
+.course {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	font-family: 'Merriweather';
+	font-size: 18px;
+	margin-bottom: 2em;
+	min-width: 320px;
+	max-width: 600px;
+	padding: 0 1em;
+}
+
+.course_left {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 80%;
+}
+
+.course_left_title {
+	font-size: 1em;
+	color: $navy;
+	margin: 0;
+}
+
+.course_left_desc {
+	color: $gray;
+	font-size: 0.85em;
+	margin: 0;
+}
+
+.course_right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+
+.course_right p {
+	display: block;
+	justify-self: flex-start;
+	margin: 0;
+}

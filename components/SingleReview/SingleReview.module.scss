@@ -1,0 +1,41 @@
+@import '../../styles/colors.module.scss';
+@import '../../styles/olsztyn/mixins.module.scss';
+
+.review {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border: 1px solid $navy;
+	//border-color: $gold;
+	margin: 1em 0.5em;
+	width: 260px;
+	padding: 1em 2em 1.5em;
+	position: relative;
+	z-index: 10;
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		top: 0;
+		height: 100%;
+		border: 1px solid $gold;
+		transform: translate(-5px, -5px);
+		z-index: -10;
+	}
+
+	&::before {
+		content: '”';
+		position: absolute;
+		top: 0.1em;
+		right: 0.1em;
+		font-family: 'Merriweather', serif;
+		font-size: 84px;
+		color: $navy;
+		opacity: 0.05;
+	}
+}
+
+.review p {
+	display: block;
+}

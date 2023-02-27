@@ -1,0 +1,90 @@
+@import '../../styles/olsztyn/mixins.module.scss';
+@import '../../styles/olsztyn/colors.module.scss';
+@import '../../styles/colors.module.scss';
+
+.section_about {
+	@include section-container;
+	overflow: hidden;
+}
+
+.section_about_wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2em 0;
+	margin: 0;
+}
+
+.section_about_left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	order: 2;
+}
+
+.section_about_right {
+	position: relative;
+	min-height: 300px;
+	order: 1;
+	width: 80%;
+}
+
+.section_about_right img {
+	object-fit: cover;
+	border-radius: 4px;
+	height: 100%;
+	width: 100%;
+	box-shadow: 4px 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.section_about_kardamon_header {
+	@include section-header($navy);
+	font-family: 'Alatsi', sans-serif;
+	font-size: 3em;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	margin-top: 1em;
+	margin-bottom: 0.35em;
+}
+
+.section_about_desc {
+	@include section-content($navy);
+	margin-bottom: 2em;
+	padding: 0 3em;
+	margin: 0.5em 0;
+}
+
+.section_about_link {
+	@include section-cta($black, $cream);
+	margin-top: 2em;
+	background-color: transparent;
+}
+
+@media (min-width: 768px) {
+	.section_about_wrapper {
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.section_about_left {
+		text-align: left;
+		flex-basis: 40%;
+		order: 1;
+		height: 100%;
+		align-items: start;
+		justify-content: center;
+	}
+
+	.section_about_right {
+		flex-basis: 40%;
+		order: 2;
+		min-height: 400px;
+		margin-left: 2em;
+	}
+
+	.section_about_desc {
+		padding: 0;
+	}
+}

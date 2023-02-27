@@ -1,8 +1,8 @@
 import Head from 'next/head';
 
-import Title from '../components/main/title/Title';
-import CardKetrzyn from '../components/main/cards/CardKetrzyn';
-import CardOlsztyn from '../components/main/cards/CardOlsztyn';
+import Title from '../components/Title/Title';
+import CardKetrzyn from '../components/cards/CardKetrzyn';
+import CardOlsztyn from '../components/cards/CardOlsztyn';
 
 import styles from './main.module.scss';
 

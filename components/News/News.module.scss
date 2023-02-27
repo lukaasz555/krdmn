@@ -1,0 +1,55 @@
+@import '../../styles/olsztyn/colors.module.scss';
+@import '../../styles/olsztyn/mixins.module.scss';
+@import '../../styles/colors.module.scss';
+
+.section_news {
+	@include section-container;
+	display: flex;
+	flex-direction: column;
+}
+
+.news_head h3 {
+	@include section-header($navy);
+	text-align: center;
+}
+
+.news_container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1em;
+}
+
+.news_item {
+	width: 250px;
+	height: 250px;
+	margin: 2em 0em;
+}
+.news_item_link {
+	display: block;
+	position: relative;
+	height: 240px;
+	width: 240px;
+}
+
+.news_item img {
+	@include img-shadow;
+	object-fit: cover;
+	border-radius: 4px;
+	height: 100%;
+	width: 100%;
+}
+
+.news_socialmedia {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-top: 1px solid $borderBlack;
+	padding-top: 1em;
+}
+
+.news_message {
+	@include section-content($navy);
+	margin: 2em 0 3em;
+}

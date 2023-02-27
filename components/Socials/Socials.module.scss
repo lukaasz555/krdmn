@@ -1,0 +1,20 @@
+@import '../../styles/olsztyn/colors.module.scss';
+@import '../../styles/colors.module.scss';
+
+.socialmedia_icons {
+	display: flex;
+	justify-content: center;
+	z-index: 20;
+}
+
+.icon {
+	color: $gray;
+	height: 24px;
+	width: 24px;
+	background-color: transparent;
+	transition: 0.2s;
+}
+
+.icon:hover {
+	color: $gold;
+}

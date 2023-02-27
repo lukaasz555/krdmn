@@ -1,0 +1,96 @@
+@import '../../../styles/olsztyn/colors.module.scss';
+@import '../../../styles/olsztyn/mixins.module.scss';
+
+.contact_wrapper {
+	@include section-container;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 10em;
+}
+
+.contact_top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact_top div:nth-child(2) {
+	margin: 0 5em;
+}
+
+.contact_top div {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 1em;
+	min-width: 220px;
+}
+
+.contact_top h3 {
+	font-family: 'Merriweather';
+}
+
+.contact_top p,
+.contact_top a {
+	margin: 0;
+	margin-bottom: 0.25em;
+	padding: 0;
+}
+
+.contact_top a {
+	color: $black;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.contact_bottom {
+	position: relative;
+	width: 90%;
+	height: 380px;
+	margin-top: 3em;
+	min-width: 320px;
+}
+
+.contact_bottom iframe {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	box-shadow: 4px 8px 22px rgba(0, 0, 0, 0.05);
+	border-radius: 4px;
+}
+
+.openingHours p {
+	text-align: center;
+	line-height: 110%;
+}
+
+@media (min-width: 768px) {
+	.contact_top {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.contact_top div:nth-child(2) {
+		margin: 0 1em;
+	}
+
+	.openingHours p {
+		text-align: right;
+		padding-right: 1.5em;
+	}
+
+	.contact_bottom {
+		height: 460px;
+	}
+}
+
+@media (min-width: 992px) {
+	.contact_top div:nth-child(2) {
+		margin: 0 3em;
+	}
+}
