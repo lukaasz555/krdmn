@@ -6,7 +6,8 @@ import { useState } from 'react';
 import Socials from '../Socials/Socials';
 import Logo from '../../public/olsztyn/logo_white.png';
 
-const TopNav = () => {
+// pass logo as a prop?
+const TopNav = ({ address }: { address: string }) => {
 	const [isNavOpen, setNavOpen] = useState(false);
 
 	const mobileStyles = {
@@ -18,10 +19,11 @@ const TopNav = () => {
 	return (
 		<div className={styles.topnav}>
 			<div className={styles.topnav_wrapper}>
-				<Link href={`/olsztyn`}>
+				<Link href={`/${address}`}>
 					<Image
 						src={Logo}
-						alt='Kardamon Olsztyn'
+						// 1st letter uppercase
+						alt={`Kardamon ${address}`}
 						width={120}
 						height={120}
 						quality={100}
@@ -36,31 +38,33 @@ const TopNav = () => {
 
 					<div style={mobileStyles.nav}>
 						<nav className={styles.topnav_mobilenav}>
-							<Link href={`/olsztyn`}>start</Link>
-							<Link href={`/olsztyn/menu`}>menu</Link>
-							<Link href={`/olsztyn/events`}>przyjęcia</Link>
-							<Link href={`/olsztyn/contact`}>kontakt</Link>
+							<Link href={`/${address}`}>start</Link>
+							<Link href={`/${address}/menu`}>menu</Link>
+							<Link href={`/${address}/events`}>przyjęcia</Link>
+							<Link href={`/${address}/contact`}>kontakt</Link>
 							<Socials />
 						</nav>
 					</div>
 
 					<div className={styles.topnav_desktopnav}>
 						<nav>
-							<Link href={`/olsztyn`} className={styles.topnav_desktopnav_link}>
+							<Link
+								href={`/${address}`}
+								className={styles.topnav_desktopnav_link}>
 								start <span></span>
 							</Link>
 							<Link
-								href={`/olsztyn/menu`}
+								href={`/${address}/menu`}
 								className={styles.topnav_desktopnav_link}>
 								menu <span></span>
 							</Link>
 							<Link
-								href={`/olsztyn/events`}
+								href={`/${address}/events`}
 								className={styles.topnav_desktopnav_link}>
 								przyjęcia <span></span>
 							</Link>
 							<Link
-								href={`/olsztyn/contact`}
+								href={`/${address}/contact`}
 								className={styles.topnav_desktopnav_link}>
 								kontakt <span></span>
 							</Link>

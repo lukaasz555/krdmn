@@ -5,7 +5,7 @@ import Footer from '../../components/Footer/Footer';
 const Layout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<section className={style.layout_wrapper}>
-			<TopNav />
+			<TopNav address='olsztyn' />
 			<main className={style.layout_content}>{children}</main>
 			<Footer />
 		</section>
