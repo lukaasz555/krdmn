@@ -36,7 +36,7 @@ export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
 							height: '100%',
 							position: 'relative',
 						}}>
-						<About />
+						<About address='ketrzyn' />
 						<Events />
 						<News feed={feed.data} />
 						{/* <Reviews /> */}
