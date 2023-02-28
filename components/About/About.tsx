@@ -32,16 +32,15 @@ const About = () => {
 				<div className={styles.section_about_left}>
 					<h3 className={styles.section_about_kardamon_header}>Kardamon</h3>
 					<p className={styles.section_about_desc}>
-						Kuchnia to pasja, a pyszne potrawy nie biorą się znikąd! Mamy to
-						szczęście, że u nas gotują właśnie tacy pasjonaci. Na dania
-						dopracowywane przez 10 lat działalności na kętrzyńskim rynku
-						gastronomicznym, zapraszamy do hotelu Villa Pallas przy ulicy
-						Żołnierskiej 4.
+						Restauracja Kardamon to wspaniałe miejsce do spotkań i uroczystości.
+						Prestiżowa lokalizacja w zabytkowym budynku ratusza miejskiego,
+						niezwykły wystrój wnętrza, wysoki standard obsługi, a przede
+						wszystkim pyszne menu sprawiają, że nasi goście chętnie przychodzą
+						na codzienny obiad, biznesowy lunch, uroczystą kolację, organizują u
+						nas spotkania w większym gronie przyjaciół oraz rodziny.
 					</p>
-					<p className={styles.section_about_desc}>
-						Spotkajmy się w Kardamonie, miejscu innym niż wszystkie!
-					</p>
-					<Link href={`/olsztyn/menu`} className={styles.section_about_link}>
+
+					<Link href={`/ketrzyn/menu`} className={styles.section_about_link}>
 						sprawdź menu
 					</Link>
 				</div>

@@ -5,8 +5,9 @@ import { Fade as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
 import Socials from '../Socials/Socials';
 import Logo from '../../public/olsztyn/logo_white.png';
+import Logo2 from '../../public/ketrzyn/logo_white.png';
+import { firstBigLetter } from '../../helpers/firstBigLetter';
 
-// pass logo as a prop?
 const TopNav = ({ address }: { address: string }) => {
 	const [isNavOpen, setNavOpen] = useState(false);
 
@@ -21,12 +22,12 @@ const TopNav = ({ address }: { address: string }) => {
 			<div className={styles.topnav_wrapper}>
 				<Link href={`/${address}`}>
 					<Image
-						src={Logo}
-						// 1st letter uppercase
-						alt={`Kardamon ${address}`}
-						width={120}
-						height={120}
+						src={address === 'olsztyn' ? Logo : Logo2}
+						alt={`Kardamon ${firstBigLetter(address)}`}
+						width={address === 'olsztyn' ? 150 : 120}
+						height={address === 'olsztyn' ? 150 : 120}
 						quality={100}
+						style={{ padding: `${address === 'ketrzyn' && '1em'}` }}
 					/>
 				</Link>
 				<div>
