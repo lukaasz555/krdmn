@@ -62,7 +62,8 @@ const About = ({ address }: { address: string }) => {
 						  ))}
 
 					<Link href={`/${address}/menu`} className={styles.section_about_link}>
-						sprawdź menu
+						menu
+						<span></span>
 					</Link>
 				</div>
 

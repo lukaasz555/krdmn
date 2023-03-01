@@ -34,12 +34,10 @@
 }
 
 .events_top_desc_link {
-	color: ($gold);
+	@include section-cta($cream);
 	margin-top: 1.5em;
 	display: inline-block;
-	&:hover {
-		text-decoration: underline;
-	}
+	background-color: $navy;
 }
 
 .events_bottom img {

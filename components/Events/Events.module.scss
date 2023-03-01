@@ -57,7 +57,7 @@
 }
 
 .events_right_link {
-	@include section-cta($white, $navy);
+	@include section-cta($white);
 }
 
 @media (min-width: 768px) {

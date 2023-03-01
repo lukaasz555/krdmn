@@ -56,9 +56,8 @@
 }
 
 .section_about_link {
-	@include section-cta($black, $cream);
+	@include section-cta($black);
 	margin-top: 2em;
-	background-color: transparent;
 }
 
 @media (min-width: 768px) {

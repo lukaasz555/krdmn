@@ -61,6 +61,7 @@ const Events = () => {
 								href={`/olsztyn/contact`}
 								className={styles.events_top_desc_link}>
 								Zadzwoń i zapytaj o ofertę!
+								<span></span>
 							</Link>
 						</div>
 					</div>
