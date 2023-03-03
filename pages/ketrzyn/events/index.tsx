@@ -15,13 +15,15 @@ const Events = () => {
 	return (
 		<>
 			<Head>
-				<title>Przyjęcia | Kardamon - Olsztyn, Żołnierska 4</title>
+				<title>
+					Przyjęcia | Kardamon Kętrzyn, Plac marszałka Józefa Piłsudskiego 1
+				</title>
 				<meta
 					name='description'
-					content='Pyszna elegancja smaków. Położona w centrum restauracja Kardamon jest blisko Ciebie. Olsztyn, Żołnierska 4'
+					content='Restauracja Kardamon w centrum Kętrzyna. Dania na wynos, imprezy okolicznościowe, catering.'
 				/>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<link rel='icon' href='/olsztyn/fav.png' />
+				<link rel='icon' href='/ketrzyn/fav.png' />
 			</Head>
 			<Layout>
 				<section className={styles.events_wrapper} id='events'>

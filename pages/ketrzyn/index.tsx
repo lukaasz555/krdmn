@@ -1,8 +1,6 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Layout from './layout';
 import About from '../../components/About/About';
-import News from '../../components/News/News';
 import Events from '../../components/Events/Events';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 import { FeedProps } from '../../helpers/interfaces';
@@ -34,8 +32,6 @@ export default function Home() {
 						}}>
 						<About address='ketrzyn' />
 						<Events />
-						{/* <News feed={feed.data} /> */}
-						{/* <Reviews /> */}
 					</div>
 				</Layout>
 				<ScrollToTop />

@@ -15,7 +15,7 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 	const [filtered, setFiltered] = useState<ICourse[] | []>(allCourses);
 	const [activeCategory, setActiveCategory] = useState('');
 
-	const categories = () => {
+	const menuCategories = () => {
 		const cats = Array.from(new Set(allCourses.map((item) => item.category)));
 		return cats.sort((a: any, b: any) => a - b);
 	};
@@ -45,20 +45,22 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 	return (
 		<>
 			<Head>
-				<title>Menu | Kardamon - Olsztyn, Żołnierska 4</title>
+				<title>
+					Menu | Kardamon Kętrzyn, Plac marszałka Józefa Piłsudskiego 1
+				</title>
 				<meta
 					name='description'
-					content='Pyszna elegancja smaków. Położona w centrum restauracja Kardamon jest blisko Ciebie. Olsztyn, Żołnierska 4'
+					content='Restauracja Kardamon w centrum Kętrzyna. Dania na wynos, imprezy okolicznościowe, catering.'
 				/>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<link rel='icon' href='/olsztyn/fav.png' />
+				<link rel='icon' href='/ketrzyn/fav.png' />
 			</Head>
 			<Layout>
 				<div id='menu'>
 					{allCourses ? (
 						<>
 							<div className={styles.category_wrapper}>
-								{categories().map((item: string) => (
+								{menuCategories().map((item: string) => (
 									<button
 										key={item}
 										id={item}

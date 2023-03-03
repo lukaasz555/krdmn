@@ -13,26 +13,29 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Kontakt | Kardamon - Olsztyn, Żołnierska 4</title>
+				<title>
+					Kontakt | Kardamon Kętrzyn, Plac marszałka Józefa Piłsudskiego 1
+				</title>
 				<meta
 					name='description'
-					content='Pyszna elegancja smaków. Położona w centrum restauracja Kardamon jest blisko Ciebie. Olsztyn, Żołnierska 4'
+					content='Restauracja Kardamon w centrum Kętrzyna. Dania na wynos, imprezy okolicznościowe, catering.'
 				/>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<link rel='icon' href='/olsztyn/fav.png' />
+				<link rel='icon' href='/ketrzyn/fav.png' />
 			</Head>
 			<Layout>
 				<section className={styles.contact_wrapper} id='contact'>
 					<div className={styles.contact_top}>
 						<div>
 							<h3>Adres</h3>
-							<p>Żołnierska 4</p>
-							<p>10-557 Olsztyn</p>
+							<p>Plac marszałka Józefa Piłsudskiego 1</p>
+							<p>11-400 Kętrzyn</p>
 						</div>
 
 						<div>
 							<h3>Kontakt</h3>
-							<Link href={`tel:+48536848483`}>+48 536 848 483</Link>
+							<Link href={`tel:897511022`}>89 751 10 22</Link>
+							<Link href={`tel:+48510518518`}>+48 510 518 518</Link>
 							<Link href={`mailto:kardamonolsztyn@gmail.com`}>
 								kardamonolsztyn@gmail.com
 							</Link>
@@ -40,14 +43,19 @@ export default function Home() {
 
 						<div className={styles.openingHours}>
 							<h3>Godziny otwarcia</h3>
-							<p>pon-sob: 13 - 21</p>
-							<p>niedziela: 13 - 20</p>
+							<p>pn. - czw. 11 - 21</p>
+							<p>pt. - sob. 11 - 22</p>
+							<p>ndz. 11 - 21</p>
 						</div>
 					</div>
 					<div className={styles.contact_bottom}>
 						<iframe
-							src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2357.914087947878!2d20.484400315841274!3d53.773216750351914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e2798da0e4da45%3A0xa17014e33bfcb612!2sRestauracja%20Kardamon!5e0!3m2!1spl!2spl!4v1673527005686!5m2!1spl!2spl'
-							loading='lazy'></iframe>
+							src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9363.069371258227!2d21.3730136!3d54.0778692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e23a5b07b3510d%3A0x4b5a06f39c463f3b!2sRestauracja%20Kardamon!5e0!3m2!1spl!2spl!4v1675166317977!5m2!1spl!2spl'
+							width='800'
+							height='600'
+							allowFullScreen={true}
+							loading='lazy'
+							referrerPolicy='no-referrer-when-downgrade'></iframe>
 					</div>
 				</section>
 			</Layout>
