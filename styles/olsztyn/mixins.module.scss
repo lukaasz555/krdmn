@@ -43,7 +43,6 @@
 	padding: 0.15em 0.5em 0.25em;
 	position: relative;
 	border: none;
-	//border: 1px solid blue;
 
 	&::before,
 	&::after {
@@ -56,6 +55,7 @@
 		transition: transform 0.25s ease-out;
 		transform-origin: left;
 	}
+
 	&::before {
 		bottom: 0;
 		transform: scaleX(0.5);
@@ -71,6 +71,7 @@
 	&:hover::before {
 		transform: scaleX(1);
 	}
+
 	&:hover::after {
 		transform: scaleX(1);
 	}
