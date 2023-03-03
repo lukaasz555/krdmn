@@ -10,10 +10,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
 import { FeedProps } from '../../helpers/interfaces';
+import InstagramFeed from '../InstagramFeed/InstagramFeed';
 
 const News = ({ feed }: { feed: FeedProps[] }) => {
 	const { width } = useWindowSize();
@@ -53,24 +51,7 @@ const News = ({ feed }: { feed: FeedProps[] }) => {
 			</header>
 			<div className={styles.news_container}>
 				{feed ? (
-					<Swiper
-						className='mySwiper'
-						centeredSlides={centerSlides}
-						slidesPerView={4.2}>
-						{feed.map((item: any) => (
-							<SwiperSlide key={item.id} className={styles.news_item}>
-								<Link href={item.permalink} className={styles.news_item_link}>
-									<Image
-										src={item.media_url}
-										height={260}
-										width={260}
-										alt={item.permalink}
-										quality={80}
-									/>
-								</Link>
-							</SwiperSlide>
-						))}
-					</Swiper>
+					<InstagramFeed centerSlides={centerSlides} feed={feed} />
 				) : (
 					<div>
 						<p className={styles.news_message}>

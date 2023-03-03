@@ -7,19 +7,19 @@ import Events from '../../components/Events/Events';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 import { FeedProps } from '../../helpers/interfaces';
 
-export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
+export default function Home() {
 	return (
 		<>
 			<Head>
 				<title>
-					Spotkajmy się w Kardamonie | Kardamon - Olsztyn, Żołnierska 4
+					Restauracja Kardamon | Kętrzyn, Plac marszałka Józefa Piłsudskiego 1
 				</title>
 				<meta
 					name='description'
-					content='Pyszna elegancja smaków. Położona w centrum restauracja Kardamon jest blisko Ciebie. Olsztyn, Żołnierska 4'
+					content='Restauracja Kardamon w centrum Kętrzyna. Dania na wynos, imprezy okolicznościowe, catering.'
 				/>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<link rel='icon' href='/olsztyn/fav.png' />
+				<link rel='icon' href='/ketrzyn/fav.png' />
 			</Head>
 			<main>
 				<Layout>
@@ -34,7 +34,7 @@ export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
 						}}>
 						<About address='ketrzyn' />
 						<Events />
-						<News feed={feed.data} />
+						{/* <News feed={feed.data} /> */}
 						{/* <Reviews /> */}
 					</div>
 				</Layout>
@@ -42,17 +42,4 @@ export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
 			</main>
 		</>
 	);
-}
-
-export async function getServerSideProps() {
-	const getFeed = await fetch(
-		`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.NEXT_ENV_IG_TOKEN}`
-	);
-	const feed = await getFeed.json();
-
-	return {
-		props: {
-			feed,
-		},
-	};
 }
