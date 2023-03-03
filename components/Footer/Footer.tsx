@@ -11,10 +11,6 @@ import OpeningHrs from '../OpeningHrs/OpeningHrs';
 const Footer = ({ address }: { address: string }) => {
 	const currentYear = new Date().getFullYear();
 
-	useEffect(() => {
-		console.log('address: ' + address);
-	}, []);
-
 	return (
 		<footer className={styles.footer_wrapper}>
 			<div className={styles.footer_content}>

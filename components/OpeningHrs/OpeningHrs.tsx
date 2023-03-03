@@ -2,10 +2,6 @@ import { useEffect } from 'react';
 import styles from '../Footer/Footer.module.scss';
 
 const OpeningHrs = ({ address }: { address: string }) => {
-	useEffect(() => {
-		console.log('adres w OpeningHrs: ', address);
-	}, []);
-
 	return (
 		<div className={styles.footer_block}>
 			<h3 className={styles.footer_header_hours}>Godziny otwarcia</h3>

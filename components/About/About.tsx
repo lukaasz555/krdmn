@@ -39,11 +39,6 @@ const About = ({ address }: { address: string }) => {
 		);
 	}, []);
 
-	useEffect(() => {
-		console.log(description);
-		console.log(address);
-	}, []);
-
 	return (
 		<section className={styles.section_about} id='about'>
 			<div className={styles.section_about_wrapper}>
