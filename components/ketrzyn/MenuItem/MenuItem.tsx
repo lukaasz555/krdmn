@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { handleCatName } from '../../../helpers/handleCatName';
+import { handleCategoryNames } from '../../../helpers/handleCategoryNames';
 import { ICourse } from '../../../models/Courses';
 import styles from './MenuItem.module.scss';
 
@@ -20,7 +20,7 @@ const MenuItem = ({ title, items }: MenuItemProps) => {
 					<button
 						className={styles.category_name}
 						onClick={() => setOpen(!isOpen)}>
-						{handleCatName(title)}
+						{handleCategoryNames(title)}
 					</button>
 					<button
 						className={

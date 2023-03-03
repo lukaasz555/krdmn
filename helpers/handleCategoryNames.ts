@@ -1,4 +1,4 @@
-export const handleCatName = (item: string) => {
+export const handleCategoryNames = (item: string) => {
 	switch (item) {
 		case '1':
 			return 'Przystawki';

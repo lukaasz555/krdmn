@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { request } from '../../api/dato_olsztyn';
+import { request } from '../../api/dato_ketrzyn';
 import Layout from '../layout';
 import styles from './menu.module.scss';
-import { handleCatName } from '../../../helpers/handleCatName';
+import { handleCategoryNames } from '../../../helpers/handleCategoryNames';
 import { ICourse, CourseDataProps } from '../../../models/Courses';
 import Course from '../../../components/Course/Course';
 import { slideFromBottom } from '../../../helpers/animations';
@@ -67,12 +67,12 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 										onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
 											handleClick(e)
 										}>
-										{handleCatName(item)}
+										{handleCategoryNames(item)}
 									</button>
 								))}
 							</div>
 							<section className={styles.menu_wrapper}>
-								<h2>{handleCatName(activeCategory)}</h2>
+								<h2>{handleCategoryNames(activeCategory)}</h2>
 								<div>
 									{filtered.length > 0
 										? filtered.map(
