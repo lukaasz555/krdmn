@@ -7,7 +7,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 		<section className={style.layout_wrapper}>
 			<TopNav address='olsztyn' />
 			<main className={style.layout_content}>{children}</main>
-			<Footer />
+			<Footer address='olsztyn' />
 		</section>
 	);
 };

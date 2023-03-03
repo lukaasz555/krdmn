@@ -4,14 +4,10 @@ import Layout from './layout';
 import About from '../../components/About/About';
 import News from '../../components/News/News';
 import Events from '../../components/Events/Events';
-//import Reviews from '../../components/Reviews/Reviews';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
-
 import { FeedProps } from '../../helpers/interfaces';
 
 export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
-	const address = 'ketrzyn';
-
 	return (
 		<>
 			<Head>

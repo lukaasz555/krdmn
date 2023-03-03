@@ -4,9 +4,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Socials from '../Socials/Socials';
 import Logo from '../../public/olsztyn/logo_white.png';
+import Logo2 from '../../public/ketrzyn/logo_white.png';
+import { firstBigLetter } from '../../helpers/firstBigLetter';
+import OpeningHrs from '../OpeningHrs/OpeningHrs';
 
-const Footer = () => {
+const Footer = ({ address }: { address: string }) => {
 	const currentYear = new Date().getFullYear();
+
+	useEffect(() => {
+		console.log('address: ' + address);
+	}, []);
 
 	return (
 		<footer className={styles.footer_wrapper}>
@@ -15,22 +22,42 @@ const Footer = () => {
 					<div className={styles.footer_block}>
 						<h3 className={styles.footer_header_address}>Gdzie jesteśmy?</h3>
 						<section className={styles.footer_content_address}>
-							<p>Żołnierska 4</p>
-							<p>10-557 Olsztyn</p>
+							{address === 'olsztyn' ? (
+								<>
+									<p>Żołnierska 4</p>
+									<p>10-557 Olsztyn</p>
+								</>
+							) : (
+								<>
+									<p>Plac marszałka Józefa Piłsudskiego 1</p>
+									<p>11-400 Kętrzyn</p>
+								</>
+							)}
 						</section>
 
 						<section className={styles.footer_content_address}>
+							{address === 'olsztyn' ? (
+								<p>+48 536 848 483</p>
+							) : (
+								<>
+									<p>89 751 10 22</p>
+									<p>+48 518 518 155</p>
+								</>
+							)}
 							<p>
-								<Link href={`tel:+48536848483`}>+48 536 848 483</Link>
-							</p>
-							<p>
-								<Link href={`mailto:kardamonolsztyn@gmail.com`}>
-									kardamonolsztyn@gmail.com
-								</Link>
+								{address === 'olsztyn' ? (
+									<Link href={`mailto:kardamonolsztyn@gmail.com`}>
+										kardamonolsztyn@gmail.com
+									</Link>
+								) : (
+									<Link href={`mailto:kardamonketrzyn@gmail.com`}>
+										kardamonketrzyn@gmail.com
+									</Link>
+								)}
 							</p>
 						</section>
 						<section className={styles.footer_content_socials}>
-							<Socials />
+							{address === 'olsztyn' ? <Socials /> : null}
 						</section>
 					</div>
 
@@ -45,59 +72,21 @@ const Footer = () => {
 						</section>
 					</div>
 
-					<div className={styles.footer_block}>
-						<h3 className={styles.footer_header_hours}>Godziny otwarcia</h3>
-						<section>
-							<div className={styles.footer_content_hours}>
-								<p>
-									poniedziałek: <span>13:00-21:00</span>
-								</p>
-							</div>
-							<div className={styles.footer_content_hours}>
-								<p>
-									wtorek: <span>13:00-21:00</span>
-								</p>
-							</div>
-							<div className={styles.footer_content_hours}>
-								<p>
-									środa: <span>13:00-21:00</span>
-								</p>
-							</div>
-							<div className={styles.footer_content_hours}>
-								<p>
-									czwartek: <span>13:00-21:00</span>
-								</p>
-							</div>
-							<div className={styles.footer_content_hours}>
-								<p>
-									piątek: <span>13:00-21:00</span>
-								</p>
-							</div>
-							<div className={styles.footer_content_hours}>
-								<p>
-									sobota: <span>13:00-21:00</span>
-								</p>
-							</div>
-
-							<div className={styles.footer_content_hours}>
-								<p>
-									niedziela: <span>13:00-20:00</span>
-								</p>
-							</div>
-						</section>
-					</div>
+					<OpeningHrs address={address} />
 				</div>
 				<div className={styles.footer_bottom}>
-					<Link href={`/olsztyn`}>
+					<Link href={`/${address}`}>
 						<Image
-							src={Logo}
-							alt='Kardamon Olsztyn'
-							width={80}
-							height={80}
+							src={address === 'olsztyn' ? Logo : Logo2}
+							alt={`Kardamon ${firstBigLetter(address)}`}
 							quality={100}
+							width={address === 'olsztyn' ? 80 : 60}
+							height={address === 'olsztyn' ? 80 : 60}
 						/>
 					</Link>
-					<p>Restauracja Kardamon {currentYear}</p>
+					<Link href={`/`} className={styles.footer_bottom_link}>
+						Restauracja Kardamon {currentYear}
+					</Link>
 				</div>
 			</div>
 		</footer>
