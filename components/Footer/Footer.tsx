@@ -53,7 +53,7 @@ const Footer = ({ address }: { address: string }) => {
 							</p>
 						</section>
 						<section className={styles.footer_content_socials}>
-							{address === 'olsztyn' ? <Socials /> : null}
+							<Socials address={address} />
 						</section>
 					</div>
 

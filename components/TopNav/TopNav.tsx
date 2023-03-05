@@ -43,7 +43,7 @@ const TopNav = ({ address }: { address: string }) => {
 							<Link href={`/${address}/menu`}>menu</Link>
 							<Link href={`/${address}/offer`}>oferta</Link>
 							<Link href={`/${address}/contact`}>kontakt</Link>
-							<Socials />
+							<Socials address={address} />
 						</nav>
 					</div>
 
