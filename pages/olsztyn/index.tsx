@@ -34,7 +34,7 @@ export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
 							position: 'relative',
 						}}>
 						<About address='olsztyn' />
-						<Events />
+						<Events address='olsztyn' />
 						<News feed={feed.data} address='olsztyn' />
 						<Reviews />
 					</div>

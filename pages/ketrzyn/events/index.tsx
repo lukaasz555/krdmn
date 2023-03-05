@@ -4,7 +4,7 @@ import styles from './events.module.scss';
 import Layout from '../layout';
 import { slideFromBottom } from '../../../helpers/animations';
 import Image from 'next/image';
-import EventPic from '../../../public/olsztyn/4.jpeg';
+import EventPic from '../../../public/ketrzyn/gal1.jpeg';
 import Link from 'next/link';
 
 const Events = () => {
@@ -60,7 +60,7 @@ const Events = () => {
 								kawowe. Na słodko i na słono. Wszystko wedle życzenia!
 							</p>
 							<Link
-								href={`/olsztyn/contact`}
+								href={`/ketrzyn/contact`}
 								className={styles.events_top_desc_link}>
 								Zadzwoń i zapytaj o ofertę!
 								<span></span>

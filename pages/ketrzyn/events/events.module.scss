@@ -1,5 +1,4 @@
-@import '../../../styles/olsztyn/colors.module.scss';
-@import '../../../styles/olsztyn/mixins.module.scss';
+@import '../../../styles/mixins.module.scss';
 @import '../../../styles/colors.module.scss';
 
 .events_wrapper {
@@ -34,10 +33,13 @@
 }
 
 .events_top_desc_link {
-	@include section-cta($cream);
+	color: ($gold);
 	margin-top: 1.5em;
 	display: inline-block;
-	background-color: $navy;
+	font-size: 1.2em;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 .events_bottom img {
