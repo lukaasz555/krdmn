@@ -16,7 +16,7 @@ const Events = () => {
 		<>
 			<Head>
 				<title>
-					Przyjęcia | Kardamon Kętrzyn, Plac marszałka Józefa Piłsudskiego 1
+					Oferta | Kardamon Kętrzyn, Plac marszałka Józefa Piłsudskiego 1
 				</title>
 				<meta
 					name='description'
@@ -28,36 +28,56 @@ const Events = () => {
 			<Layout>
 				<section className={styles.events_wrapper} id='events'>
 					<div className={styles.events_top}>
+						<h3>Na miejscu i na dowóz</h3>
+						<div className={styles.events_top_desc}>
+							<p>
+								Jesteśmy zawsze obok Ciebie! To Ty decydujesz, czy odwiedzisz
+								naszą Restaurację w budynku miejskiego ratusza, czy to Kardamon
+								odwiedzi Ciebie w twoim domu! Możesz zjeść na miejscu, odebrać
+								osobiście lub zamówić z dostawą pod wskazany adres. Bezpłatny
+								dowóz na terenie Kętrzyna przy minimalnym zamówieniu w wysokości
+								30 zł. Możliwa płatność gotówką oraz kartą.
+							</p>
+							<p>
+								Latem szczególnie zapraszamy do naszego ogródka. Stoliki na
+								zewnątrz cieszą się wtedy największą popularnością!
+							</p>
+						</div>
+
 						<h3>Znamy się na przyjęciach</h3>
 						<div className={styles.events_top_desc}>
 							<p>
-								Urodziny, chrzciny, komunie, wesela, stypy - przygotujemy dla
-								Was z wielką przyjemnością. Bo Kardamon to idealne miejsce na
-								organizację uroczystości w Olsztynie!
+								Urodziny, chrzciny, komunie, stypy - przygotujemy dla Was z
+								wielką przyjemnością. Bo Kardamon to idealne miejsce na
+								organizację uroczystości w Kętrzynie!
+							</p>
+							<p>
+								Dla małych grup zorganizowanych mamy coś na wyłączność! Możliwa
+								rezerwacja indywidualnej sali VIP tylko dla Was! Idealnie
+								sprawdzi się na małe przyjęcie w gronie kilkunastu osób.
 							</p>
 						</div>
+
+						<h3 style={{ marginTop: '1.5em' }}>Lunch dnia</h3>
 						<div className={styles.events_top_desc}>
 							<p>
-								Jesteśmy dużą, przestronną restauracją z własnym ogrodem, a
-								nasza sala główna pomieści nawet 110 osób.
-							</p>
-							<p>
-								Chcecie coś na wyłączność? Możliwa także rezerwacja
-								indywidualnej sali zamkniętej tylko dla Was! <br />
-								Sala bankietowa idealnie sprawdzi się na małe przyjęcie w gronie
-								15 osób. Sala klubowa pozwoli Wam zorganizować uroczystość dla
-								40 osób. Sala konferencyjna to 60 miejsc przy stołach, a 100
-								miejsc w ustawieniu kinowym.
+								Od poniedziałku do piątku, w godzinach 13 - 16, w swojej ofercie
+								posiadamy również lunch dnia! Możesz zjeść na miejscu w naszej
+								restauracji, możesz również zamówić z dowozem pod wskazany
+								adres. Lunch dnia w cenie 35 zł!
 							</p>
 						</div>
-						<h3 style={{ marginTop: '1.5em' }}>
-							Realizujemy również cateringi
-						</h3>
+
+						<h3>Realizujemy cateringi</h3>
 						<div className={styles.events_top_desc}>
 							<p>
-								Dla pięciu, dwudziestu, stu, a nawet trzystu osób! Żadna liczba
-								nam nie straszna! Obstawiamy spotkania biznesowe i przerwy
-								kawowe. Na słodko i na słono. Wszystko wedle życzenia!
+								Obstawiamy firmowe spotkania biznesowe i przerwy kawowe. Na
+								słodko i na słono.
+							</p>
+							<p>
+								Organizujesz przyjęcie i potrzebujesz naszej pomocy? Jesteśmy!
+								Zapewnimy to, czego potrzebujesz, by zaskoczyć swoich gości.
+								Wszystko wedle życzenia prosto z dostawą do twojego domu!
 							</p>
 							<Link
 								href={`/ketrzyn/contact`}
