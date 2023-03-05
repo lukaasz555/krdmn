@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 //
 import MainPic2 from '../../public/olsztyn/main.jpeg';
+import MainKetrzyn from '../../public/ketrzyn/main.jpeg';
 
 const About = ({ address }: { address: string }) => {
 	gsap.registerPlugin(ScrollTrigger);
@@ -69,18 +70,6 @@ const About = ({ address }: { address: string }) => {
 						</p>
 					)}
 
-					{/* {address === 'ketrzyn'
-						? description.ketrzyn.map((item, i) => (
-								<p className={styles.section_about_desc} key={i}>
-									{item}
-								</p>
-						  ))
-						: description.olsztyn.map((item, i) => (
-								<p className={styles.section_about_desc} key={i}>
-									{item}
-								</p>
-						  ))} */}
-
 					<Link href={`/${address}/menu`} className={styles.section_about_link}>
 						menu
 						<span></span>
@@ -89,8 +78,8 @@ const About = ({ address }: { address: string }) => {
 
 				<div className={styles.section_about_right}>
 					<Image
-						src={MainPic2}
-						alt='Restauracja Kardamon - Olsztyn, Żołnierska 4'
+						src={address === 'olsztyn' ? MainPic2 : MainKetrzyn}
+						alt='Restauracja Kardamon'
 						fill={true}
 						quality={100}
 					/>
