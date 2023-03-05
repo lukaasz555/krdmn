@@ -23,14 +23,13 @@
 .topnav_mobilenav {
 	position: absolute;
 	left: 50%;
-	bottom: -250%;
+	bottom: -210%;
 	width: 100vw;
 	transform: translateX(-50%);
 	z-index: 10;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-
 	background-color: $navy;
 	padding: 2em 0;
 }
