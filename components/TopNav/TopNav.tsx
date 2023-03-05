@@ -41,7 +41,7 @@ const TopNav = ({ address }: { address: string }) => {
 						<nav className={styles.topnav_mobilenav}>
 							<Link href={`/${address}`}>start</Link>
 							<Link href={`/${address}/menu`}>menu</Link>
-							<Link href={`/${address}/events`}>przyjęcia</Link>
+							<Link href={`/${address}/offer`}>oferta</Link>
 							<Link href={`/${address}/contact`}>kontakt</Link>
 							<Socials />
 						</nav>
@@ -60,9 +60,9 @@ const TopNav = ({ address }: { address: string }) => {
 								menu <span></span>
 							</Link>
 							<Link
-								href={`/${address}/events`}
+								href={`/${address}/offer`}
 								className={styles.topnav_desktopnav_link}>
-								przyjęcia <span></span>
+								oferta <span></span>
 							</Link>
 							<Link
 								href={`/${address}/contact`}
