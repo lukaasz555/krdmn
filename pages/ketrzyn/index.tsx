@@ -1,11 +1,14 @@
 import Head from 'next/head';
 import Layout from './layout';
 import About from '../../components/About/About';
+import News from '../../components/News/News';
 import Events from '../../components/Events/Events';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 import { FeedProps } from '../../helpers/interfaces';
+import { request } from '../api/dato_ketrzyn';
+import Greetings from '../../components/Greetings/Greetings';
 
-export default function Home() {
+export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
 	return (
 		<>
 			<Head>
@@ -32,10 +35,25 @@ export default function Home() {
 						}}>
 						<About address='ketrzyn' />
 						<Events />
+						<News feed={feed.data} address='ketrzyn' />
+						<Greetings />
 					</div>
 				</Layout>
 				<ScrollToTop />
 			</main>
 		</>
 	);
+}
+
+export async function getServerSideProps() {
+	const getFeed = await fetch(
+		`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.NEXT_ENV_IG_TOKEN}`
+	);
+	const feed = await getFeed.json();
+
+	return {
+		props: {
+			feed,
+		},
+	};
 }

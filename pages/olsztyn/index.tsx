@@ -6,7 +6,6 @@ import News from '../../components/News/News';
 import Events from '../../components/Events/Events';
 import Reviews from '../../components/Reviews/Reviews';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
-
 import { FeedProps } from '../../helpers/interfaces';
 
 export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
@@ -34,9 +33,9 @@ export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
 							height: '100%',
 							position: 'relative',
 						}}>
-						<About />
+						<About address='olsztyn' />
 						<Events />
-						<News feed={feed.data} />
+						<News feed={feed.data} address='olsztyn' />
 						<Reviews />
 					</div>
 				</Layout>

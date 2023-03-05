@@ -13,7 +13,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { FeedProps } from '../../helpers/interfaces';
 import InstagramFeed from '../InstagramFeed/InstagramFeed';
 
-const News = ({ feed }: { feed: FeedProps[] }) => {
+const News = ({ feed, address }: { feed: FeedProps[]; address: String }) => {
 	const { width } = useWindowSize();
 	const [centerSlides, setCenterSlides] = useState(true);
 
@@ -63,16 +63,26 @@ const News = ({ feed }: { feed: FeedProps[] }) => {
 								Obserwuj nas i bądź na bieżąco!
 							</p>
 							<div style={{ display: 'flex', justifyContent: 'center' }}>
-								<Link href={`https://www.facebook.com/kardamonolsztyn`}>
+								<Link
+									href={
+										address === 'olsztyn'
+											? `https://www.facebook.com/kardamonolsztyn`
+											: `https://www.facebook.com/profile.php?id=100063684725171`
+									}>
 									<FontAwesomeIcon
 										icon={faSquareFacebook}
-										style={{ height: '20px', color: '#211c1e' }}
+										style={{ height: '20px', color: '#232832' }}
 									/>
 								</Link>
-								<Link href={`https://www.instagram.com/kardamon.olsztyn/`}>
+								<Link
+									href={
+										address === 'olsztyn'
+											? `https://www.instagram.com/kardamon.olsztyn/`
+											: `https://www.instagram.com/kardamon.ketrzyn/`
+									}>
 									<FontAwesomeIcon
 										icon={faSquareInstagram}
-										style={{ height: '20px', color: '#211c1e' }}
+										style={{ height: '20px', color: '#232832' }}
 									/>
 								</Link>
 							</div>

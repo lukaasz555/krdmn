@@ -1,0 +1,22 @@
+.wrapper {
+	font-family: 'Dancing Script', cursive;
+	margin-bottom: 3em;
+	text-align: center;
+}
+
+.wrapper h3 {
+	font-size: 60px;
+	margin: 0;
+}
+
+.wrapper h4 {
+	font-size: 32px;
+
+	margin-top: 0.5em;
+}
+
+@media (min-width: 768px) {
+	.wrapper h4 {
+		text-align: right;
+	}
+}
