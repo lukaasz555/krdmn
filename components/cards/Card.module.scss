@@ -3,7 +3,7 @@
 .card__wrapper {
 	background-color: rgba(255, 245, 235, 0.4);
 	border-radius: 8px;
-	padding: 2em;
+	padding: 2em 1em;
 	transition: transform 0.2s;
 	margin: 2em;
 	position: relative;
@@ -25,6 +25,7 @@
 		border-radius: 8px;
 		box-shadow: 4px 8px 22px rgba(0, 0, 0, 0.1);
 		transition: box-shadow 0.2s;
+		z-index: -10;
 	}
 
 	&:hover::after {
@@ -37,7 +38,6 @@
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	//style={{ color: '#6C5A55' }}
 	color: #6c5a55;
 }
 
@@ -54,24 +54,26 @@
 .card__header {
 	font-family: 'Alatsi', sans-serif;
 	text-transform: uppercase;
-
 	letter-spacing: 0.1em;
-	font-size: 1.75em;
-	text-align: center;
+	font-size: 1.5em;
 	text-align: left;
 	z-index: 10;
 	width: 100%;
-
 	border-top: 1px solid $borderBlack;
 	padding-top: 0.5em;
-
 	color: $brown;
+
+	a {
+		text-align: left;
+	}
 }
 
 .card__data {
 	width: 100%;
 	z-index: 10;
 	margin-bottom: 1em;
+	padding: 0 2em;
+	box-sizing: border-box;
 }
 
 .card__data p {
@@ -83,6 +85,8 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	padding: 0 2em;
+	box-sizing: border-box;
 }
 
 .card__link {

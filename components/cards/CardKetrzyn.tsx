@@ -10,23 +10,27 @@ const CardKetrzyn = () => {
 		<article className={styles.card__wrapper}>
 			<section className={styles.card__content}>
 				<header className={styles.card__top}>
-					<Image
-						src={Logo2}
-						alt='Restauracja Kardamon - Kętrzyn, Plac marszałka Piłsudskiego 1'
-						fill={true}
-					/>
+					<Link href={`/ketrzyn`}>
+						<Image
+							src={Logo2}
+							alt='Restauracja Kardamon - Kętrzyn, Plac marszałka Piłsudskiego 1'
+							fill={true}
+						/>
+					</Link>
 				</header>
-				<h2 className={styles.card__header}>Kardamon Kętrzyn</h2>
+				<Link href={`/ketrzyn`}>
+					<h2 className={styles.card__header}>Kardamon Kętrzyn</h2>
+				</Link>
 				<div className={styles.card__data}>
 					<p>Plac marszałka Piłsudskiego 1</p>
 					<p>11-400 Kętrzyn</p>
 				</div>
 				<div className={styles.card__contact}>
-					<Link href={`tel:+48897511022`} className={styles.card__link}>
-						+48 89 751 10 22
+					<Link href={`tel:897511022`} className={styles.card__link}>
+						89 751 10 22
 					</Link>
-					<Link href={`tel:+48510518518`} className={styles.card__link}>
-						+48 510 518 518
+					<Link href={`tel:+48518518155`} className={styles.card__link}>
+						+48 518 518 155
 					</Link>
 				</div>
 			</section>

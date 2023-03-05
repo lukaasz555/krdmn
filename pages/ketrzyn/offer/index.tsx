@@ -44,20 +44,6 @@ const Events = () => {
 							</p>
 						</div>
 
-						<h3>Znamy się na przyjęciach</h3>
-						<div className={styles.events_top_desc}>
-							<p>
-								Urodziny, chrzciny, komunie, stypy - przygotujemy dla Was z
-								wielką przyjemnością. Bo Kardamon to idealne miejsce na
-								organizację uroczystości w Kętrzynie!
-							</p>
-							<p>
-								Dla małych grup zorganizowanych mamy coś na wyłączność! Możliwa
-								rezerwacja indywidualnej sali VIP tylko dla Was! Idealnie
-								sprawdzi się na małe przyjęcie w gronie kilkunastu osób.
-							</p>
-						</div>
-
 						<h3 style={{ marginTop: '1.5em' }}>Lunch dnia</h3>
 						<div className={styles.events_top_desc}>
 							<p>

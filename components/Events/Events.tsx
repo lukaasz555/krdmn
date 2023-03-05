@@ -59,11 +59,27 @@ const Events = ({ address }: { address: String }) => {
 					<h3 className={styles.events_right_header}>
 						Znamy się na przyjęciach
 					</h3>
-					<p className={styles.events_right_desc}>
-						Mamy ponad 10. letnie doświadczenie w organizacji imprez. Jesteśmy w
-						stanie spełnić wszystkie wymagania i dostosować się do potrzeb
-						Naszych Gości. Zadzwoń i zapytaj o szczegóły.
-					</p>
+					{address === 'olsztyn' ? (
+						<p className={styles.events_right_desc}>
+							Mamy ponad 10. letnie doświadczenie w organizacji imprez. Jesteśmy
+							w stanie spełnić wszystkie wymagania i dostosować się do potrzeb
+							Naszych Gości. Zadzwoń i zapytaj o szczegóły.
+						</p>
+					) : (
+						<>
+							<p className={styles.events_right_desc}>
+								Urodziny, chrzciny, komunie, stypy - przygotujemy dla Was z
+								wielką przyjemnością. Bo Kardamon to idealne miejsce na
+								organizację uroczystości w Kętrzynie!
+							</p>
+							<p className={styles.events_right_desc}>
+								Dla małych grup zorganizowanych mamy coś na wyłączność! Możliwa
+								rezerwacja indywidualnej sali VIP tylko dla Was! Idealnie
+								sprawdzi się na małe przyjęcie w gronie kilkunastu osób.
+							</p>
+						</>
+					)}
+
 					<Link
 						className={styles.events_right_link}
 						href={`/${address}/contact`}>

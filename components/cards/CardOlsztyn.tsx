@@ -10,13 +10,17 @@ const CardOlsztyn = () => {
 		<article className={styles.card__wrapper}>
 			<section className={styles.card__content}>
 				<header className={styles.card__top}>
-					<Image
-						src={Logo}
-						alt='Restauracja Kardamon - Kętrzyn, Plac marszałka Piłsudskiego 1'
-						fill={true}
-					/>
+					<Link href={`/olsztyn`}>
+						<Image
+							src={Logo}
+							alt='Restauracja Kardamon - Kętrzyn, Plac marszałka Piłsudskiego 1'
+							fill={true}
+						/>
+					</Link>
 				</header>
-				<h2 className={styles.card__header}>Kardamon olsztyn</h2>
+				<Link href={`/olsztyn`}>
+					<h2 className={styles.card__header}>Kardamon olsztyn</h2>
+				</Link>
 				<div className={styles.card__data}>
 					<p>Żołnierska 4</p>
 					<p>10-557 Olsztyn</p>
