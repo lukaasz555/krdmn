@@ -12,6 +12,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { FeedProps } from '../../helpers/interfaces';
 import InstagramFeed from '../InstagramFeed/InstagramFeed';
+import Greetings from '../Greetings/Greetings';
 
 const News = ({ feed, address }: { feed: FeedProps[]; address: String }) => {
 	const { width } = useWindowSize();
@@ -90,6 +91,7 @@ const News = ({ feed, address }: { feed: FeedProps[]; address: String }) => {
 					</div>
 				)}
 			</div>
+			{address === 'olsztyn' ? null : <Greetings />}
 		</section>
 	);
 };

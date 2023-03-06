@@ -36,7 +36,6 @@ export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
 						<About address='ketrzyn' />
 						<Events address='ketrzyn' />
 						<News feed={feed.data} address='ketrzyn' />
-						<Greetings />
 					</div>
 				</Layout>
 				<ScrollToTop />
