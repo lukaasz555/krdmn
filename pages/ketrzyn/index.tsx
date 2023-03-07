@@ -46,7 +46,7 @@ export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
 
 export async function getServerSideProps() {
 	const getFeed = await fetch(
-		`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.NEXT_ENV_IG_TOKEN}`
+		`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.NEXT_ENV_IG_TOKEN_KK}`
 	);
 	const feed = await getFeed.json();
 
