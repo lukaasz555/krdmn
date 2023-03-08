@@ -4,9 +4,8 @@ import styles from './About.module.scss';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-//
-import MainPic2 from '../../public/olsztyn/main.jpeg';
-import MainKetrzyn from '../../public/ketrzyn/main.jpeg';
+import MainPic2 from '../../public/olsztyn/main_olsztyn.jpeg';
+import MainKetrzyn from '../../public/ketrzyn/main_ketrzyn.jpeg';
 
 const About = ({ address }: { address: string }) => {
 	gsap.registerPlugin(ScrollTrigger);

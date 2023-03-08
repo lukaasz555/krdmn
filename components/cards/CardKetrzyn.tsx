@@ -2,7 +2,7 @@ import styles from './Card.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Logo from '../../../public/ketrzyn/kklogo.png';
+import Logo from '../../../public/ketrzyn/ketrzyn_logo.png';
 import Logo2 from '../../public/ketrzyn/fav.png';
 
 const CardKetrzyn = () => {

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import styles from './Events.module.scss';
 import Image from 'next/image';
-import EventPic from '../../public/olsztyn/2.jpeg';
-import EventPicKK from '../../public/ketrzyn/gal1.jpeg';
+import EventPic from '../../public/olsztyn/event_olsztyn.jpeg';
+import EventPicKK from '../../public/ketrzyn/event_ketrzyn.jpeg';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';

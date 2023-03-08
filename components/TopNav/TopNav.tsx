@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { Fade as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
 import Socials from '../Socials/Socials';
-import Logo from '../../public/olsztyn/logo_white.png';
-import Logo2 from '../../public/ketrzyn/logo_white.png';
+import Logo from '../../public/olsztyn/logo_white_olsztyn.png';
+import Logo2 from '../../public/ketrzyn/logo_white_ketrzyn.png';
 import { firstBigLetter } from '../../helpers/firstBigLetter';
 
 const TopNav = ({ address }: { address: string }) => {

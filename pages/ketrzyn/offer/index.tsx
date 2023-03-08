@@ -4,7 +4,7 @@ import styles from './events.module.scss';
 import Layout from '../layout';
 import { slideFromBottom } from '../../../helpers/animations';
 import Image from 'next/image';
-import EventPic from '../../../public/ketrzyn/gal1.jpeg';
+import EventPic from '../../../public/ketrzyn/event_ketrzyn.jpeg';
 import Link from 'next/link';
 
 const Events = () => {

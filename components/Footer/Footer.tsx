@@ -3,8 +3,8 @@ import styles from './Footer.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import Socials from '../Socials/Socials';
-import Logo from '../../public/olsztyn/logo_white.png';
-import Logo2 from '../../public/ketrzyn/logo_white.png';
+import Logo from '../../public/olsztyn/logo_white_olsztyn.png';
+import Logo2 from '../../public/ketrzyn/logo_white_ketrzyn.png';
 import { firstBigLetter } from '../../helpers/firstBigLetter';
 import OpeningHrs from '../OpeningHrs/OpeningHrs';
 

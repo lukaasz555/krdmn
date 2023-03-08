@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ScrollToTop.module.scss';
 import Image from 'next/image';
-import Arrow from '../../public/olsztyn/arrow.png';
+import Arrow from '../../public/img/arrow.png';
 
 const ScrollToTop = () => {
 	const [isVisible, setVisibile] = useState(false);
