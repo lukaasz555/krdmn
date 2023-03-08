@@ -10,7 +10,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 const Events = ({ address }: { address: String }) => {
 	gsap.registerPlugin(ScrollTrigger);
 
-	useEffect(() => {
+	/* useEffect(() => {
 		gsap.fromTo(
 			'#e_left',
 			{ opacity: 0, transform: 'translateY(-100%)' },
@@ -42,12 +42,12 @@ const Events = ({ address }: { address: String }) => {
 				},
 			}
 		);
-	}, []);
+	}, []); */
 
 	return (
-		<div className={styles.events_wrapper} id='events'>
+		<div className={styles.events_wrapper}>
 			<div className={styles.events_content}>
-				<div className={styles.events_left} id='e_left'>
+				<div className={styles.events_left}>
 					<Image
 						src={address === 'olsztyn' ? EventPic : EventPicKK}
 						alt='Restauracja Kardamon - Olsztyn, Żołnierska 4'
@@ -55,7 +55,7 @@ const Events = ({ address }: { address: String }) => {
 						quality={100}
 					/>
 				</div>
-				<div className={styles.events_right} id='e_right'>
+				<div className={styles.events_right}>
 					<h3 className={styles.events_right_header}>
 						Znamy się na przyjęciach
 					</h3>

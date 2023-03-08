@@ -28,7 +28,7 @@ const News = ({ feed, address }: { feed: FeedProps[]; address: String }) => {
 
 	gsap.registerPlugin(ScrollTrigger);
 
-	useEffect(() => {
+	/* 	useEffect(() => {
 		gsap.fromTo(
 			'#news',
 			{ transform: 'translateY(50%)', zIndex: -10 },
@@ -43,10 +43,10 @@ const News = ({ feed, address }: { feed: FeedProps[]; address: String }) => {
 				},
 			}
 		);
-	}, []);
+	}, []); */
 
 	return (
-		<section className={styles.section_news} id='news'>
+		<section className={styles.section_news}>
 			<header className={styles.news_head}>
 				<h3>Aktualności</h3>
 			</header>

@@ -21,7 +21,7 @@ const About = ({ address }: { address: string }) => {
 		],
 	};
 
-	useEffect(() => {
+	/* 	useEffect(() => {
 		gsap.fromTo(
 			'#about',
 			{ opacity: 0, transform: 'translateY(15%)' },
@@ -36,10 +36,10 @@ const About = ({ address }: { address: string }) => {
 				},
 			}
 		);
-	}, []);
+	}, []); */
 
 	return (
-		<section className={styles.section_about} id='about'>
+		<section className={styles.section_about}>
 			<div className={styles.section_about_wrapper}>
 				<div className={styles.section_about_left}>
 					<h3 className={styles.section_about_kardamon_header}>Kardamon</h3>

@@ -5,7 +5,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const Reviews = () => {
-	useEffect(() => {
+	/* 	useEffect(() => {
 		gsap.fromTo(
 			'#reviews',
 			{ transform: 'translateY(50%)', zIndex: -10 },
@@ -20,10 +20,10 @@ const Reviews = () => {
 				},
 			}
 		);
-	}, []);
+	}, []); */
 
 	return (
-		<div className={styles.reviews} id='reviews'>
+		<div className={styles.reviews}>
 			<header>
 				<h3>Opinie</h3>
 			</header>

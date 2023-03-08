@@ -1,9 +1,7 @@
 import styles from './Card.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-
-import Logo from '../../../public/ketrzyn/ketrzyn_logo.png';
-import Logo2 from '../../public/ketrzyn/fav.png';
+import Logo from '../../public/ketrzyn/fav.png';
 
 const CardKetrzyn = () => {
 	return (
@@ -12,7 +10,7 @@ const CardKetrzyn = () => {
 				<header className={styles.card__top}>
 					<Link href={`/ketrzyn`}>
 						<Image
-							src={Logo2}
+							src={Logo}
 							alt='Restauracja Kardamon - Kętrzyn, Plac marszałka Piłsudskiego 1'
 							fill={true}
 						/>
