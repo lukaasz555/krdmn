@@ -4,46 +4,8 @@ import Image from 'next/image';
 import EventPic from '../../public/olsztyn/event_olsztyn.jpeg';
 import EventPicKK from '../../public/ketrzyn/event_ketrzyn.jpeg';
 import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const Events = ({ address }: { address: String }) => {
-	gsap.registerPlugin(ScrollTrigger);
-
-	/* useEffect(() => {
-		gsap.fromTo(
-			'#e_left',
-			{ opacity: 0, transform: 'translateY(-100%)' },
-			{
-				opacity: 1,
-				transform: 'translateY(0)',
-				duration: 1.1,
-				scrollTrigger: {
-					trigger: '#about',
-					start: 'bottom center',
-					end: 'bottom',
-				},
-			}
-		);
-	}, []);
-
-	useEffect(() => {
-		gsap.fromTo(
-			'#e_right',
-			{ opacity: 0, transform: 'translateY(100%)' },
-			{
-				opacity: 1,
-				transform: 'translateY(0)',
-				duration: 1.1,
-				scrollTrigger: {
-					trigger: '#events',
-					start: 'top center',
-					end: 'bottom',
-				},
-			}
-		);
-	}, []); */
-
 	return (
 		<div className={styles.events_wrapper}>
 			<div className={styles.events_content}>

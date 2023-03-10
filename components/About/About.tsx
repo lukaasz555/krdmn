@@ -2,14 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from './About.module.scss';
 import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import MainPic2 from '../../public/olsztyn/main_olsztyn.jpeg';
 import MainKetrzyn from '../../public/ketrzyn/main_ketrzyn.jpeg';
 
 const About = ({ address }: { address: string }) => {
-	gsap.registerPlugin(ScrollTrigger);
-
 	const description = {
 		olsztyn: [
 			'Kuchnia to pasja, a pyszne potrawy nie biorą się znikąd! Mamy to szczęście, że u nas gotują właśnie tacy pasjonaci. Na dania dopracowywane przez 10 lat działalności na kętrzyńskim rynku gastronomicznym, zapraszamy do hotelu Villa Pallas przy ulicy Żołnierskiej 4.',
@@ -20,23 +16,6 @@ const About = ({ address }: { address: string }) => {
 			'Restauracja Kardamon to wspaniałe miejsce do spotkań i uroczystości. Prestiżowa lokalizacja w zabytkowym budynku ratusza miejskiego, niezwykły wystrój wnętrza, wysoki standard obsługi, a przede wszystkim pyszne menu sprawiają, że nasi goście chętnie przychodzą na codzienny obiad, biznesowy lunch, uroczystą kolację, organizują u nas spotkania w większym gronie przyjaciół oraz rodziny.',
 		],
 	};
-
-	/* 	useEffect(() => {
-		gsap.fromTo(
-			'#about',
-			{ opacity: 0, transform: 'translateY(15%)' },
-			{
-				opacity: 1,
-				transform: 'translateY(0)',
-				duration: 1,
-				scrollTrigger: {
-					trigger: '#about',
-					start: 'top center',
-					end: 'bottom',
-				},
-			}
-		);
-	}, []); */
 
 	return (
 		<section className={styles.section_about}>
