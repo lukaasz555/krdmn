@@ -4,7 +4,7 @@ import styles from './events.module.scss';
 import Layout from '../layout';
 import { slideFromBottom } from '../../../helpers/animations';
 import Image from 'next/image';
-import EventPic from '../../../public/olsztyn/offer_main.jpeg';
+import EventPic from '../../../public/olsztyn/offer_main.webp';
 import Link from 'next/link';
 
 const Events = () => {

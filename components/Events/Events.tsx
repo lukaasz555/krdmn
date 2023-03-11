@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './Events.module.scss';
 import Image from 'next/image';
-import EventPic from '../../public/olsztyn/event_olsztyn.jpeg';
+import EventPic from '../../public/olsztyn/event_olsztyn.webp';
 import EventPicKK from '../../public/ketrzyn/event_ketrzyn.jpeg';
 import Link from 'next/link';
 

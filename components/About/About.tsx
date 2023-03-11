@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from './About.module.scss';
 import Link from 'next/link';
-import MainPic2 from '../../public/olsztyn/main_olsztyn.jpeg';
-import MainKetrzyn from '../../public/ketrzyn/main_ketrzyn.jpeg';
+import MainPic2 from '../../public/olsztyn/main_olsztyn.webp';
+import MainKetrzyn from '../../public/ketrzyn/main_ketrzyn.webp';
 
 const About = ({ address }: { address: string }) => {
 	const description = {
