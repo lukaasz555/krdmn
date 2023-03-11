@@ -9,7 +9,6 @@ import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 import { FeedProps } from '../../helpers/interfaces';
 
 export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
-	console.log(feed);
 	return (
 		<>
 			<Head>

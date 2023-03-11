@@ -10,7 +10,6 @@ import Greetings from '../../components/Greetings/Greetings';
 import { useRef } from 'react';
 
 export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
-	console.log(feed);
 	return (
 		<>
 			<Head>
