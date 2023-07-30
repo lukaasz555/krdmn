@@ -7,9 +7,26 @@ import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 import { FeedProps } from '../../helpers/interfaces';
 import { request } from '../api/dato_ketrzyn';
 import Greetings from '../../components/Greetings/Greetings';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import axios from 'axios';
 
 export default function Home({ feed }: { feed: { data: FeedProps[] } }) {
+	const [feedData, setFeedData] = useState<FeedProps[]>([]);
+
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const res = await axios.get(
+					`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.NEXT_ENV_IG_TOKEN_KK}&limit=10`
+				);
+				setFeedData(res.data);
+			} catch (err) {
+				console.error(err);
+			}
+		};
+		fetchData();
+	}, []);
+
 	return (
 		<>
 			<Head>
@@ -50,6 +67,9 @@ export async function getServerSideProps() {
 		`https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink&access_token=${process.env.NEXT_ENV_IG_TOKEN_KK}&limit=10`
 	);
 	const feed = await getFeed.json();
+
+	// console.log('123');
+	// console.log(feed);
 
 	return {
 		props: {

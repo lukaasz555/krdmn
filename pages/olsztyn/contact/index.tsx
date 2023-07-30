@@ -40,8 +40,7 @@ export default function Home() {
 
 						<div className={styles.openingHours}>
 							<h3>Godziny otwarcia</h3>
-							<p>pon-sob: 13 - 21</p>
-							<p>niedziela: 13 - 20</p>
+							<p>pn. - ndz.: 12:00 - 22:00</p>
 						</div>
 					</div>
 					<div className={styles.contact_bottom}>

@@ -13,8 +13,12 @@ const CardOlsztyn = () => {
 					<Link href={`/olsztyn`}>
 						<Image
 							src={Logo}
-							alt='Restauracja Kardamon - Kętrzyn, Plac marszałka Piłsudskiego 1'
-							fill={true}
+							alt='Restauracja Kardamon - Olsztyn, ul. Żołnierska 4'
+							height={130}
+							width={130}
+							style={{
+								marginTop: '10px',
+							}}
 						/>
 					</Link>
 				</header>

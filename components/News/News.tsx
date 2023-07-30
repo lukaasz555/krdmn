@@ -8,8 +8,6 @@ import {
 	faSquareFacebook,
 	faSquareInstagram,
 } from '@fortawesome/free-brands-svg-icons';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { FeedProps } from '../../helpers/interfaces';
 import InstagramFeed from '../InstagramFeed/InstagramFeed';
 import Greetings from '../Greetings/Greetings';
@@ -25,25 +23,6 @@ const News = ({ feed, address }: { feed: FeedProps[]; address: String }) => {
 			setCenterSlides(true);
 		}
 	}, [width]);
-
-	gsap.registerPlugin(ScrollTrigger);
-
-	/* 	useEffect(() => {
-		gsap.fromTo(
-			'#news',
-			{ transform: 'translateY(50%)', zIndex: -10 },
-			{
-				transform: 'translateY(0)',
-				duration: 1,
-				zIndex: 0,
-				scrollTrigger: {
-					trigger: '#events',
-					start: 'top',
-					end: 'bottom',
-				},
-			}
-		);
-	}, []); */
 
 	return (
 		<section className={styles.section_news}>

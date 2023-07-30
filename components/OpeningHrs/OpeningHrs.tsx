@@ -10,38 +10,38 @@ const OpeningHrs = ({ address }: { address: string }) => {
 				<section>
 					<div className={styles.footer_content_hours}>
 						<p>
-							poniedziałek: <span>13:00-21:00</span>
+							poniedziałek: <span>12:00-22:00</span>
 						</p>
 					</div>
 					<div className={styles.footer_content_hours}>
 						<p>
-							wtorek: <span>13:00-21:00</span>
+							wtorek: <span>12:00-22:00</span>
 						</p>
 					</div>
 					<div className={styles.footer_content_hours}>
 						<p>
-							środa: <span>13:00-21:00</span>
+							środa: <span>12:00-22:00</span>
 						</p>
 					</div>
 					<div className={styles.footer_content_hours}>
 						<p>
-							czwartek: <span>13:00-21:00</span>
+							czwartek: <span>12:00-22:00</span>
 						</p>
 					</div>
 					<div className={styles.footer_content_hours}>
 						<p>
-							piątek: <span>13:00-21:00</span>
+							piątek: <span>12:00-22:00</span>
 						</p>
 					</div>
 					<div className={styles.footer_content_hours}>
 						<p>
-							sobota: <span>13:00-21:00</span>
+							sobota: <span>12:00-22:00</span>
 						</p>
 					</div>
 
 					<div className={styles.footer_content_hours}>
 						<p>
-							niedziela: <span>13:00-20:00</span>
+							niedziela: <span>12:00-22:00</span>
 						</p>
 					</div>
 				</section>
