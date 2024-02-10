@@ -30,7 +30,7 @@ const News = ({ feed, address }: { feed: FeedProps[]; address: String }) => {
 				<h3>Aktualności</h3>
 			</header>
 			<div className={styles.news_container}>
-				{feed ? (
+				{feed.length > 0 ? (
 					<InstagramFeed centerSlides={centerSlides} feed={feed} />
 				) : (
 					<div>
