@@ -44,17 +44,7 @@ const Events = () => {
 							</p>
 						</div>
 
-						<h3 style={{ marginTop: '1.5em' }}>Lunch dnia</h3>
-						<div className={styles.events_top_desc}>
-							<p>
-								Od poniedziałku do piątku, w godzinach 13 - 16, w swojej ofercie
-								posiadamy również lunch dnia! Możesz zjeść na miejscu w naszej
-								restauracji, możesz również zamówić z dowozem pod wskazany
-								adres. Lunch dnia w cenie 35 zł!
-							</p>
-						</div>
-
-						<h3>Realizujemy cateringi</h3>
+						<h3 style={{ marginTop: '1.5em' }}>Realizujemy cateringi</h3>
 						<div className={styles.events_top_desc}>
 							<p>
 								Obstawiamy firmowe spotkania biznesowe i przerwy kawowe. Na
