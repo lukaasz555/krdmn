@@ -60,7 +60,7 @@ export default function Home({ feed }: HomepageProps) {
 						}}>
 						<About address='ketrzyn' />
 						<Events address='ketrzyn' />
-						<News feed={feed.data} address='ketrzyn' />
+						<News feed={[]} address='ketrzyn' />
 					</div>
 				</Layout>
 				<ScrollToTop />

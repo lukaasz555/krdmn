@@ -35,9 +35,9 @@ export default function Home() {
 						<div>
 							<h3>Kontakt</h3>
 							<Link href={`tel:897511022`}>89 751 10 22</Link>
-							<Link href={`tel:+48510518518`}>+48 510 518 518</Link>
-							<Link href={`mailto:kardamonolsztyn@gmail.com`}>
-								kardamonolsztyn@gmail.com
+							<Link href={`tel:+48518518155`}>+48 518 518 155</Link>
+							<Link href={`mailto:kardamonketrzyn@gmail.com`}>
+								kardamonketrzyn@gmail.com
 							</Link>
 						</div>
 
