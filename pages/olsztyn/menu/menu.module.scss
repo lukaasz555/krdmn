@@ -1,0 +1,40 @@
+@import '../../../styles/colors.module.scss';
+.category_wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 3em 0;
+}
+
+.menu_wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 5em;
+}
+
+.menu_wrapper h2 {
+	margin-bottom: 2em;
+	font-family: 'Merriweather';
+	color: $navy;
+}
+
+.menu_wrapper > div {
+	padding-bottom: 2em;
+}
+
+.category_wrapper button {
+	background: transparent;
+	border: none;
+	font-size: 1em;
+	font-family: 'Merriweather';
+	color: $gray;
+	cursor: pointer;
+	transition: 0.2s;
+	margin: 0.5em 0.75em;
+}
+
+.category_wrapper button:hover {
+	color: $navy;
+}
