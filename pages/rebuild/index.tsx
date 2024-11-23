@@ -38,21 +38,21 @@ export default function Home() {
 
         <div className={rebuildStyles.rebuild__container__socialmedia}>
 							<p style={{ margin: '0.25em', fontSize: '1em', textAlign: 'center' }}>
-								Zapraszamy na nasze profile w mediach społecznościowych:
+								Zapraszamy na nasze profile w mediach społecznościowych
 							</p>
 							<div style={{ display: 'flex', justifyContent: 'center', columnGap: '8px' }}>
 								<Link
 									href={'https://www.facebook.com/profile.php?id=100063684725171'}>
 									<FontAwesomeIcon
 										icon={faSquareFacebook}
-										style={{ height: '28px', color: '#232832' }}
+										style={{ height: '24px', color: '#232832' }}
 										/>
 								</Link>
 								<Link
 									href={'https://www.instagram.com/kardamon.ketrzyn/'}>
 									<FontAwesomeIcon
 										icon={faSquareInstagram}
-										style={{ height: '28px', color: '#232832' }}
+										style={{ height: '24px', color: '#232832' }}
 										/>
 								</Link>
 							</div>

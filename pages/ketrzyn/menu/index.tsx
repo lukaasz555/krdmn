@@ -5,10 +5,10 @@ import { request } from '../../api/dato_ketrzyn';
 import Layout from '../layout';
 import styles from './menu.module.scss';
 import { handleCategoryNames } from '../../../helpers/handleCategoryNames';
-import { ICourse, CourseDataProps } from '../../../models/Courses';
+import { ICourse } from '../../../models/Courses';
 import Course from '../../../components/Course/Course';
 import { slideFromBottom } from '../../../helpers/animations';
-import { GetServerSideProps } from 'next';
+import RebuildPage from '../../rebuild/index';
 
 export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 	const { allCourses } = data;
@@ -42,65 +42,66 @@ export default function Home({ data }: { data: { allCourses: ICourse[] } }) {
 		slideFromBottom('#menu');
 	}, []);
 
-	return (
-		<>
-			<Head>
-				<title>
-					Menu | Kardamon Kętrzyn, Plac marszałka Józefa Piłsudskiego 1
-				</title>
-				<meta
-					name='description'
-					content='Restauracja Kardamon w centrum Kętrzyna. Dania na wynos, imprezy okolicznościowe, catering.'
-				/>
-				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<link rel='icon' href='/ketrzyn/fav.png' />
-			</Head>
-			<Layout>
-				<div id='menu'>
-					{allCourses ? (
-						<>
-							<div className={styles.category_wrapper}>
-								{menuCategories().map((item: string) => (
-									<button
-										key={item}
-										id={item}
-										onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
-											handleClick(e)
-										}>
-										{handleCategoryNames(item)}
-									</button>
-								))}
-							</div>
-							<section className={styles.menu_wrapper}>
-								<h2>{handleCategoryNames(activeCategory)}</h2>
-								<div>
-									{filtered.length > 0
-										? filtered.map(
-												({
-													id,
-													name,
-													price,
-													desc,
-												}: Omit<ICourse, 'category'>) => (
-													<Course
-														key={id}
-														name={name}
-														price={price}
-														desc={desc}
-													/>
-												)
-										  )
-										: null}
-								</div>
-							</section>
-						</>
-					) : (
-						<p>Nie udało się wczytać zawartości</p>
-					)}
-				</div>
-			</Layout>
-		</>
-	);
+	return <RebuildPage />
+	// return (
+	// 	<>
+	// 		<Head>
+	// 			<title>
+	// 				Menu | Kardamon Kętrzyn, Plac marszałka Józefa Piłsudskiego 1
+	// 			</title>
+	// 			<meta
+	// 				name='description'
+	// 				content='Restauracja Kardamon w centrum Kętrzyna. Dania na wynos, imprezy okolicznościowe, catering.'
+	// 			/>
+	// 			<meta name='viewport' content='width=device-width, initial-scale=1' />
+	// 			<link rel='icon' href='/ketrzyn/fav.png' />
+	// 		</Head>
+	// 		<Layout>
+	// 			<div id='menu'>
+	// 				{allCourses ? (
+	// 					<>
+	// 						<div className={styles.category_wrapper}>
+	// 							{menuCategories().map((item: string) => (
+	// 								<button
+	// 									key={item}
+	// 									id={item}
+	// 									onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
+	// 										handleClick(e)
+	// 									}>
+	// 									{handleCategoryNames(item)}
+	// 								</button>
+	// 							))}
+	// 						</div>
+	// 						<section className={styles.menu_wrapper}>
+	// 							<h2>{handleCategoryNames(activeCategory)}</h2>
+	// 							<div>
+	// 								{filtered.length > 0
+	// 									? filtered.map(
+	// 											({
+	// 												id,
+	// 												name,
+	// 												price,
+	// 												desc,
+	// 											}: Omit<ICourse, 'category'>) => (
+	// 												<Course
+	// 													key={id}
+	// 													name={name}
+	// 													price={price}
+	// 													desc={desc}
+	// 												/>
+	// 											)
+	// 									  )
+	// 									: null}
+	// 							</div>
+	// 						</section>
+	// 					</>
+	// 				) : (
+	// 					<p>Nie udało się wczytać zawartości</p>
+	// 				)}
+	// 			</div>
+	// 		</Layout>
+	// 	</>
+	// );
 }
 
 export async function getServerSideProps() {
